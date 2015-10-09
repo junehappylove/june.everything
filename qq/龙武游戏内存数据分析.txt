@@ -136,33 +136,194 @@ CPU Disasm
                       :
 07A7863D  Debug string: jzhang(CUQG):CRichEditCtrlEx2::ShowMessage nUIN=1417192483 pMsg=a cFlag=1 bForceShow=0 cFlagAdv=0
 ------------
-eax=0017603C
-ecx=3B89C0C2
-edx=0017605B
-ebx=00000111
-----
-0017677C
-3B89C0C2
-0017679F
-00000001
-----
-001762D0
-3B89C0C2
-00176331
-5478A423
-----
-00176298
-3B89C0C2
-001762CB
-5478A423
-----
-001762D0
-3B89C0C2
-00176331
-5478A423
+CPU - 主线程, 模块 CUQG_ocx
+
+EAX 00000000
+ECX 0000000D
+EDX 00176049
+EBX 00000111
+ESP 00176008
+EBP 001764B0
+ESI 0C3F4C24
+EDI 0017603A
+EIP 09E2862F CUQG_ocx.09E2862F
+
+CPU Stack
+地址        值          ASCII 注释
+00176008  /00176049  I`   ; |buffer =
+0017600C  |000003F3  ó    ; |size = 1011.
+00176010  |09E41508  ?	  ; |format = "CChatWnd::OnSend %s"
+00176014  |00176444  Dd   ; \argptr = 00176444
+00176018  |0017602C  ,`   ; ASCII "jzhang(CUQG):"
+0017601C  |0017603C  <`   ; ASCII "jzhang(CUQG):"
+00176020  |0017602C  ,`   ; ASCII "jzhang(CUQG):"
+
 ------------
+76B2D1A8
+
+CPU Stack
+地址        值          ASCII  注释
+00176748  /00176789  ‰g    ; |buffer =
+0017674C  |000003F3  ó     ; |size = 1011.
+00176750  |09E41D94  ”?	   ; |format = "CCUQGCtrl::OnChatMsg %s
+"
+00176754  |00176B84  ?k    ; \argptr = 00176B84
+00176758  |0017676C  lg    ; ASCII "jzhang(CUQG):"
+0017675C  |0017677C  |g    ; ASCII "jzhang(CUQG):"
+00176760  |0017676C  lg    ; ASCII "jzhang(CUQG):"
+
+CPU - 主线程, 模块 CUQG_ocx
+
+EAX 00000000
+ECX 0000000D
+EDX 00176789
+EBX 00000001
+ESP 00176748
+EBP 0C3F49A0
+ESI 09AE4D40
+EDI 0017677A
+EIP 09E2862F CUQG_ocx.09E2862F
+====================================
+CPU Stack
+地址        值          ASCII  注释
+0017629C  /001762DD  Yb    ; |buffer =
+001762A0  |000003F3  ó     ; |size = 1011.
+001762A4  |09E42418  $?	   ; |format = "CRichEditCtrlEx2::ShowMessage nUIN=%d pMsg=%s cFlag=%d bForceShow=%d cFlagAdv=%d
+"
+001762A8  |001766D8  ?f    ; \argptr = 001766D8
+001762AC  |001762C0  àb    ; ASCII "jzhang(CUQG):"
+001762B0  |001762D0  Db    ; ASCII "jzhang(CUQG):"
+001762B4  |001762C0  àb    ; ASCII "jzhang(CUQG):"
+
+CPU - 主线程, 模块 CUQG_ocx
+
+EAX 00000000
+ECX 0000000D
+EDX 001762DD
+EBX 5478A423
+ESP 0017629C
+EBP 00000000
+ESI 0C3F4D6C
+EDI 001762CE
+EIP 09E2862F CUQG_ocx.09E2862F
+===================================
+
+CPU Stack
+地址        值          ASCII  注释
+00176264  /001762A5  ￥b    ; |buffer =
+00176268  |000003F3  ó     ; |size = 1011.
+0017626C  |09E422F4  ?"?	   ; |format = "CRichEditCtrlEx2::AppendEscapedText %s
+"
+00176270  |001766A0  ?f    ; \argptr = 001766A0
+00176274  |00176288  ?b    ; ASCII "jzhang(CUQG):"
+00176278  |00176298  ?b    ; ASCII "jzhang(CUQG):"
+0017627C  |00176288  ?b    ; ASCII "jzhang(CUQG):"
+
+CPU - 主线程, 模块 CUQG_ocx
+
+EAX 00000000
+ECX 0000000D
+EDX 001762A5
+EBX 5478A423
+ESP 00176264
+EBP 0017674C
+ESI 0C3F4D6C
+EDI 00176296
+EIP 09E2862F CUQG_ocx.09E2862F
+================
+CPU Stack
+地址        值          ASCII  注释
+0017629C  /001762DD  Yb    ; |buffer =
+001762A0  |000003F3  ó     ; |size = 1011.
+001762A4  |09E42418  $?	   ; |format = "CRichEditCtrlEx2::ShowMessage nUIN=%d pMsg=%s cFlag=%d bForceShow=%d cFlagAdv=%d
+"
+001762A8  |001766D8  ?f    ; \argptr = 001766D8
+001762AC  |001762C0  àb    ; ASCII "jzhang(CUQG):"
+001762B0  |001762D0  Db    ; ASCII "jzhang(CUQG):"
+001762B4  |001762C0  àb    ; ASCII "jzhang(CUQG):"
+
+CPU - 主线程, 模块 CUQG_ocx
+
+EAX 00000000
+ECX 0000000D
+EDX 001762DD
+EBX 5478A423
+ESP 0017629C
+EBP 00000000
+ESI 0C3F4FD8
+EDI 001762CE
+EIP 09E2862F CUQG_ocx.09E2862F
+
+=============
+CPU Disasm
+地址        十六进制转储            命令                                       注释
+0C6785A0  /$  81EC 10040000 SUB ESP,410                              ; CUQG_ocx.0C6785A0(guessed Format...)
+0C6785A6  |.  A1 BC2A690C   MOV EAX,DWORD PTR DS:[0C692ABC]          ; ASCII "jzhang(CUQG):"
+0C6785AB  |.  8B0D C02A690C MOV ECX,DWORD PTR DS:[0C692AC0]          ; ASCII "ng(CUQG):"
+0C6785B1  |.  894424 00     MOV DWORD PTR SS:[ESP],EAX
+0C6785B5  |.  66:A1 C82A690 MOV AX,WORD PTR DS:[0C692AC8]
+0C6785BB  |.  57            PUSH EDI
+0C6785BC  |.  894C24 08     MOV DWORD PTR SS:[ESP+8],ECX
+0C6785C0  |.  8B15 C42A690C MOV EDX,DWORD PTR DS:[0C692AC4]          ; ASCII "UQG):"
+0C6785C6  |.  66:894424 10  MOV WORD PTR SS:[ESP+10],AX
+0C6785CB  |.  B9 FF000000   MOV ECX,0FF
+0C6785D0  |.  33C0          XOR EAX,EAX
+0C6785D2  |.  8D7C24 15     LEA EDI,[ESP+15]
+0C6785D6  |.  C64424 14 00  MOV BYTE PTR SS:[ESP+14],0
+0C6785DB  |.  F3:AB         REP STOS DWORD PTR ES:[EDI]
+0C6785DD  |.  895424 0C     MOV DWORD PTR SS:[ESP+0C],EDX
+0C6785E1  |.  8D4C24 04     LEA ECX,[ESP+4]
+0C6785E5  |.  66:AB         STOS WORD PTR ES:[EDI]
+0C6785E7  |.  68 FF030000   PUSH 3FF
+0C6785EC  |.  8D5424 18     LEA EDX,[ESP+18]
+0C6785F0  |.  51            PUSH ECX
+0C6785F1  |.  52            PUSH EDX
+0C6785F2  |.  AA            STOS BYTE PTR ES:[EDI]
+0C6785F3  |.  FF15 6469680C CALL DWORD PTR DS:[<&MSVCRT._mbsnbcpy>]
+0C6785F9  |.  8D4424 10     LEA EAX,[ESP+10]
+0C6785FD  |.  50            PUSH EAX                                 ; /string
+0C6785FE  |.  FF15 1869680C CALL DWORD PTR DS:[<&MSVCRT._mbslen>]    ; \MSVCRT._mbslen
+0C678604  |.  8B9424 280400 MOV EDX,DWORD PTR SS:[ESP+428]
+0C67860B  |.  8D8C24 2C0400 LEA ECX,[ESP+42C]
+0C678612  |.  51            PUSH ECX                                 ; /argptr
+0C678613  |.  B9 00040000   MOV ECX,400                              ; |1024
+0C678618  |.  2BC8          SUB ECX,EAX                              ; |ecx = 1024-输入的字符长度
+0C67861A  |.  52            PUSH EDX                                 ; |format
+0C67861B  |.  51            PUSH ECX                                 ; |size
+0C67861C  |.  8D7C24 20     LEA EDI,[ESP+20]                         ; |
+0C678620  |.  83C9 FF       OR ECX,FFFFFFFF                          ; |
+0C678623  |.  33C0          XOR EAX,EAX                              ; |
+0C678625  |.  F2:AE         REPNE SCAS BYTE PTR ES:[EDI]             ; |
+0C678627  |.  F7D1          NOT ECX                                  ; |
+0C678629  |.  49            DEC ECX                                  ; |
+0C67862A  |.  8D540C 30     LEA EDX,[ECX+ESP+30]                     ; |
+0C67862E  |.  52            PUSH EDX                                 ; |buffer
+0C67862F  |.  FF15 8869680C CALL DWORD PTR DS:[<&MSVCRT._vsnprintf>] ; \MSVCRT._vsnprintf
+0C678635  |.  83C4 20       ADD ESP,20
+0C678638  |.  8D4424 14     LEA EAX,[ESP+14]
+0C67863C  |.  50            PUSH EAX                                 ; /String
+0C67863D  |.  FF15 2061680C CALL DWORD PTR DS:[<&KERNEL32.OutputDebu ; \KERNEL32.OutputDebugStringA
+0C678643  |.  5F            POP EDI
+0C678644  |.  81C4 10040000 ADD ESP,410
+0C67864A  \.  C3            RETN
 
 
 
+CPU Disasm
+地址        十六进制转储            命令                                       注释
+0BC65BA0  /.  6A 00         PUSH 0                                   ; /Arg2 = 0
+0BC65BA2  |.  6A 00         PUSH 0                                   ; |Arg1 = 0
+0BC65BA4  |.  E8 37D9FFFF   CALL 0BC634E0                            ; \CUQG_ocx.0BC634E0
+0BC65BA9  \.  C3            RETN
 
+CPU - 主线程, 模块 CUQG_ocx
 
+EAX 00000001
+ECX 0C33D19C
+EDX 0BC65BA0 入口点
+EBX 00000111
+ESP 0017649C
+EBP 001764B0
+ESI 00000001
+EDI 00000000
+EIP 0BC65BA4 CUQG_ocx.0BC65BA4
