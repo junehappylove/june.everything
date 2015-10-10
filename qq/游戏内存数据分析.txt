@@ -1,0 +1,55 @@
+=============================================
+2号座位
+mov eax,[ecx+eax*4+954] ecx=01CBCEF0 eax=2
+mov ecx,[clclient.dll+1A68C] 001FA68C
+/
+mov ecx,[CLUI.dll+1DBC4]  03D1DBC4	 不行
+
+
+mov [ecx+edx*4+9A4],esi ecx=01CBCEF0 edx=2
+============================================
+一号座位： 
+mov eax,[ecx+eax*4+954] ecx=013ACEF0 eax=1
+mov ecx,[clclient.dll+1A68C] 002FA68C 
+================================================
+qq斗地主
+07948604  |.  8B9424 280400>mov edx,dword ptr ss:[esp+428]
+0794860B  |.  8D8C24 2C0400>lea ecx,dword ptr ss:[esp+42C]
+07948612  |.  51            push ecx                                 ; /arglist
+07948613  |.  B9 00040000   mov ecx,400                              ; |
+07948618  |.  2BC8          sub ecx,eax                              ; |
+0794861A  |.  52            push edx                                 ; |format
+0794861B  |.  51            push ecx                                 ; |count
+0794861C  |.  8D7C24 20     lea edi,dword ptr ss:[esp+20]            ; |
+07948620  |.  83C9 FF       or ecx,FFFFFFFF                          ; |
+07948623  |.  33C0          xor eax,eax                              ; |
+07948625  |.  F2:AE         repne scas byte ptr es:[edi]             ; |
+07948627  |.  F7D1          not ecx                                  ; |
+07948629  |.  49            dec ecx                                  ; |
+0794862A  |.  8D540C 30     lea edx,dword ptr ss:[esp+ecx+30]        ; |
+0794862E  |.  52            push edx                                 ; |buffer
+0794862F  |.  FF15 88699507 call dword ptr ds:[<&MSVCRT._vsnprintf>] ; \这里跟喊话有关,函数是:_vsnprintf
+
+
+ds:[07956988]=7586D1A8 (msvcrt.vsnprintf)
+EAX 00000000
+ECX 0000000D
+EDX 0011609D
+EBX 00000111
+ESP 0011605C
+EBP 00116504
+ESI 0A9065BC
+EDI 0011608E
+EIP 0794862F CUQG.0794862F
+--------
+0011605C   0011609D  |buffer = 0011609D
+00116060   000003F3  |count = 3F3 (1011.)
+00116064   07961508  |format = "CChatWnd::OnSend %s"
+00116068   00116498  \arglist = 00116498
+
+
+================================================
+精灵传说
+坐标
+mov edx,[esi+08] esi=24E8AAF0
+mov eax,[ecx+50] ecx=24E47C60
