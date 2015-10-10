@@ -1,0 +1,5 @@
+push 0x00002000
+push 0x0047e6a8
+push 0x0047e6ad
+push 0x00000000
+call 0x76D2FD1E
