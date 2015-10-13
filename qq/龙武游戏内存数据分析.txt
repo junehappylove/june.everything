@@ -327,3 +327,79 @@ EBP 001764B0
 ESI 00000001
 EDI 00000000
 EIP 0BC65BA4 CUQG_ocx.0BC65BA4
+
+====================================
+EAX 0738F440
+ECX 0738F440
+EDX 0738F441
+EBX 00000111
+ESP 00176440
+EBP 001764B0
+ESI 0C41AC74
+EDI 0C41ACCC
+EIP 0BD0352F CUQG.0BD0352F
+=====
+EAX 072AF670
+ECX 072AF670
+EDX 072AF671
+EBX 00000111
+ESP 00176440
+EBP 001764B0
+ESI 0C46AC74
+EDI 0C46ACCC
+EIP 0911352F CUQG.0911352F
+
+---- 喊话的关键call 需要游戏过保护，否则调用不了，直接崩溃！
+0BD03525  |. 8B4C24 10      MOV ECX,DWORD PTR SS:[ESP+10]
+0BD03529  |. 51             PUSH ECX		;喊话内容的偏移地址
+0BD0352A  |. 68 0815D40B    PUSH CUQG.0BD41508  ;  ASCII "CChatWnd::OnSend %s
+"
+0BD0352F  |. E8 6C500200    CALL CUQG.0BD285A0
+----
+mov esp,00176448
+mov EAX,0738F440
+mov ECX,0738F440
+mov EDX,0738F441
+mov EBX,00000111
+mov EBP 001764B0
+mov ESI 0C46AC74
+mov EDI 0C46ACCC
+mov EIP 0911352F
+push [[[00174EF4]+4]+0]
+push 0BD41508
+CALL 0BD285A0
+
+=====================
+Log data
+Address   Message
+          Debug string: jzhang(CUQG):CChatWnd::OnSend 1
+          Debug string: jzhang(CUQG):CCUQGCtrl::OnChatMsg 1
+          Debug string: jzhang(CUQG):CRichEditCtrlEx2::ShowMessage nUIN=1417192483 pMsg=1 cFlag=1 bForceShow=0 cFlagAdv=0
+          Debug string: jzhang(CUQG):CRichEditCtrlEx2::AppendEscapedText 1
+          Debug string: jzhang(CUQG):CRichEditCtrlEx2::ShowMessage nUIN=1417192483 pMsg=1 cFlag=1 bForceShow=0 cFlagAdv=0
+
+
+
+091C8635  |. 83C4 20        ADD ESP,20
+091C8638  |. 8D4424 14      LEA EAX,DWORD PTR SS:[ESP+14]
+091C863C  |. 50             PUSH EAX                                 ; /String
+091C863D  |. FF15 20611D09  CALL DWORD PTR DS:[<&KERNEL32.OutputDebu>; \OutputDebugStringA
+
+0017603C
+call 7530B2B7
+
+
+bp SendMessageW
+
+
+
+
+
+
+
+
+
+
+
+
+

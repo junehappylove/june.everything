@@ -3,8 +3,33 @@
   <CheatEntries>
     <CheatEntry>
       <ID>2</ID>
+      <Description>"无描述"</Description>
+      <LastState Value="??" Activated="0" RealAddress="00174EF4"/>
+      <ShowAsHex>1</ShowAsHex>
+      <Color>80000008</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>00174EF4</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>3</ID>
+      <Description>"喊话内容数组"</Description>
+      <LastState Activated="0" RealAddress="00000000"/>
+      <ShowAsHex>1</ShowAsHex>
+      <Color>80000008</Color>
+      <VariableType>String</VariableType>
+      <Length>30</Length>
+      <Unicode>0</Unicode>
+      <ZeroTerminate>1</ZeroTerminate>
+      <Address>00174EF4</Address>
+      <Offsets>
+        <Offset>0</Offset>
+        <Offset>4</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>4</ID>
       <Description>"当前玩家QQ号"</Description>
-      <LastState Value="1417192483" Activated="0" RealAddress="0050C6B8"/>
+      <LastState Value="??" Activated="0" RealAddress="0050C6B8"/>
       <Color>80000008</Color>
       <VariableType>4 Bytes</VariableType>
       <Address>0050C6B8</Address>
@@ -12,23 +37,23 @@
     <CheatEntry>
       <ID>1</ID>
       <Description>"当前玩家座位号"</Description>
-      <LastState Value="0" Activated="0" RealAddress="0050C6BC"/>
+      <LastState Value="??" Activated="0" RealAddress="0050C6BC"/>
       <Color>80000008</Color>
       <VariableType>4 Bytes</VariableType>
       <Address>0050C6BC</Address>
     </CheatEntry>
     <CheatEntry>
-      <ID>4</ID>
+      <ID>5</ID>
       <Description>"1号座位的QQ号"</Description>
-      <LastState Value="1417192483" Activated="0" RealAddress="0050CA0C"/>
+      <LastState Value="??" Activated="0" RealAddress="0050CA0C"/>
       <Color>80000008</Color>
       <VariableType>4 Bytes</VariableType>
       <Address>0050CA0C</Address>
     </CheatEntry>
     <CheatEntry>
-      <ID>3</ID>
+      <ID>6</ID>
       <Description>"2号座位的QQ号"</Description>
-      <LastState Value="107292453" Activated="0" RealAddress="0050D238"/>
+      <LastState Value="??" Activated="0" RealAddress="0050D238"/>
       <Color>80000008</Color>
       <VariableType>4 Bytes</VariableType>
       <Address>0050D238</Address>
@@ -36,7 +61,7 @@
     <CheatEntry>
       <ID>0</ID>
       <Description>"3号座位的QQ号"</Description>
-      <LastState Value="540130396" Activated="0" RealAddress="0050DA64"/>
+      <LastState Value="??" Activated="0" RealAddress="0050DA64"/>
       <Color>80000008</Color>
       <VariableType>4 Bytes</VariableType>
       <Address>0050DA64</Address>
@@ -77,7 +102,7 @@
     <CheatEntry>
       <ID>10</ID>
       <Description>"0号玩家出牌数量"</Description>
-      <LastState Value="0" Activated="0" RealAddress="0050DEC4"/>
+      <LastState Value="??" Activated="0" RealAddress="0050DEC4"/>
       <Color>80000008</Color>
       <VariableType>4 Bytes</VariableType>
       <Address>0050DEC4</Address>
@@ -85,178 +110,178 @@
     <CheatEntry>
       <ID>11</ID>
       <Description>"1号玩家出牌数量"</Description>
-      <LastState Value="0" Activated="0" RealAddress="0050CE6C"/>
+      <LastState Value="??" Activated="0" RealAddress="0050CE6C"/>
       <Color>80000008</Color>
       <VariableType>4 Bytes</VariableType>
       <Address>50CE6C</Address>
     </CheatEntry>
     <CheatEntry>
-      <ID>5</ID>
+      <ID>12</ID>
       <Description>"2号玩家出牌数量"</Description>
-      <LastState Value="0" Activated="0" RealAddress="0050D698"/>
+      <LastState Value="??" Activated="0" RealAddress="0050D698"/>
       <Color>80000008</Color>
       <VariableType>4 Bytes</VariableType>
       <Address>50D698</Address>
     </CheatEntry>
     <CheatEntry>
-      <ID>6</ID>
+      <ID>13</ID>
       <Description>"0号玩家出的第1张牌"</Description>
-      <LastState Value="00000000" Activated="0" RealAddress="0050DD84"/>
+      <LastState Value="??" Activated="0" RealAddress="0050DD84"/>
       <ShowAsHex>1</ShowAsHex>
       <Color>80000008</Color>
       <VariableType>4 Bytes</VariableType>
       <Address>0050DD84</Address>
     </CheatEntry>
     <CheatEntry>
-      <ID>12</ID>
+      <ID>14</ID>
       <Description>"0号玩家出的第2张牌"</Description>
-      <LastState Value="00000000" Activated="0" RealAddress="0050DD8C"/>
+      <LastState Value="??" Activated="0" RealAddress="0050DD8C"/>
       <ShowAsHex>1</ShowAsHex>
       <Color>80000008</Color>
       <VariableType>4 Bytes</VariableType>
       <Address>0050DD8C</Address>
     </CheatEntry>
     <CheatEntry>
-      <ID>13</ID>
+      <ID>15</ID>
       <Description>"1号玩家出的第一张牌"</Description>
-      <LastState Value="00000000" Activated="0" RealAddress="0050CD2C"/>
+      <LastState Value="??" Activated="0" RealAddress="0050CD2C"/>
       <ShowAsHex>1</ShowAsHex>
       <Color>80000008</Color>
       <VariableType>4 Bytes</VariableType>
       <Address>0050CD2C</Address>
     </CheatEntry>
     <CheatEntry>
-      <ID>14</ID>
+      <ID>16</ID>
       <Description>"2号玩家出的第一张牌"</Description>
-      <LastState Value="00000000" Activated="0" RealAddress="0050D558"/>
+      <LastState Value="??" Activated="0" RealAddress="0050D558"/>
       <ShowAsHex>1</ShowAsHex>
       <Color>80000008</Color>
       <VariableType>4 Bytes</VariableType>
       <Address>0050D558</Address>
     </CheatEntry>
     <CheatEntry>
-      <ID>15</ID>
+      <ID>17</ID>
       <Description>"底分"</Description>
-      <LastState Value="0" Activated="0" RealAddress="0050B8B8"/>
+      <LastState Value="??" Activated="0" RealAddress="0050B8B8"/>
       <Color>80000008</Color>
       <VariableType>4 Bytes</VariableType>
       <Address>0050B8B8</Address>
     </CheatEntry>
     <CheatEntry>
-      <ID>16</ID>
+      <ID>18</ID>
       <Description>"倍数"</Description>
-      <LastState Value="1" Activated="0" RealAddress="0050B8B4"/>
+      <LastState Value="??" Activated="0" RealAddress="0050B8B4"/>
       <Color>80000008</Color>
       <VariableType>4 Bytes</VariableType>
       <Address>0050B8B4</Address>
     </CheatEntry>
     <CheatEntry>
-      <ID>17</ID>
+      <ID>19</ID>
       <Description>"0号玩家得分"</Description>
-      <LastState Value="00000000" Activated="0" RealAddress="0050C6E0"/>
+      <LastState Value="??" Activated="0" RealAddress="0050C6E0"/>
       <ShowAsHex>1</ShowAsHex>
       <Color>80000008</Color>
       <VariableType>4 Bytes</VariableType>
       <Address>ddzrpg.exe+10C6E0</Address>
     </CheatEntry>
     <CheatEntry>
-      <ID>18</ID>
+      <ID>20</ID>
       <Description>"0号玩家总成绩"</Description>
-      <LastState Value="00000000" Activated="0" RealAddress="0050C6F0"/>
+      <LastState Value="??" Activated="0" RealAddress="0050C6F0"/>
       <ShowAsHex>1</ShowAsHex>
       <Color>80000008</Color>
       <VariableType>4 Bytes</VariableType>
       <Address>ddzrpg.exe+10C6F0</Address>
     </CheatEntry>
     <CheatEntry>
-      <ID>19</ID>
+      <ID>21</ID>
       <Description>"1号玩家得分"</Description>
-      <LastState Value="00000000" Activated="0" RealAddress="0050C6D8"/>
+      <LastState Value="??" Activated="0" RealAddress="0050C6D8"/>
       <ShowAsHex>1</ShowAsHex>
       <Color>80000008</Color>
       <VariableType>4 Bytes</VariableType>
       <Address>0050C6D8</Address>
     </CheatEntry>
     <CheatEntry>
-      <ID>20</ID>
+      <ID>22</ID>
       <Description>"1号玩家总成绩"</Description>
-      <LastState Value="00000000" Activated="0" RealAddress="0050C6E8"/>
+      <LastState Value="??" Activated="0" RealAddress="0050C6E8"/>
       <ShowAsHex>1</ShowAsHex>
       <Color>80000008</Color>
       <VariableType>4 Bytes</VariableType>
       <Address>ddzrpg.exe+10C6E8</Address>
     </CheatEntry>
     <CheatEntry>
-      <ID>21</ID>
+      <ID>23</ID>
       <Description>"2号玩家得分"</Description>
-      <LastState Value="00000000" Activated="0" RealAddress="0050C6DC"/>
+      <LastState Value="??" Activated="0" RealAddress="0050C6DC"/>
       <ShowAsHex>1</ShowAsHex>
       <Color>80000008</Color>
       <VariableType>4 Bytes</VariableType>
       <Address>ddzrpg.exe+10C6DC</Address>
     </CheatEntry>
     <CheatEntry>
-      <ID>22</ID>
+      <ID>24</ID>
       <Description>"2号玩家总成绩"</Description>
-      <LastState Value="00000000" Activated="0" RealAddress="0050C6EC"/>
+      <LastState Value="??" Activated="0" RealAddress="0050C6EC"/>
       <ShowAsHex>1</ShowAsHex>
       <Color>80000008</Color>
       <VariableType>4 Bytes</VariableType>
       <Address>ddzrpg.exe+10C6EC</Address>
     </CheatEntry>
     <CheatEntry>
-      <ID>23</ID>
+      <ID>25</ID>
       <Description>"2号玩家剩余牌数量"</Description>
-      <LastState Value="0" Activated="0" RealAddress="0050D3F0"/>
+      <LastState Value="??" Activated="0" RealAddress="0050D3F0"/>
       <Color>80000008</Color>
       <VariableType>4 Bytes</VariableType>
       <Address>ddzrpg.exe+10D3F0</Address>
     </CheatEntry>
     <CheatEntry>
-      <ID>24</ID>
+      <ID>26</ID>
       <Description>"1号玩家剩余牌数量"</Description>
-      <LastState Value="0" Activated="0" RealAddress="0050CBC4"/>
+      <LastState Value="??" Activated="0" RealAddress="0050CBC4"/>
       <Color>80000008</Color>
       <VariableType>4 Bytes</VariableType>
       <Address>ddzrpg.exe+10CBC4</Address>
     </CheatEntry>
     <CheatEntry>
-      <ID>25</ID>
+      <ID>27</ID>
       <Description>"0号玩家剩余牌数量"</Description>
-      <LastState Value="0" Activated="0" RealAddress="0050DC1C"/>
+      <LastState Value="??" Activated="0" RealAddress="0050DC1C"/>
       <Color>80000008</Color>
       <VariableType>4 Bytes</VariableType>
       <Address>0050DC1C</Address>
     </CheatEntry>
     <CheatEntry>
-      <ID>26</ID>
+      <ID>28</ID>
       <Description>"地主牌第1张"</Description>
-      <LastState Value="00000000" Activated="0" RealAddress="0050EAC0"/>
+      <LastState Value="??" Activated="0" RealAddress="0050EAC0"/>
       <ShowAsHex>1</ShowAsHex>
       <Color>80000008</Color>
       <VariableType>4 Bytes</VariableType>
       <Address>ddzrpg.exe+10EAC0</Address>
     </CheatEntry>
     <CheatEntry>
-      <ID>27</ID>
+      <ID>29</ID>
       <Description>"地主牌第2张"</Description>
-      <LastState Value="00000000" Activated="0" RealAddress="0050EAC8"/>
+      <LastState Value="??" Activated="0" RealAddress="0050EAC8"/>
       <ShowAsHex>1</ShowAsHex>
       <Color>80000008</Color>
       <VariableType>4 Bytes</VariableType>
       <Address>ddzrpg.exe+10EAC8</Address>
     </CheatEntry>
     <CheatEntry>
-      <ID>28</ID>
+      <ID>30</ID>
       <Description>"地主牌第3张"</Description>
-      <LastState Value="00000000" Activated="0" RealAddress="0050EAD0"/>
+      <LastState Value="??" Activated="0" RealAddress="0050EAD0"/>
       <ShowAsHex>1</ShowAsHex>
       <Color>80000008</Color>
       <VariableType>4 Bytes</VariableType>
       <Address>ddzrpg.exe+10EAD0</Address>
     </CheatEntry>
     <CheatEntry>
-      <ID>29</ID>
+      <ID>31</ID>
       <Description>"右击当前玩家显示名称"</Description>
       <LastState Activated="0" RealAddress="0050CA12"/>
       <Color>80000008</Color>
@@ -267,7 +292,7 @@
       <Address>0050CA12</Address>
     </CheatEntry>
     <CheatEntry>
-      <ID>30</ID>
+      <ID>32</ID>
       <Description>"当前玩家提示名称"</Description>
       <LastState Activated="0" RealAddress="0050D200"/>
       <Color>80000008</Color>
@@ -278,12 +303,12 @@
       <Address>0050D200</Address>
     </CheatEntry>
     <CheatEntry>
-      <ID>31</ID>
+      <ID>33</ID>
       <Description>"当前玩家展示名称"</Description>
       <LastState Activated="0" RealAddress="0B99512C"/>
       <Color>80000008</Color>
       <VariableType>String</VariableType>
-      <Length>24</Length>
+      <Length>12</Length>
       <Unicode>0</Unicode>
       <ZeroTerminate>1</ZeroTerminate>
       <Address>0B99512C</Address>
