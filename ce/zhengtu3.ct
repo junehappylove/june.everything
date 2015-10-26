@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="16">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>24</ID>
+      <Description>"与怪物血相关"</Description>
+      <Color>80000008</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>zhengtu.dav+A85E98</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>26</ID>
+      <Description>"选中的怪物名称"</Description>
+      <Color>80000008</Color>
+      <VariableType>String</VariableType>
+      <Length>30</Length>
+      <Unicode>0</Unicode>
+      <ZeroTerminate>1</ZeroTerminate>
+      <Address>0C14C0C0</Address>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+  <DisassemblerComments>
+    <DisassemblerComment>
+      <Address>"zhengtu.dav"+C2AE3</Address>
+      <Comment>222222222222222
+</Comment>
+    </DisassemblerComment>
+    <DisassemblerComment>
+      <Address>"zhengtu.dav"+C2B00</Address>
+      <Comment>1111111111
+</Comment>
+    </DisassemblerComment>
+    <DisassemblerComment>
+      <Address>"zhengtu.dav"+CA35C</Address>
+      <Comment>鎵惧埌鍩哄潃
+</Comment>
+    </DisassemblerComment>
+    <DisassemblerComment>
+      <Address>"zhengtu.dav"+CA391</Address>
+      <Comment>鎵緀di
+</Comment>
+    </DisassemblerComment>
+    <DisassemblerComment>
+      <Address>"zhengtu.dav"+D72E1</Address>
+      <Comment>鎵緀cx
+</Comment>
+    </DisassemblerComment>
+    <DisassemblerComment>
+      <Address>"zhengtu.dav"+D7462</Address>
+      <Comment>鎵緀si
+</Comment>
+    </DisassemblerComment>
+    <DisassemblerComment>
+      <Address>"zhengtu.dav"+E5E90</Address>
+      <Comment>33333333333333
+</Comment>
+    </DisassemblerComment>
+    <DisassemblerComment>
+      <Address>"zhengtu.dav"+17EC15</Address>
+      <Comment>鍩哄潃鎵惧埌
+</Comment>
+    </DisassemblerComment>
+    <DisassemblerComment>
+      <Address>"zhengtu.dav"+17EC1A</Address>
+      <Comment>鎵緀ax
+</Comment>
+    </DisassemblerComment>
+    <DisassemblerComment>
+      <Address>"zhengtu.dav"+17ECE1</Address>
+      <Comment>鎵緀bp
+</Comment>
+    </DisassemblerComment>
+  </DisassemblerComments>
+</CheatTable>
