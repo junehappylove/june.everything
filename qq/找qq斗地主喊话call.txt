@@ -1,0 +1,349 @@
+CPU Disasm
+地址        十六进制转储            命令                                       注释
+0B9D3525  |.  8B4C24 10     MOV ECX,DWORD PTR SS:[ESP+10]            ; 这里怀疑是喊话的call
+0B9D3529  |.  51            PUSH ECX                                 ; /<%s>
+0B9D352A  |.  68 0815A10B   PUSH OFFSET 0BA11508                     ; |Format = "CChatWnd::OnSend %s"
+0B9D352F  |.  E8 6C500200   CALL 0B9F85A0                            ; \CUQG_ocx.0B9F85A0
+
+===============
+CPU - 主线程, 模块 CUQG_ocx
+
+EAX 072AEE50
+ECX 072AEE50
+EDX 072AEE51
+EBX 00000111
+ESP 00176440 PTR to ASCII "CChatWnd::OnSend %s"
+EBP 001764B0
+ESI 0C2DAE3C
+EDI 0C2DAE94
+EIP 0915352F CUQG_ocx.0915352F
+
+---------------
+07915BA0   .  6A 00         push 0                                   ; /Arg2 = 00000000
+07915BA2   .  6A 00         push 0                                   ; |Arg1 = 00000000
+07915BA4   .  E8 37D9FFFF   call CUQG.079134E0                       ; \CUQG.079134E0
+07915BA9   .  C3            retn
+------------
+07933525  |.  8B4C24 10     mov ecx,dword ptr ss:[esp+10]
+07933529  |.  51            push ecx
+0793352A  |.  68 08159707   push CUQG.07971508                                    ;  ASCII "CChatWnd::OnSend %s"
+0793352F  |.  E8 6C500200   call CUQG.079585A0                                    ;  这里有可能是调用
+
+EAX 06686E00
+ECX 06686E00
+EDX 06686E01
+EBX 00000111
+ESP 00116494
+EBP 00116504
+ESI 09309E4C
+EDI 09309EA4
+EIP 0793352F CUQG.0793352F
+
+EAX 06687FE8
+ECX 06687FE8
+EDX 06687FE9
+EBX 00000111
+ESP 00116494
+EBP 00116504
+ESI 09309E4C
+EDI 09309EA4
+EIP 0793352F CUQG.0793352F
+
+
+ESP 0011649C
+
+=====================
+07A734E0  /$  6A FF         push -1
+07A734E2  |.  68 601EAA07   push CUQG.07AA1E60                       ;  SE 处理程序安装
+07A734E7  |.  64:A1 0000000>mov eax,dword ptr fs:[0]
+07A734ED  |.  50            push eax                                 ;  这里下断
+07A734EE  |.  64:8925 00000>mov dword ptr fs:[0],esp
+07A734F5  |.  83EC 34       sub esp,34
+07A734F8  |.  53            push ebx
+07A734F9  |.  55            push ebp
+07A734FA  |.  56            push esi
+07A734FB  |.  8BF1          mov esi,ecx
+07A734FD  |.  57            push edi
+07A734FE  |.  8D4C24 10     lea ecx,dword ptr ss:[esp+10]
+07A73502  |.  C686 C0070000>mov byte ptr ds:[esi+7C0],1
+07A73509  |.  E8 5AD20200   call <jmp.&MFC42.#540_??0CString@@QAE@XZ>
+07A7350E  |.  8D7E 58       lea edi,dword ptr ds:[esi+58]
+07A73511  |.  8D4424 10     lea eax,dword ptr ss:[esp+10]
+07A73515  |.  50            push eax
+07A73516  |.  8BCF          mov ecx,edi
+07A73518  |.  C74424 50 000>mov dword ptr ss:[esp+50],0
+07A73520  |.  E8 FFD30200   call <jmp.&MFC42.#3874_?GetWindowTextA@C>
+07A73525  |.  8B4C24 10     mov ecx,dword ptr ss:[esp+10]
+07A73529  |.  51            push ecx
+07A7352A  |.  68 0815AB07   push CUQG.07AB1508                       ;  ASCII "CChatWnd::OnSend %s"
+07A7352F  |.  E8 6C500200   call CUQG.07A985A0                       ;  这里有可能是调用
+07A73534  |.  83C4 08       add esp,8
+07A73537  |.  8D4C24 10     lea ecx,dword ptr ss:[esp+10]
+07A7353B  |.  E8 DED30200   call <jmp.&MFC42.#6282_?TrimLeft@CString>
+07A73540  |.  8D4C24 10     lea ecx,dword ptr ss:[esp+10]
+07A73544  |.  E8 CFD30200   call <jmp.&MFC42.#6283_?TrimRight@CStrin>
+07A73549  |.  8B86 E8070000 mov eax,dword ptr ds:[esi+7E8]
+07A7354F  |.  8B1D D46AAA07 mov ebx,dword ptr ds:[<&USER32.GetWindow>;  USER32.GetWindowRect
+07A73555  |.  8D5424 24     lea edx,dword ptr ss:[esp+24]
+07A73559  |.  52            push edx                                 ; /pRect
+07A7355A  |.  50            push eax                                 ; |hWnd
+07A7355B  |.  FFD3          call ebx                                 ; \GetWindowRect
+07A7355D  |.  8B4C24 24     mov ecx,dword ptr ss:[esp+24]
+07A73561  |.  8B5424 28     mov edx,dword ptr ss:[esp+28]
+07A73565  |.  8B4424 10     mov eax,dword ptr ss:[esp+10]
+07A73569  |.  83C1 0A       add ecx,0A
+07A7356C  |.  83C2 05       add edx,5
+07A7356F  |.  894C24 1C     mov dword ptr ss:[esp+1C],ecx
+07A73573  |.  895424 20     mov dword ptr ss:[esp+20],edx
+07A73577  |.  8B48 F8       mov ecx,dword ptr ds:[eax-8]
+07A7357A  |.  85C9          test ecx,ecx
+07A7357C  |.  75 5D         jnz short CUQG.07A735DB
+07A7357E  |.  F646 44 04    test byte ptr ds:[esi+44],4
+07A73582  |.  74 3F         je short CUQG.07A735C3
+07A73584  |.  8D4C24 1C     lea ecx,dword ptr ss:[esp+1C]
+07A73588  |.  51            push ecx
+07A73589  |.  68 F814AB07   push CUQG.07AB14F8                       ;  ASCII "ChatBlankNotice"
+07A7358E  |.  E8 8D540200   call CUQG.07A98A20
+07A73593  |.  8BCC          mov ecx,esp
+07A73595  |.  896424 20     mov dword ptr ss:[esp+20],esp
+07A73599  |.  50            push eax
+07A7359A  |.  E8 E1D10200   call <jmp.&MFC42.#537_??0CString@@QAE@PB>
+07A7359F  |.  8D8E C40E0000 lea ecx,dword ptr ds:[esi+EC4]
+07A735A5  |.  E8 2C800200   call CUQG.07A9B5D6
+07A735AA  |.  8B96 E40E0000 mov edx,dword ptr ds:[esi+EE4]
+07A735B0  |.  6A 00         push 0                                   ; /lParam = 0
+07A735B2  |.  68 D0070000   push 7D0                                 ; |wParam = 7D0
+07A735B7  |.  68 080B0000   push 0B08                                ; |Message = MSG(B08)
+07A735BC  |.  52            push edx                                 ; |hWnd
+07A735BD  |.  FF15 D06AAA07 call dword ptr ds:[<&USER32.PostMessageA>; \PostMessageA
+07A735C3  |>  68 FC2FAB07   push CUQG.07AB2FFC
+07A735C8  |.  8BCF          mov ecx,edi
+07A735CA  |.  E8 B14C0000   call CUQG.07A78280
+07A735CF  |.  8BCF          mov ecx,edi
+07A735D1  |.  E8 3CD30200   call <jmp.&MFC42.#5981_?SetFocus@CWnd@@Q>
+07A735D6  |.  E9 19010000   jmp CUQG.07A736F4
+07A735DB  |>  8D4424 10     lea eax,dword ptr ss:[esp+10]
+07A735DF  |.  8BCE          mov ecx,esi
+07A735E1  |.  50            push eax
+07A735E2  |.  E8 F9330000   call CUQG.07A769E0
+07A735E7  |.  8D4C24 10     lea ecx,dword ptr ss:[esp+10]
+07A735EB  |.  E8 28D30200   call <jmp.&MFC42.#6283_?TrimRight@CStrin>
+07A735F0  |.  8B4C24 10     mov ecx,dword ptr ss:[esp+10]
+07A735F4  |.  8B41 F8       mov eax,dword ptr ds:[ecx-8]
+07A735F7  |.  85C0          test eax,eax
+07A735F9  |.  75 4E         jnz short CUQG.07A73649
+07A735FB  |.  F646 44 04    test byte ptr ds:[esi+44],4
+07A735FF  |.  0F84 EF000000 je CUQG.07A736F4
+07A73605  |.  8D5424 1C     lea edx,dword ptr ss:[esp+1C]
+07A73609  |.  52            push edx
+07A7360A  |.  68 F814AB07   push CUQG.07AB14F8                       ;  ASCII "ChatBlankNotice"
+07A7360F  |.  E8 0C540200   call CUQG.07A98A20
+07A73614  |.  8BCC          mov ecx,esp
+07A73616  |.  896424 20     mov dword ptr ss:[esp+20],esp
+07A7361A  |.  50            push eax
+07A7361B  |.  E8 60D10200   call <jmp.&MFC42.#537_??0CString@@QAE@PB>
+07A73620  |.  8D8E C40E0000 lea ecx,dword ptr ds:[esi+EC4]
+07A73626  |.  E8 AB7F0200   call CUQG.07A9B5D6
+07A7362B  |.  8B86 E40E0000 mov eax,dword ptr ds:[esi+EE4]
+07A73631  |.  6A 00         push 0                                   ; /lParam = 0
+07A73633  |.  68 D0070000   push 7D0                                 ; |wParam = 7D0
+07A73638  |.  68 080B0000   push 0B08                                ; |Message = MSG(B08)
+07A7363D  |.  50            push eax                                 ; |hWnd
+07A7363E  |.  FF15 D06AAA07 call dword ptr ds:[<&USER32.PostMessageA>; \PostMessageA
+07A73644  |.  E9 AB000000   jmp CUQG.07A736F4
+07A73649  |>  8D4C24 10     lea ecx,dword ptr ss:[esp+10]
+07A7364D  |.  51            push ecx
+07A7364E  |.  8D4C24 18     lea ecx,dword ptr ss:[esp+18]
+07A73652  |.  E8 35D10200   call <jmp.&MFC42.#535_??0CString@@QAE@AB>
+07A73657  |.  8B5424 10     mov edx,dword ptr ss:[esp+10]
+07A7365B  |.  6A 00         push 0
+07A7365D  |.  8D4C24 14     lea ecx,dword ptr ss:[esp+14]
+07A73661  |.  C64424 50 01  mov byte ptr ss:[esp+50],1
+07A73666  |.  8B6A F8       mov ebp,dword ptr ds:[edx-8]
+07A73669  |.  E8 9ED20200   call <jmp.&MFC42.#2915_?GetBuffer@CStrin>
+07A7366E  |.  45            inc ebp
+07A7366F  |.  50            push eax                                 ; /Arg2
+07A73670  |.  55            push ebp                                 ; |Arg1
+07A73671  |.  8BCE          mov ecx,esi                              ; |
+07A73673  |.  E8 A8000000   call CUQG.07A73720                       ; \CUQG.07913720
+07A73678  |.  85C0          test eax,eax
+07A7367A  |.  74 1A         je short CUQG.07A73696
+07A7367C  |.  8D4424 14     lea eax,dword ptr ss:[esp+14]
+07A73680  |.  8BCE          mov ecx,esi
+07A73682  |.  50            push eax
+07A73683  |.  E8 38060000   call CUQG.07A73CC0
+07A73688  |.  68 FC2FAB07   push CUQG.07AB2FFC
+07A7368D  |.  8BCF          mov ecx,edi
+07A7368F  |.  E8 EC4B0000   call CUQG.07A78280
+07A73694  |.  EB 50         jmp short CUQG.07A736E6
+07A73696  |>  8B56 78       mov edx,dword ptr ds:[esi+78]
+07A73699  |.  8D4C24 34     lea ecx,dword ptr ss:[esp+34]
+07A7369D  |.  51            push ecx
+07A7369E  |.  52            push edx
+07A7369F  |.  FFD3          call ebx
+07A736A1  |.  F646 44 04    test byte ptr ds:[esi+44],4
+07A736A5  |.  74 3F         je short CUQG.07A736E6
+07A736A7  |.  8D4424 1C     lea eax,dword ptr ss:[esp+1C]
+07A736AB  |.  50            push eax
+07A736AC  |.  68 F814AB07   push CUQG.07AB14F8                       ;  ASCII "ChatBlankNotice"
+07A736B1  |.  E8 6A530200   call CUQG.07A98A20
+07A736B6  |.  8BCC          mov ecx,esp
+07A736B8  |.  896424 20     mov dword ptr ss:[esp+20],esp
+07A736BC  |.  50            push eax
+07A736BD  |.  E8 BED00200   call <jmp.&MFC42.#537_??0CString@@QAE@PB>
+07A736C2  |.  8D8E C40E0000 lea ecx,dword ptr ds:[esi+EC4]
+07A736C8  |.  E8 097F0200   call CUQG.07A9B5D6
+07A736CD  |.  8B8E E40E0000 mov ecx,dword ptr ds:[esi+EE4]
+07A736D3  |.  6A 00         push 0                                   ; /lParam = 0
+07A736D5  |.  68 D0070000   push 7D0                                 ; |wParam = 7D0
+07A736DA  |.  68 080B0000   push 0B08                                ; |Message = MSG(B08)
+07A736DF  |.  51            push ecx                                 ; |hWnd
+07A736E0  |.  FF15 D06AAA07 call dword ptr ds:[<&USER32.PostMessageA>; \PostMessageA
+07A736E6  |>  8D4C24 14     lea ecx,dword ptr ss:[esp+14]
+07A736EA  |.  C64424 4C 00  mov byte ptr ss:[esp+4C],0
+07A736EF  |.  E8 6ED00200   call <jmp.&MFC42.#800_??1CString@@QAE@XZ>
+07A736F4  |>  8D4C24 10     lea ecx,dword ptr ss:[esp+10]
+07A736F8  |.  C74424 4C FFF>mov dword ptr ss:[esp+4C],-1
+07A73700  |.  E8 5DD00200   call <jmp.&MFC42.#800_??1CString@@QAE@XZ>
+07A73705  |.  8B4C24 44     mov ecx,dword ptr ss:[esp+44]
+07A73709  |.  5F            pop edi
+07A7370A  |.  5E            pop esi
+07A7370B  |.  5D            pop ebp
+07A7370C  |.  33C0          xor eax,eax
+07A7370E  |.  64:890D 00000>mov dword ptr fs:[0],ecx
+07A73715  |.  5B            pop ebx
+07A73716  |.  83C4 40       add esp,40
+07A73719  \.  C2 0800       retn 8
+
+=====================
+07A985A0  /$  81EC 10040000 sub esp,410
+07A985A6  |.  A1 BC2AAB07   mov eax,dword ptr ds:[7AB2ABC]
+07A985AB  |.  8B0D C02AAB07 mov ecx,dword ptr ds:[7AB2AC0]
+07A985B1  |.  894424 00     mov dword ptr ss:[esp],eax
+07A985B5  |.  66:A1 C82AAB0>mov ax,word ptr ds:[7AB2AC8]
+07A985BB  |.  57            push edi
+07A985BC  |.  894C24 08     mov dword ptr ss:[esp+8],ecx
+07A985C0  |.  8B15 C42AAB07 mov edx,dword ptr ds:[7AB2AC4]
+07A985C6  |.  66:894424 10  mov word ptr ss:[esp+10],ax
+07A985CB  |.  B9 FF000000   mov ecx,0FF
+07A985D0  |.  33C0          xor eax,eax
+07A985D2  |.  8D7C24 15     lea edi,dword ptr ss:[esp+15]
+07A985D6  |.  C64424 14 00  mov byte ptr ss:[esp+14],0
+07A985DB  |.  F3:AB         rep stos dword ptr es:[edi]
+07A985DD  |.  895424 0C     mov dword ptr ss:[esp+C],edx
+07A985E1  |.  8D4C24 04     lea ecx,dword ptr ss:[esp+4]
+07A985E5  |.  66:AB         stos word ptr es:[edi]
+07A985E7  |.  68 FF030000   push 3FF                                               ; /n = 3FF (1023.)
+07A985EC  |.  8D5424 18     lea edx,dword ptr ss:[esp+18]                          ; |
+07A985F0  |.  51            push ecx                                               ; |s2
+07A985F1  |.  52            push edx                                               ; |s1
+07A985F2  |.  AA            stos byte ptr es:[edi]                                 ; |
+07A985F3  |.  FF15 6469AA07 call dword ptr ds:[<&MSVCRT._mbsnbcpy>]                ; \_mbsnbcpy
+07A985F9  |.  8D4424 10     lea eax,dword ptr ss:[esp+10]
+07A985FD  |.  50            push eax
+07A985FE  |.  FF15 1869AA07 call dword ptr ds:[<&MSVCRT._mbslen>]                  ;  msvcrt._mbslen
+07A98604  |.  8B9424 280400>mov edx,dword ptr ss:[esp+428]
+07A9860B  |.  8D8C24 2C0400>lea ecx,dword ptr ss:[esp+42C]
+07A98612  |.  51            push ecx                                               ; /arglist
+07A98613  |.  B9 00040000   mov ecx,400                                            ; |
+07A98618  |.  2BC8          sub ecx,eax                                            ; |
+07A9861A  |.  52            push edx                                               ; |format
+07A9861B  |.  51            push ecx                                               ; |count
+07A9861C  |.  8D7C24 20     lea edi,dword ptr ss:[esp+20]                          ; |
+07A98620  |.  83C9 FF       or ecx,FFFFFFFF                                        ; |
+07A98623  |.  33C0          xor eax,eax                                            ; |
+07A98625  |.  F2:AE         repne scas byte ptr es:[edi]                           ; |
+07A98627  |.  F7D1          not ecx                                                ; |
+07A98629  |.  49            dec ecx                                                ; |
+07A9862A  |.  8D540C 30     lea edx,dword ptr ss:[esp+ecx+30]                      ; |
+07A9862E  |.  52            push edx                                               ; |buffer
+07A9862F  |.  FF15 8869AA07 call dword ptr ds:[<&MSVCRT._vsnprintf>]               ; \这里跟喊话有关,函数是:_vsnprintf
+07A98635  |.  83C4 20       add esp,20
+07A98638  |.  8D4424 14     lea eax,dword ptr ss:[esp+14]
+07A9863C  |.  50            push eax                                               ; /String
+07A9863D  |.  FF15 2061AA07 call dword ptr ds:[<&KERNEL32.OutputDebugStringA>]     ; \OutputDebugStringA
+07A98643  |.  5F            pop edi
+07A98644  |.  81C4 10040000 add esp,410
+07A9864A  \.  C3            retn                                                   ;  这里
+============
+07A9863C  |.  50            push eax                                               ; /String
+07A9863D  |.  FF15 2061AA07 call dword ptr ds:[<&KERNEL32.OutputDebugStringA>]     ; \OutputDebugStringA
+
+EAX 00116090 ASCII "jzhang(CUQG):CChatWnd::OnSend 1"
+ECX B1B5D386
+EDX 001160AF
+EBX 00000111
+ESP 00116078
+EBP 00116504
+ESI 09409E4C
+EDI 0011608E
+EIP 07A9863D CUQG.07A9863D
+
+ds:[07AA6120]=753B16A2 (kernel32.OutputDebugStringA)
+
+EAX 001162D0 ASCII "jzhang(CUQG):CRichEditCtrlEx2::ShowMessage nUIN=1417192483 pMsg=4567465 cFlag=1 bForceShow=0 cFlagAdv=0"
+ECX B1B5D386
+EDX 00116337
+EBX 5478A423
+ESP 001162B8
+EBP 00000000
+ESI 0940A200
+EDI 001162CE
+EIP 07A9863D CUQG.07A9863D
+
+00116090
+0011677C
+001162D0
+00116298
+001162D0
+==================
+ds:[07AA6988]=7621D1A8 (msvcrt.vsnprintf)
+
+07A98612  |.  51               push ecx                                               ; /arglist
+07A98613  |.  B9 00040000      mov ecx,400                                            ; |
+07A98618  |.  2BC8             sub ecx,eax                                            ; |
+07A9861A  |.  52               push edx                                               ; |format
+07A9861B  |.  51               push ecx                                               ; |count
+07A9861C  |.  8D7C24 20        lea edi,dword ptr ss:[esp+20]                          ; |
+07A98620  |.  83C9 FF          or ecx,FFFFFFFF                                        ; |
+07A98623  |.  33C0             xor eax,eax                                            ; |
+07A98625  |.  F2:AE            repne scas byte ptr es:[edi]                           ; |
+07A98627  |.  F7D1             not ecx                                                ; |
+07A98629  |.  49               dec ecx                                                ; |
+07A9862A  |.  8D540C 30        lea edx,dword ptr ss:[esp+ecx+30]                      ; |
+07A9862E  |.  52               push edx                                               ; |buffer
+07A9862F  |.  FF15 8869AA07    call dword ptr ds:[<&MSVCRT._vsnprintf>]               ; \这里跟喊话有关,函数是:_vsnprintf
+
+push ecx, 00116498
+push edx, 07AB1508
+push ecx, 000003F3
+push edx, 0011609D
+call 7621D1A8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
