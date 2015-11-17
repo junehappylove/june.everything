@@ -392,6 +392,31 @@ call 7530B2B7
 bp SendMessageW
 
 
+=========================
+09103525  |. 8B4C24 10      MOV ECX,DWORD PTR SS:[ESP+10]            ;  怀疑这里就是喊话的call
+09103529  |. 51             PUSH ECX
+0910352A  |. 68 08151409    PUSH CUQG.09141508                       ;  ASCII "CChatWnd::OnSend %s
+"
+0910352F  |. E8 6C500200    CALL CUQG.091285A0                       ;  喊话关键call
+
+CPU Disasm
+地址        十六进制数据            指令                                       注释                                                             标签
+092C3529  |.  51            PUSH ECX                                 /<%s> = "111"
+092C352A  |.  68 08153009   PUSH OFFSET 09301508                     |Format = "CChatWnd::OnSend %s
+"
+092C352F  |.  E8 6C500200   CALL 092E85A0                            \CUQG_ocx.092E85A0
+
+
+CPU Disasm
+地址        十六进制数据            指令                                       注释                                                             标签
+092E863C  |.  50            PUSH EAX                                 /String = "jzhang(CUQG):CChatWnd::OnSend aaa
+"
+092E863D  |.  FF15 20612F09 CALL NEAR DWORD PTR DS:[<&KERNEL32.Outpu \KERNEL32.OutputDebugStringA
+
+
+
+
+
 
 
 
