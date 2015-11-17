@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="14">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>0</ID>
+      <Description>"No description"</Description>
+      <Color>80000008</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>e86c04</Address>
+      <Offsets>
+        <Offset>40</Offset>
+        <Offset>538</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>20</ID>
+      <Description>"人物名称"</Description>
+      <Color>80000008</Color>
+      <VariableType>String</VariableType>
+      <Length>12</Length>
+      <Unicode>0</Unicode>
+      <ZeroTerminate>1</ZeroTerminate>
+      <Address>e86c04</Address>
+      <Offsets>
+        <Offset>4</Offset>
+        <Offset>538</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>12</ID>
+      <Description>"人物等级"</Description>
+      <Color>80000008</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>e86c04</Address>
+      <Offsets>
+        <Offset>190C</Offset>
+        <Offset>538</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>10</ID>
+      <Description>"人物血基址"</Description>
+      <Color>80000008</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>e86c04</Address>
+      <Offsets>
+        <Offset>40</Offset>
+        <Offset>538</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>11</ID>
+      <Description>"人物满血"</Description>
+      <Color>80000008</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>e86c04</Address>
+      <Offsets>
+        <Offset>44</Offset>
+        <Offset>538</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>18</ID>
+      <Description>"人物当前气"</Description>
+      <Color>80000008</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>e86c04</Address>
+      <Offsets>
+        <Offset>191E</Offset>
+        <Offset>538</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>19</ID>
+      <Description>"人物当前最大气"</Description>
+      <Color>80000008</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>e86c04</Address>
+      <Offsets>
+        <Offset>1922</Offset>
+        <Offset>538</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>21</ID>
+      <Description>"人物X坐标"</Description>
+      <Color>80000008</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>e86c04</Address>
+      <Offsets>
+        <Offset>2C</Offset>
+        <Offset>538</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>22</ID>
+      <Description>"人物Y坐标"</Description>
+      <Color>80000008</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>e86c04</Address>
+      <Offsets>
+        <Offset>30</Offset>
+        <Offset>538</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>16</ID>
+      <Description>"人物当前经验"</Description>
+      <Color>80000008</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>e86c04</Address>
+      <Offsets>
+        <Offset>194E</Offset>
+        <Offset>538</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>17</ID>
+      <Description>"人物当前最大经验(或升级经验)"</Description>
+      <Color>80000008</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>e86c04</Address>
+      <Offsets>
+        <Offset>1956</Offset>
+        <Offset>538</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>26</ID>
+      <Description>"不知道还"</Description>
+      <Color>80000008</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>e86c04</Address>
+      <Offsets>
+        <Offset>195A</Offset>
+        <Offset>538</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>27</ID>
+      <Description>"不知道还"</Description>
+      <Color>80000008</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>e86c04</Address>
+      <Offsets>
+        <Offset>1952</Offset>
+        <Offset>538</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>24</ID>
+      <Description>"与怪物血相关"</Description>
+      <Color>80000008</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>zhengtu.dav+A85E98</Address>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+  <DisassemblerComments>
+    <DisassemblerComment>
+      <Address>"zhengtu.dav"+CA35C</Address>
+      <Comment>鎵惧埌鍩哄潃
+</Comment>
+    </DisassemblerComment>
+    <DisassemblerComment>
+      <Address>"zhengtu.dav"+CA391</Address>
+      <Comment>鎵緀di
+</Comment>
+    </DisassemblerComment>
+    <DisassemblerComment>
+      <Address>"zhengtu.dav"+D72E1</Address>
+      <Comment>鎵緀cx
+</Comment>
+    </DisassemblerComment>
+    <DisassemblerComment>
+      <Address>"zhengtu.dav"+D7462</Address>
+      <Comment>鎵緀si
+</Comment>
+    </DisassemblerComment>
+    <DisassemblerComment>
+      <Address>"zhengtu.dav"+17EC15</Address>
+      <Comment>鍩哄潃鎵惧埌
+</Comment>
+    </DisassemblerComment>
+    <DisassemblerComment>
+      <Address>"zhengtu.dav"+17EC1A</Address>
+      <Comment>鎵緀ax
+</Comment>
+    </DisassemblerComment>
+    <DisassemblerComment>
+      <Address>"zhengtu.dav"+17ECE1</Address>
+      <Comment>鎵緀bp
+</Comment>
+    </DisassemblerComment>
+  </DisassemblerComments>
+</CheatTable>
