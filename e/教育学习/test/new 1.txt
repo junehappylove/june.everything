@@ -1,0 +1,153 @@
+http://jxjy.dwjtaq.com/
+random.xhtml
+
+POST /isFaceLogin.xhtml?1454162414856 HTTP/1.1
+Host: jxjy.dwjtaq.com
+Connection: keep-alive
+Content-Length: 90
+Accept: */*
+Origin: http://jxjy.dwjtaq.com
+X-Requested-With: XMLHttpRequest
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+Referer: http://jxjy.dwjtaq.com/view/ContinuingEducationWeb/meLogin.jsp
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.8
+Cookie: JSESSIONID=327A8221921ADC9A29C8CCB3E8433C37; 
+	LiveWSDCT42375070=1454153305215352763060; 
+	LiveWSDCT42375070sessionid=1454153305215352763060; 
+	NDCT42375070lastinvite=1454153398028; 
+	CNZZDATA1256882194=1926532832-1454142321-http%253A%252F%252Fjxjy.dwjtaq.com%252F%7C1454162194
+	//CNZZDATA1256882194=1926532832-1454142321-http://jxjy.dwjtaq.com/?1454162194
+
+PAPERSCODE=211122199110200332&USERNAME=&yhdl=sfz&CERTTYPE=010600&PASSWORD=123123&rand=5449
+
+
+GET /judgeUserLogin.xhtml?1454164983053&val=%2FshowPlay.xhtml HTTP/1.1
+x-requested-with: XMLHttpRequest
+Accept-Language: zh-cn
+Referer: http://jxjy.dwjtaq.com/secondLawPage.xhtml
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E)
+Host: jxjy.dwjtaq.com
+Connection: Keep-Alive
+Cookie: LiveWSDCT42375070=1454153305215352763060; 
+	LiveWSDCT42375070sessionid=1454153305215352763060; 
+	NDCT42375070lastinvite=1454153398028; 
+	JSESSIONID=1E0D25B9909CB49A24FFBBC52DB2206A; 
+	CNZZDATA1256882194=1926532832-1454142321-http%253A%252F%252Fjxjy.dwjtaq.com%252F%7C1454162194
+	
+	
+===================
+POST /initFaceCamera.xhtml?1454166633240 HTTP/1.1
+x-requested-with: XMLHttpRequest
+Accept-Language: zh-cn
+Referer: http://jxjy.dwjtaq.com/view/ContinuingEducationWeb/meLogin.jsp
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E)
+Host: jxjy.dwjtaq.com
+Content-Length: 0
+Connection: Keep-Alive
+Cache-Control: no-cache
+Cookie: LiveWSDCT42375070=1454153305215352763060; LiveWSDCT42375070sessionid=1454153305215352763060; NDCT42375070lastinvite=1454153398028; JSESSIONID=1E0D25B9909CB49A24FFBBC52DB2206A; CNZZDATA1256882194=1926532832-1454142321-http%253A%252F%252Fjxjy.dwjtaq.com%252F%7C1454162194
+
+
+--------------
+POST /userTakeLogin.xhtml?1454166633885 HTTP/1.1
+x-requested-with: XMLHttpRequest
+Accept-Language: zh-cn
+Referer: http://jxjy.dwjtaq.com/view/ContinuingEducationWeb/meLogin.jsp
+Accept: */*
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E)
+Host: jxjy.dwjtaq.com
+Content-Length: 25685
+Connection: Keep-Alive
+Cache-Control: no-cache
+Cookie: LiveWSDCT42375070=1454153305215352763060; LiveWSDCT42375070sessionid=1454153305215352763060; NDCT42375070lastinvite=1454153398028; JSESSIONID=1E0D25B9909CB49A24FFBBC52DB2206A; CNZZDATA1256882194=1926532832-1454142321-http%253A%252F%252Fjxjy.dwjtaq.com%252F%7C1454162194
+
+-----------------
+PAPERSCODE=211122199110200332&
+USERNAME=&
+yhdl=sfz&
+CERTTYPE=010600&
+PASSWORD=123123&
+rand=2402&
+faceField=
+=------------------
+PAPERSCODE=211122199110200332&USERNAME=&yhdl=sfz&CERTTYPE=010600&PASSWORD=123123&rand=2402&faceField=
+==================================
+	"id": "36f73bffb68cf1bc1f6ddeaca2e5fe57",
+						"text": "道路货物运输驾驶员的责任、权利和义务",
+						"url": "/view/ContinuingEducationWeb/knowledge/continuingeducationflashs/huoyunFlash/1/1_1/1_1_1/",
+						"children": 
+http://jxjy.dwjtaq.com/reInitPlay.xhtml?contentId=a64c9063bd3e1a2330dac854f0c3c8dc&url=/view/ContinuingEducationWeb/knowledge/continuingeducationflashs/huoyunFlash/1/1_1/1_1_1/&page=12
+a64c9063bd3e1a2330dac854f0c3c8dc
+
+
+http://jxjy.dwjtaq.com/reInitPlay.xhtml?contentId=123456&url=/view/ContinuingEducationWeb/knowledge/continuingeducationflashs/huoyunFlash/1/1_1/1_1_1/&page=12
+
+
+{"success":"isFace","error":null,"msg":null,"obj":null}
+
+
+著作权归作者所有。
+商业转载请联系作者获得授权，非商业转载请注明出处。
+作者：郭无心
+链接：http://www.zhihu.com/question/19816240/answer/63371634
+来源：知乎
+
+HMAC-MD5过程如下：
+(1) 在密钥key后面添加0来创建一个长为B(64字节)的字符串（str）；
+(2) 将上一步生成的字符串(str)  与ipad（0x36）做异或运算，形成结果字符串（istr）
+(3) 将数据流data附加到第二步的结果字符串(istr)的末尾
+(4) 做md5运算于第三步生成的数据流(istr)
+(5) 将第一步生成的字符串(str) 与opad（0x5c）做异或运算，形成结果字符串（ostr）
+(6) 再将第四步的结果(istr) 附加到第五步的结果字符串（ostr）的末尾
+(7) 做md5运算于第6步生成的数据流（ostr），最终输出结果(out)
+注意：如果第一步中，key的长度klen大于64字节，则先进行md5运算，使其长度klen = 16字节
+
+本软件主要功能是完成驾驶员注册、登录、学习、记录学时以及学时上传等主要工作。
+为全省道路运输驾驶员参加网络远程继续教育提供了学习平台，解决了驾驶员的工学矛盾，
+减轻驾驶员学习压力，使驾驶员可以足不出户，随时随地地参加继续教育学习，
+及时地了解国家和行业发布的最新法律法规和相关规定,同时完成国家规定的继续教育学时。
+
+00409170  4D4E0000  ..NM
+00409174  5658714D  MqXV
+00409178  446E4A55  UJnD
+0040917C  31584F6D  mOX1
+00409180  53697066  fpiS
+00409184  6F6B374A  J7ko
+
+0012F0C4  661FF3D9  mfc100.661FF3D9
+0012F0C8  68CF25AE  ycamera.68CF25AE
+0012F0CC  76BBDEE3  SHELL32.76BBDEE3
+0012F0D0  6605C6FC  mfc100.6605C6FC
+
+
+特正码
+51 8D 4C 24 04 2B C8 1B C0 F7 D0 23 C8 8B C4 25 00 F0 FF FF 3B C8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

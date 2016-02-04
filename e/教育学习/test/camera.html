@@ -20,7 +20,6 @@ function caption123(){
 	src = yourFace.ImageCaption(64);
 	$('#imageBase4').val(src);
 	var sr = "NMMqXVUJnDmOX1fpiSJ7ko4w4qdhURBJ749VMeYagXAzTAZNTOzm4VZZyhIgnbmkcEoBDzM1yGVgI5+WBxI9WbkYHwG63HS8KcuC7SuBOsDUjwZ4D9RMHlJJXb6adeZ0LMhPrZPEl64q2QHYIYWk7Lk+od1NbcpQiUHfqgIla/A=";
-	//sr = "a";
 	src = yourFace.SetRandomText(sr);
 	$('#facefield').val(src);
 }
@@ -32,6 +31,7 @@ function setText(sr) {
 	$('#facefield').val(str);
 	//222222222222
 	//NMMqXVUJnDmOX1fpiSJ7ko4w4qdhURBJ749VMeYagXAzTAZNTOzm4VZZyhIgnbmkcEoBDzM1yGVgI5+WBxI9WbkYHwG63HS8KcuC7SuBOsDUjwZ4D9RMHlJJXb6adeZ0LMhPrZPEl64q2QHYIYWk7Lk+od1NbcpQiUHfqgIla/A=
+	//RnFHUcUmOOKXmCbF7YpQcCgdPegdDmklrcpBzmlPcUgNB9KaQWDseaBzxSE5OO9HHak9R7DqAeaQZxS54xQgQA85xS9uKMUvbFDA"
 	//sr = "Woc//cG7eA3LG2JRcOt/2LRUrtulBGKZxCNmjWG0eg4oKlG9ZRBLXd0fxmYZKfOCzwWKgy7McZ638e5/UkESOKLrqN8dA9KOo8Lk+ta7+cL8nJGxAmLeIRmI+R/o4WuQXFNKgpR4DnlG2EBeiT7s7L1Xx/mcv12zM6apOVIHrp8=";
 	str = yourFace.SetRandomText(sr);
 	$('#imageBase64').val(str);
@@ -56,11 +56,16 @@ function start(){
 	yourFace.start();
 }
 function photo(){
+	var imgdata = yourFace.ImageCaption(32);
+	$('#image').attr("src", "data:image/png;base64," + imgdata);
 	//beginGetPhoto();
-	$('#image').attr("src", "data:image/png;base64," + $.scriptcam.getFrameAsBase64());
-	//alert(2+2);
+	//$('#image').attr("src", "data:image/png;base64," + $.scriptcam.getFrameAsBase64());
 	//var faceField = $.scriptcam.getFrameAsBase64();
 	//$('#facefield').val(faceField); 
+}
+function photo2(){
+	var imgdat2 = yourFace.ImageCaption(0);
+	$('#image2').attr("src", "data:image/png;base64," + imgdat2);
 }
 
 // 拍照
@@ -103,8 +108,9 @@ function about(){
 <body>
 <object id="yourFace" width=320 height=240 
 classid="CLSID:6C94E32C-B15B-4A66-9FA8-6C1D013D0D19" 
-codebase="http://www/upload/camera.CAB"></object> 
+codebase="http://www/upload/camera.CAB"></object> &nbsp;
 <img id="image" src="" width="320px" height="240px"/>
+<img id="image2" src="" width="320px" height="240px"/>
 <div id="webcam"></div>
 <br>
 <button onclick="caption123()">caption</button>
@@ -112,6 +118,7 @@ codebase="http://www/upload/camera.CAB"></object>
 <button onclick="start()">start</button>
 <button onclick="stop()">stop</button>
 <button onclick="photo()">photo</button>
+<button onclick="photo2()">phot2</button>
 <button onclick="about()">about</button>
 <br>
 

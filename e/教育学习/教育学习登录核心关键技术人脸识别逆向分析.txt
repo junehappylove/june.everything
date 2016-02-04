@@ -1,0 +1,552 @@
+679028B0  /$ 55                  PUSH EBP                                      ;  拍照函数
+679028B1  |. 8BEC                MOV EBP,ESP
+679028B3  |. 83E4 F8             AND ESP,FFFFFFF8
+679028B6  |. 6A FF               PUSH -1
+679028B8  |. 68 18909567         PUSH ycamera.67959018
+679028BD  |. 64:A1 00000000      MOV EAX,DWORD PTR FS:[0]
+679028C3  |. 50                  PUSH EAX
+679028C4  |. 51                  PUSH ECX
+679028C5  |. B8 143E0000         MOV EAX,3E14
+679028CA  |. E8 A1590500         CALL ycamera.67958270
+679028CF  |. A1 90979867         MOV EAX,DWORD PTR DS:[67989790]
+679028D4  |. 33C4                XOR EAX,ESP
+679028D6  |. 898424 103E0000     MOV DWORD PTR SS:[ESP+3E10],EAX
+679028DD  |. 53                  PUSH EBX
+679028DE  |. 56                  PUSH ESI
+679028DF  |. 57                  PUSH EDI
+679028E0  |. A1 90979867         MOV EAX,DWORD PTR DS:[67989790]
+679028E5  |. 33C4                XOR EAX,ESP
+679028E7  |. 50                  PUSH EAX
+679028E8  |. 8D8424 283E0000     LEA EAX,DWORD PTR SS:[ESP+3E28]
+679028EF  |. 64:A3 00000000      MOV DWORD PTR FS:[0],EAX
+679028F5  |. 8BF1                MOV ESI,ECX
+679028F7  |. E8 35520500         CALL ycamera.67957B31
+679028FC  |. 50                  PUSH EAX                                      ; /Arg1
+679028FD  |. 8D4C24 20           LEA ECX,DWORD PTR SS:[ESP+20]                 ; |
+67902901  |. FF15 84A59567       CALL DWORD PTR DS:[<&mfc100.#322>]            ; \mfc100.662D521A
+67902907  |. 8D4C24 18           LEA ECX,DWORD PTR SS:[ESP+18]
+6790290B  |. C78424 303E0000 000>MOV DWORD PTR SS:[ESP+3E30],0
+67902916  |. FF15 58A49567       CALL DWORD PTR DS:[<&mfc100.#316>]            ;  mfc100.66247561
+6790291C  |. C68424 303E0000 01  MOV BYTE PTR SS:[ESP+3E30],1
+67902924  |. 83BE FC010000 00    CMP DWORD PTR DS:[ESI+1FC],0
+6790292B  |. 0F84 F2000000       JE ycamera.67902A23
+67902931  |. E8 3A350000         CALL ycamera.67905E70
+67902936  |. 85C0                TEST EAX,EAX
+67902938  |. 0F84 E5000000       JE ycamera.67902A23
+6790293E  |. 8B0D 90BF9867       MOV ECX,DWORD PTR DS:[6798BF90]
+67902944  |. 8B71 28             MOV ESI,DWORD PTR DS:[ECX+28]
+67902947  |. 85F6                TEST ESI,ESI
+67902949  |. 74 06               JE SHORT ycamera.67902951
+6790294B  |. 8379 2C 00          CMP DWORD PTR DS:[ECX+2C],0
+6790294F  |. 75 04               JNZ SHORT ycamera.67902955
+67902951  |> 8B7424 14           MOV ESI,DWORD PTR SS:[ESP+14]
+67902955  |> 50                  PUSH EAX
+67902956  |. FF15 40A59567       CALL DWORD PTR DS:[<&mfc100.#265>]            ;  mfc100.66256E42
+6790295C  |. 8BF8                MOV EDI,EAX
+6790295E  |. B8 4B000000         MOV EAX,4B
+67902963  |. 66:894424 30        MOV WORD PTR SS:[ESP+30],AX
+67902968  |. 83C4 04             ADD ESP,4
+6790296B  |. 8D4424 2C           LEA EAX,DWORD PTR SS:[ESP+2C]
+6790296F  |. E8 9C0C0000         CALL ycamera.67903610
+67902974  |. 8D5C24 2C           LEA EBX,DWORD PTR SS:[ESP+2C]
+67902978  |. E8 530D0000         CALL ycamera.679036D0
+6790297D  |. 68 889B9867         PUSH ycamera.67989B88
+67902982  |. 8D9C24 B4250000     LEA EBX,DWORD PTR SS:[ESP+25B4]
+67902989  |. B9 9C9B9867         MOV ECX,ycamera.67989B9C
+6790298E  |. E8 6D100000         CALL ycamera.67903A00
+67902993  |. 68 C89B9867         PUSH ycamera.67989BC8
+67902998  |. 8D9C24 C82B0000     LEA EBX,DWORD PTR SS:[ESP+2BC8]
+6790299F  |. B9 E09B9867         MOV ECX,ycamera.67989BE0
+679029A4  |. E8 57100000         CALL ycamera.67903A00
+679029A9  |. 68 A89B9867         PUSH ycamera.67989BA8
+679029AE  |. 8D9C24 DC310000     LEA EBX,DWORD PTR SS:[ESP+31DC]
+679029B5  |. B9 BC9B9867         MOV ECX,ycamera.67989BBC
+679029BA  |. E8 41100000         CALL ycamera.67903A00
+679029BF  |. 68 849C9867         PUSH ycamera.67989C84
+679029C4  |. 8D9C24 F0370000     LEA EBX,DWORD PTR SS:[ESP+37F0]
+679029CB  |. B9 989C9867         MOV ECX,ycamera.67989C98
+679029D0  |. E8 2B100000         CALL ycamera.67903A00
+679029D5  |. 57                  PUSH EDI
+679029D6  |. 56                  PUSH ESI
+679029D7  |. 8D4C24 1C           LEA ECX,DWORD PTR SS:[ESP+1C]
+679029DB  |. 8D5424 34           LEA EDX,DWORD PTR SS:[ESP+34]
+679029DF  |. C74424 1C 00000000  MOV DWORD PTR SS:[ESP+1C],0
+679029E7  |. E8 34170000         CALL ycamera.67904120
+679029EC  |. 68 00001000         PUSH 100000                                   ; |/size = 100000 (1048576.)
+679029F1  |. FF15 B0A09567       CALL DWORD PTR DS:[<&MSVCR100.malloc>]        ; |\malloc
+679029F7  |. 8B4C24 18           MOV ECX,DWORD PTR SS:[ESP+18]                 ; |
+679029FB  |. 51                  PUSH ECX                                      ; |Arg2
+679029FC  |. 8BF0                MOV ESI,EAX                                   ; |
+679029FE  |. 57                  PUSH EDI                                      ; |Arg1
+679029FF  |. E8 CC090000         CALL ycamera.679033D0                         ; \ycamera.679033D0
+67902A04  |. 83C4 0C             ADD ESP,0C
+67902A07  |. 56                  PUSH ESI                                      ; /Arg1
+67902A08  |. 8D4C24 1C           LEA ECX,DWORD PTR SS:[ESP+1C]                 ; |
+67902A0C  |. FF15 40A49567       CALL DWORD PTR DS:[<&mfc100.#1316>]           ; \mfc100.661F3ADE
+67902A12  |. 56                  PUSH ESI
+67902A13  |. FF15 4CA69567       CALL DWORD PTR DS:[<&mfc100.#1296>]           ;  mfc100.66256E52
+67902A19  |. 57                  PUSH EDI
+67902A1A  |. FF15 0CA39567       CALL DWORD PTR DS:[<&mfc100.#266>]            ;  mfc100.66256E52
+67902A20  |. 83C4 08             ADD ESP,8
+67902A23  |> 8D4C24 18           LEA ECX,DWORD PTR SS:[ESP+18]
+67902A27  |. FF15 34A49567       CALL DWORD PTR DS:[<&mfc100.#2119>]           ;  mfc100.661FB61E
+67902A2D  |. 8D4C24 18           LEA ECX,DWORD PTR SS:[ESP+18]
+67902A31  |. 8BF0                MOV ESI,EAX
+67902A33  |. FF15 48A49567       CALL DWORD PTR DS:[<&mfc100.#901>]            ;  mfc100.661F82BE
+67902A39  |. 8D4C24 1C           LEA ECX,DWORD PTR SS:[ESP+1C]
+67902A3D  |. C78424 303E0000 FFF>MOV DWORD PTR SS:[ESP+3E30],-1
+67902A48  |. FF15 88A59567       CALL DWORD PTR DS:[<&mfc100.#13518>]          ;  mfc100.662D5283
+67902A4E  |. 8BC6                MOV EAX,ESI
+67902A50  |. 8B8C24 283E0000     MOV ECX,DWORD PTR SS:[ESP+3E28]
+67902A57  |. 64:890D 00000000    MOV DWORD PTR FS:[0],ECX
+67902A5E  |. 59                  POP ECX
+67902A5F  |. 5F                  POP EDI
+67902A60  |. 5E                  POP ESI
+67902A61  |. 5B                  POP EBX
+67902A62  |. 8B8C24 103E0000     MOV ECX,DWORD PTR SS:[ESP+3E10]
+67902A69  |. 33CC                XOR ECX,ESP
+67902A6B  |. E8 1D530500         CALL ycamera.67957D8D
+67902A70  |. 8BE5                MOV ESP,EBP
+67902A72  |. 5D                  POP EBP
+67902A73  \. C2 0400             RETN 4
+67902A76     CC                  INT3
+67902A77     CC                  INT3
+67902A78     CC                  INT3
+67902A79     CC                  INT3
+67902A7A     CC                  INT3
+67902A7B     CC                  INT3
+67902A7C     CC                  INT3
+67902A7D     CC                  INT3
+67902A7E     CC                  INT3
+67902A7F     CC                  INT3
+67902A80  /$ 55                  PUSH EBP
+67902A81  |. 8BEC                MOV EBP,ESP
+67902A83  |. 6A FF               PUSH -1
+67902A85  |. 68 CC8F9567         PUSH ycamera.67958FCC
+67902A8A  |. 64:A1 00000000      MOV EAX,DWORD PTR FS:[0]
+67902A90  |. 50                  PUSH EAX
+67902A91  |. B8 0C400000         MOV EAX,400C
+67902A96  |. E8 D5570500         CALL ycamera.67958270
+67902A9B  |. A1 90979867         MOV EAX,DWORD PTR DS:[67989790]
+67902AA0  |. 33C5                XOR EAX,EBP
+67902AA2  |. 8945 F0             MOV DWORD PTR SS:[EBP-10],EAX
+67902AA5  |. 56                  PUSH ESI
+67902AA6  |. 50                  PUSH EAX
+67902AA7  |. 8D45 F4             LEA EAX,DWORD PTR SS:[EBP-C]
+67902AAA  |. 64:A3 00000000      MOV DWORD PTR FS:[0],EAX
+67902AB0  |. 89BD E8BFFFFF       MOV DWORD PTR SS:[EBP+FFFFBFE8],EDI
+67902AB6  |. C785 ECBFFFFF 00000>MOV DWORD PTR SS:[EBP+FFFFBFEC],0
+67902AC0  |. 8BCF                MOV ECX,EDI
+67902AC2  |. C745 FC 01000000    MOV DWORD PTR SS:[EBP-4],1
+67902AC9  |. FF15 58A49567       CALL DWORD PTR DS:[<&mfc100.#316>]            ;  mfc100.66247561
+67902ACF  |. 68 00400000         PUSH 4000                                     ; /n = 4000 (16384.)
+67902AD4  |. 8D85 F0BFFFFF       LEA EAX,DWORD PTR SS:[EBP+FFFFBFF0]           ; |
+67902ADA  |. 6A 00               PUSH 0                                        ; |c = 00
+67902ADC  |. 50                  PUSH EAX                                      ; |s
+67902ADD  |. C785 ECBFFFFF 01000>MOV DWORD PTR SS:[EBP+FFFFBFEC],1             ; |
+67902AE7  |. E8 D0570500         CALL <JMP.&MSVCR100.memset>                   ; \memset
+67902AEC  |. 8B0D F4BF9867       MOV ECX,DWORD PTR DS:[6798BFF4]
+67902AF2  |. 51                  PUSH ECX
+67902AF3  |. E8 384D0000         CALL ycamera.67907830
+67902AF8  |. 8B55 08             MOV EDX,DWORD PTR SS:[EBP+8]
+67902AFB  |. 6A 01               PUSH 1
+67902AFD  |. 52                  PUSH EDX
+67902AFE  |. 8D70 01             LEA ESI,DWORD PTR DS:[EAX+1]
+67902B01  |. E8 1AF4FFFF         CALL ycamera.67901F20
+67902B06  |. 56                  PUSH ESI                                      ; |Arg2
+67902B07  |. 50                  PUSH EAX                                      ; |Arg1
+67902B08  |. 8DB5 F0BFFFFF       LEA ESI,DWORD PTR SS:[EBP+FFFFBFF0]           ; |
+67902B0E  |. E8 BD080000         CALL ycamera.679033D0                         ; \ycamera.679033D0
+67902B13  |. 83C4 20             ADD ESP,20
+67902B16  |. 50                  PUSH EAX                                      ; /Arg1
+67902B17  |. 8BCF                MOV ECX,EDI                                   ; |
+67902B19  |. FF15 40A49567       CALL DWORD PTR DS:[<&mfc100.#1316>]           ; \mfc100.661F3ADE
+67902B1F  |. 8D4D 08             LEA ECX,DWORD PTR SS:[EBP+8]
+67902B22  |. FF15 48A49567       CALL DWORD PTR DS:[<&mfc100.#901>]            ;  mfc100.661F82BE
+67902B28  |. 8BC7                MOV EAX,EDI
+67902B2A  |. 8B4D F4             MOV ECX,DWORD PTR SS:[EBP-C]
+67902B2D  |. 64:890D 00000000    MOV DWORD PTR FS:[0],ECX
+67902B34  |. 59                  POP ECX
+67902B35  |. 5E                  POP ESI
+67902B36  |. 8B4D F0             MOV ECX,DWORD PTR SS:[EBP-10]
+67902B39  |. 33CD                XOR ECX,EBP
+67902B3B  |. E8 4D520500         CALL ycamera.67957D8D
+67902B40  |. 8BE5                MOV ESP,EBP
+67902B42  |. 5D                  POP EBP
+67902B43  \. C3                  RETN
+67902B44     CC                  INT3
+67902B45     CC                  INT3
+67902B46     CC                  INT3
+67902B47     CC                  INT3
+67902B48     CC                  INT3
+67902B49     CC                  INT3
+67902B4A     CC                  INT3
+67902B4B     CC                  INT3
+67902B4C     CC                  INT3
+67902B4D     CC                  INT3
+67902B4E     CC                  INT3
+67902B4F     CC                  INT3
+67902B50  /$ 55                  PUSH EBP
+67902B51  |. 8BEC                MOV EBP,ESP
+67902B53  |. 6A FF               PUSH -1
+67902B55  |. 68 6C8F9567         PUSH ycamera.67958F6C
+67902B5A  |. 64:A1 00000000      MOV EAX,DWORD PTR FS:[0]
+67902B60  |. 50                  PUSH EAX
+67902B61  |. B8 0C400000         MOV EAX,400C
+67902B66  |. E8 05570500         CALL ycamera.67958270                         ;  计算随机码
+67902B6B  |. A1 90979867         MOV EAX,DWORD PTR DS:[67989790]
+67902B70  |. 33C5                XOR EAX,EBP
+67902B72  |. 8945 F0             MOV DWORD PTR SS:[EBP-10],EAX
+67902B75  |. 53                  PUSH EBX
+67902B76  |. 56                  PUSH ESI
+67902B77  |. 57                  PUSH EDI
+67902B78  |. 50                  PUSH EAX
+67902B79  |. 8D45 F4             LEA EAX,DWORD PTR SS:[EBP-C]
+67902B7C  |. 64:A3 00000000      MOV DWORD PTR FS:[0],EAX
+67902B82  |. 8BD9                MOV EBX,ECX
+67902B84  |. 899D ECBFFFFF       MOV DWORD PTR SS:[EBP+FFFFBFEC],EBX
+67902B8A  |. C785 E8BFFFFF 00000>MOV DWORD PTR SS:[EBP+FFFFBFE8],0
+67902B94  |. BE 01000000         MOV ESI,1
+67902B99  |. 8975 FC             MOV DWORD PTR SS:[EBP-4],ESI
+67902B9C  |. FF15 58A49567       CALL DWORD PTR DS:[<&mfc100.#316>]            ;  mfc100.66247561
+67902BA2  |. 68 00400000         PUSH 4000                                     ; |/n = 4000 (16384.)
+67902BA7  |. 8D85 F0BFFFFF       LEA EAX,DWORD PTR SS:[EBP+FFFFBFF0]           ; ||
+67902BAD  |. 6A 00               PUSH 0                                        ; ||c = 00
+67902BAF  |. 50                  PUSH EAX                                      ; ||s
+67902BB0  |. 89B5 E8BFFFFF       MOV DWORD PTR SS:[EBP+FFFFBFE8],ESI           ; ||
+67902BB6  |. E8 01570500         CALL <JMP.&MSVCR100.memset>                   ; |\memset
+67902BBB  |. 8B55 08             MOV EDX,DWORD PTR SS:[EBP+8]                  ; |
+67902BBE  |. 8D8D F0BFFFFF       LEA ECX,DWORD PTR SS:[EBP+FFFFBFF0]           ; |
+67902BC4  |. 51                  PUSH ECX                                      ; |Arg2
+67902BC5  |. 52                  PUSH EDX                                      ; |Arg1
+67902BC6  |. E8 25090000         CALL ycamera.679034F0                         ; \ycamera.679034F0
+67902BCB  |. 8B35 F4BF9867       MOV ESI,DWORD PTR DS:[6798BFF4]
+67902BD1  |. 83C4 14             ADD ESP,14
+67902BD4  |. 85F6                TEST ESI,ESI
+67902BD6  |. 74 3E               JE SHORT ycamera.67902C16
+67902BD8  |. 56                  PUSH ESI
+67902BD9  |. E8 524C0000         CALL ycamera.67907830
+67902BDE  |. 8BD8                MOV EBX,EAX
+67902BE0  |. 8D43 01             LEA EAX,DWORD PTR DS:[EBX+1]
+67902BE3  |. 50                  PUSH EAX                                      ; /size
+67902BE4  |. FF15 B0A09567       CALL DWORD PTR DS:[<&MSVCR100.malloc>]        ; \malloc
+67902BEA  |. 8BF8                MOV EDI,EAX
+67902BEC  |. 8D43 01             LEA EAX,DWORD PTR DS:[EBX+1]
+67902BEF  |. 50                  PUSH EAX                                      ; /n
+67902BF0  |. 6A 00               PUSH 0                                        ; |c = 00
+67902BF2  |. 57                  PUSH EDI                                      ; |s
+67902BF3  |. E8 C4560500         CALL <JMP.&MSVCR100.memset>                   ; \memset
+67902BF8  |. 6A 03               PUSH 3
+67902BFA  |. 56                  PUSH ESI
+67902BFB  |. 57                  PUSH EDI
+67902BFC  |. 8D85 F0BFFFFF       LEA EAX,DWORD PTR SS:[EBP+FFFFBFF0]
+67902C02  |. 50                  PUSH EAX
+67902C03  |. 53                  PUSH EBX
+67902C04  |. E8 774C0000         CALL ycamera.67907880
+67902C09  |. 8B9D ECBFFFFF       MOV EBX,DWORD PTR SS:[EBP+FFFFBFEC]
+67902C0F  |. 83C4 28             ADD ESP,28
+67902C12  |. 85C0                TEST EAX,EAX
+67902C14  |. 79 05               JNS SHORT ycamera.67902C1B
+67902C16  |> BF D3169867         MOV EDI,ycamera.679816D3
+67902C1B  |> 57                  PUSH EDI                                      ; /Arg1
+67902C1C  |. 8BCB                MOV ECX,EBX                                   ; |
+67902C1E  |. FF15 40A49567       CALL DWORD PTR DS:[<&mfc100.#1316>]           ; \mfc100.661F3ADE
+67902C24  |. 8D4D 08             LEA ECX,DWORD PTR SS:[EBP+8]
+67902C27  |. FF15 48A49567       CALL DWORD PTR DS:[<&mfc100.#901>]            ;  mfc100.661F82BE
+67902C2D  |. 8BC3                MOV EAX,EBX
+67902C2F  |. 8B4D F4             MOV ECX,DWORD PTR SS:[EBP-C]
+67902C32  |. 64:890D 00000000    MOV DWORD PTR FS:[0],ECX
+67902C39  |. 59                  POP ECX
+67902C3A  |. 5F                  POP EDI
+67902C3B  |. 5E                  POP ESI
+67902C3C  |. 5B                  POP EBX
+67902C3D  |. 8B4D F0             MOV ECX,DWORD PTR SS:[EBP-10]
+67902C40  |. 33CD                XOR ECX,EBP
+67902C42  |. E8 46510500         CALL ycamera.67957D8D
+67902C47  |. 8BE5                MOV ESP,EBP
+67902C49  |. 5D                  POP EBP
+67902C4A  \. C3                  RETN
+67902C4B     CC                  INT3
+67902C4C     CC                  INT3
+67902C4D     CC                  INT3
+67902C4E     CC                  INT3
+67902C4F     CC                  INT3
+67902C50  /$ 55                  PUSH EBP
+67902C51  |. 8BEC                MOV EBP,ESP
+67902C53  |. 6A FF               PUSH -1
+67902C55  |. 68 2C929567         PUSH ycamera.6795922C
+67902C5A  |. 64:A1 00000000      MOV EAX,DWORD PTR FS:[0]
+67902C60  |. 50                  PUSH EAX
+67902C61  |. 83EC 08             SUB ESP,8
+67902C64  |. 56                  PUSH ESI
+67902C65  |. A1 90979867         MOV EAX,DWORD PTR DS:[67989790]
+67902C6A  |. 33C5                XOR EAX,EBP
+67902C6C  |. 50                  PUSH EAX
+67902C6D  |. 8D45 F4             LEA EAX,DWORD PTR SS:[EBP-C]
+67902C70  |. 64:A3 00000000      MOV DWORD PTR FS:[0],EAX
+67902C76  |. 8B75 08             MOV ESI,DWORD PTR SS:[EBP+8]
+67902C79  |. C745 F0 00000000    MOV DWORD PTR SS:[EBP-10],0
+67902C80  |. 8BCE                MOV ECX,ESI
+67902C82  |. C745 FC 01000000    MOV DWORD PTR SS:[EBP-4],1
+67902C89  |. FF15 58A49567       CALL DWORD PTR DS:[<&mfc100.#316>]            ;  mfc100.66247561
+67902C8F  |. 51                  PUSH ECX                                      ; /Arg1
+67902C90  |. 8D45 0C             LEA EAX,DWORD PTR SS:[EBP+C]                  ; |
+67902C93  |. 8BCC                MOV ECX,ESP                                   ; |
+67902C95  |. 8965 EC             MOV DWORD PTR SS:[EBP-14],ESP                 ; |
+67902C98  |. 50                  PUSH EAX                                      ; |/Arg1
+67902C99  |. C745 F0 01000000    MOV DWORD PTR SS:[EBP-10],1                   ; ||
+67902CA0  |. FF15 54A49567       CALL DWORD PTR DS:[<&mfc100.#300>]            ; |\mfc100.661FB5F6
+67902CA6  |. 8D4D EC             LEA ECX,DWORD PTR SS:[EBP-14]                 ; |
+67902CA9  |. E8 A2FEFFFF         CALL ycamera.67902B50                         ; \ycamera.67902B50
+67902CAE  |. 83C4 04             ADD ESP,4
+67902CB1  |. 50                  PUSH EAX                                      ; /agr1 ASCII 598367,,,,,,
+67902CB2  |. 8BCE                MOV ECX,ESI                                   ; |
+67902CB4  |. C645 FC 02          MOV BYTE PTR SS:[EBP-4],2                     ; |
+67902CB8  |. FF15 44A49567       CALL DWORD PTR DS:[<&mfc100.#1313>]           ; \mfc100.661F3ED5
+67902CBE  |. 8D4D EC             LEA ECX,DWORD PTR SS:[EBP-14]
+67902CC1  |. FF15 48A49567       CALL DWORD PTR DS:[<&mfc100.#901>]            ;  mfc100.661F82BE
+67902CC7  |. 8D4D 0C             LEA ECX,DWORD PTR SS:[EBP+C]
+67902CCA  |. FF15 48A49567       CALL DWORD PTR DS:[<&mfc100.#901>]            ;  mfc100.661F82BE
+67902CD0  |. 8BC6                MOV EAX,ESI
+67902CD2  |. 8B4D F4             MOV ECX,DWORD PTR SS:[EBP-C]
+67902CD5  |. 64:890D 00000000    MOV DWORD PTR FS:[0],ECX
+67902CDC  |. 59                  POP ECX
+67902CDD  |. 5E                  POP ESI
+67902CDE  |. 8BE5                MOV ESP,EBP
+67902CE0  |. 5D                  POP EBP
+67902CE1  \. C2 0800             RETN 8
+67902CE4     CC                  INT3
+67902CE5     CC                  INT3
+67902CE6     CC                  INT3
+67902CE7     CC                  INT3
+67902CE8     CC                  INT3
+67902CE9     CC                  INT3
+67902CEA     CC                  INT3
+67902CEB     CC                  INT3
+67902CEC     CC                  INT3
+67902CED     CC                  INT3
+67902CEE     CC                  INT3
+67902CEF     CC                  INT3
+67902CF0  /$ 55                  PUSH EBP                                      ;  生成验证码函数
+67902CF1  |. 8BEC                MOV EBP,ESP
+67902CF3  |. 6A FF               PUSH -1
+67902CF5  |. 68 D1919567         PUSH ycamera.679591D1
+67902CFA  |. 64:A1 00000000      MOV EAX,DWORD PTR FS:[0]
+67902D00  |. 50                  PUSH EAX
+67902D01  |. 83EC 44             SUB ESP,44
+67902D04  |. A1 90979867         MOV EAX,DWORD PTR DS:[67989790]
+67902D09  |. 33C5                XOR EAX,EBP
+67902D0B  |. 8945 F0             MOV DWORD PTR SS:[EBP-10],EAX
+67902D0E  |. 56                  PUSH ESI
+67902D0F  |. 50                  PUSH EAX
+67902D10  |. 8D45 F4             LEA EAX,DWORD PTR SS:[EBP-C]
+67902D13  |. 64:A3 00000000      MOV DWORD PTR FS:[0],EAX
+67902D19  |. C745 C4 00000000    MOV DWORD PTR SS:[EBP-3C],0
+67902D20  |. C745 FC 00000000    MOV DWORD PTR SS:[EBP-4],0
+67902D27  |. C745 B4 34229867    MOV DWORD PTR SS:[EBP-4C],ycamera.67982234
+67902D2E  |. 8B45 0C             MOV EAX,DWORD PTR SS:[EBP+C]
+67902D31  |. C645 FC 01          MOV BYTE PTR SS:[EBP-4],1
+67902D35  |. 8B4D 08             MOV ECX,DWORD PTR SS:[EBP+8]
+67902D38  |. 50                  PUSH EAX                                      ; /Arg2
+67902D39  |. 51                  PUSH ECX                                      ; |Arg1
+67902D3A  |. 8D4D C8             LEA ECX,DWORD PTR SS:[EBP-38]                 ; |
+67902D3D  |. 8D75 B4             LEA ESI,DWORD PTR SS:[EBP-4C]                 ; |
+67902D40  |. E8 EB260000         CALL ycamera.67905430                         ; \ycamera.67905430
+67902D45  |. 8D55 C8             LEA EDX,DWORD PTR SS:[EBP-38]
+67902D48  |. 52                  PUSH EDX
+67902D49  |. 8BCF                MOV ECX,EDI
+67902D4B  |. C645 FC 00          MOV BYTE PTR SS:[EBP-4],0
+67902D4F  |. FF15 50A49567       CALL DWORD PTR DS:[<&mfc100.#310>]            ;  mfc100.662FD332
+67902D55  |. 8D4D 08             LEA ECX,DWORD PTR SS:[EBP+8]
+67902D58  |. FF15 48A49567       CALL DWORD PTR DS:[<&mfc100.#901>]            ;  mfc100.661F82BE
+67902D5E  |. 8BC7                MOV EAX,EDI
+67902D60  |. 8B4D F4             MOV ECX,DWORD PTR SS:[EBP-C]
+67902D63  |. 64:890D 00000000    MOV DWORD PTR FS:[0],ECX
+67902D6A  |. 59                  POP ECX
+67902D6B  |. 5E                  POP ESI
+67902D6C  |. 8B4D F0             MOV ECX,DWORD PTR SS:[EBP-10]
+67902D6F  |. 33CD                XOR ECX,EBP
+67902D71  |. E8 17500500         CALL ycamera.67957D8D
+67902D76  |. 8BE5                MOV ESP,EBP
+67902D78  |. 5D                  POP EBP
+67902D79  \. C3                  RETN
+67902D7A     CC                  INT3
+67902D7B     CC                  INT3
+67902D7C     CC                  INT3
+67902D7D     CC                  INT3
+67902D7E     CC                  INT3
+67902D7F     CC                  INT3
+67902D80  /$ 55                  PUSH EBP                                      ;  加密数据生成call
+67902D81  |. 8BEC                MOV EBP,ESP
+67902D83  |. 6A FF               PUSH -1
+67902D85  |. 68 CE929567         PUSH ycamera.679592CE
+67902D8A  |. 64:A1 00000000      MOV EAX,DWORD PTR FS:[0]
+67902D90  |. 50                  PUSH EAX
+67902D91  |. 83EC 14             SUB ESP,14
+67902D94  |. 56                  PUSH ESI
+67902D95  |. 57                  PUSH EDI                                      ;  598367,,,,
+67902D96  |. A1 90979867         MOV EAX,DWORD PTR DS:[67989790]
+67902D9B  |. 33C5                XOR EAX,EBP
+67902D9D  |. 50                  PUSH EAX
+67902D9E  |. 8D45 F4             LEA EAX,DWORD PTR SS:[EBP-C]
+67902DA1  |. 64:A3 00000000      MOV DWORD PTR FS:[0],EAX
+67902DA7  |. 8B75 08             MOV ESI,DWORD PTR SS:[EBP+8]
+67902DAA  |. 8BF9                MOV EDI,ECX
+67902DAC  |. 8D4D F0             LEA ECX,DWORD PTR SS:[EBP-10]
+67902DAF  |. C745 E4 00000000    MOV DWORD PTR SS:[EBP-1C],0
+67902DB6  |. FF15 58A49567       CALL DWORD PTR DS:[<&mfc100.#316>]            ;  无用
+67902DBC  |. 6A 00               PUSH 0                                        ; /Arg1 = 00000000
+67902DBE  |. 8BCF                MOV ECX,EDI                                   ; |
+67902DC0  |. C745 FC 01000000    MOV DWORD PTR SS:[EBP-4],1                    ; |
+67902DC7 >|. E8 E4FAFFFF         CALL ycamera.679028B0                         ; \拍照，获取照片数据，重要call
+67902DCC  |. 50                  PUSH EAX                                      ; /Arg1
+67902DCD  |. 8D4D E8             LEA ECX,DWORD PTR SS:[EBP-18]                 ; |
+67902DD0  |. FF15 4CA49567       CALL DWORD PTR DS:[<&mfc100.#306>]            ; \将图片数据由unicode转成ascii字符
+67902DD6  |. 50                  PUSH EAX                                      ; /图片数据指针
+67902DD7  |. 8D4D F0             LEA ECX,DWORD PTR SS:[EBP-10]                 ; |
+67902DDA  |. C645 FC 02          MOV BYTE PTR SS:[EBP-4],2                     ; |
+67902DDE  |. FF15 44A49567       CALL DWORD PTR DS:[<&mfc100.#1313>]           ; \无用
+67902DE4  |. 8D4D E8             LEA ECX,DWORD PTR SS:[EBP-18]
+67902DE7  |. C645 FC 01          MOV BYTE PTR SS:[EBP-4],1
+67902DEB  |. FF15 48A49567       CALL DWORD PTR DS:[<&mfc100.#901>]            ;  无用
+67902DF1  |. 8B87 F8010000       MOV EAX,DWORD PTR DS:[EDI+1F8]
+67902DF7  |. 50                  PUSH EAX                                      ;  9215F（598367）
+67902DF8  |. 51                  PUSH ECX                                      ; /Arg1
+67902DF9  |. 8D55 F0             LEA EDX,DWORD PTR SS:[EBP-10]                 ; |
+67902DFC  |. 8BCC                MOV ECX,ESP                                   ; |
+67902DFE  |. 8965 E8             MOV DWORD PTR SS:[EBP-18],ESP                 ; |
+67902E01  |. 52                  PUSH EDX                                      ; |/Arg1
+67902E02  |. FF15 54A49567       CALL DWORD PTR DS:[<&mfc100.#300>]            ; |\没有用
+67902E08  |. 8D7D EC             LEA EDI,DWORD PTR SS:[EBP-14]                 ; |
+67902E0B >|. E8 E0FEFFFF         CALL ycamera.67902CF0                         ; \生成MD5 32位验证码，返回给eax
+67902E10  |. 83C4 04             ADD ESP,4
+67902E13  |. C645 FC 03          MOV BYTE PTR SS:[EBP-4],3                     ; |
+67902E17  |. 8BC7                MOV EAX,EDI                                   ; |md5的32位数据的存放地址
+67902E19  |. 8BCC                MOV ECX,ESP                                   ; |
+67902E1B  |. 8965 E8             MOV DWORD PTR SS:[EBP-18],ESP                 ; |9215F（598367）
+67902E1E  |. 50                  PUSH EAX                                      ; |/Arg1
+67902E1F  |. FF15 54A49567       CALL DWORD PTR DS:[<&mfc100.#300>]            ; |\eax指向32位 验证码地址
+67902E25  |. 8D7D E0             LEA EDI,DWORD PTR SS:[EBP-20]                 ; |
+67902E28  |. E8 53FCFFFF         CALL ycamera.67902A80                         ; \这个函数生成一段172位长度字符串
+67902E2D  |. 83C4 04             ADD ESP,4
+67902E30  |. 8BCE                MOV ECX,ESI
+67902E32  |. C645 FC 04          MOV BYTE PTR SS:[EBP-4],4
+67902E36  |. FF15 58A49567       CALL DWORD PTR DS:[<&mfc100.#316>]            ;  无用或者跟计算图片数据长度有关
+67902E3C  |. 8B4D EC             MOV ECX,DWORD PTR SS:[EBP-14]                 ;  32验证码
+67902E3F  |. 8B41 F4             MOV EAX,DWORD PTR DS:[ECX-C]                  ;  00000020
+67902E42  |. 8B55 F0             MOV EDX,DWORD PTR SS:[EBP-10]                 ;  图像数据
+67902E45  |. 8B4A F4             MOV ECX,DWORD PTR DS:[EDX-C]                  ;  00015b20表示图片数据的长度
+67902E48  |. 50                  PUSH EAX                                      ; /Arg4
+67902E49  |. 51                  PUSH ECX                                      ; |Arg3
+67902E4A  |. 68 541A9867         PUSH ycamera.67981A54                         ; |Arg2 = 67981A54 ASCII "%08X%08X"
+67902E4F  |. 56                  PUSH ESI                                      ; |Arg1
+67902E50  |. C745 E4 01000000    MOV DWORD PTR SS:[EBP-1C],1                   ; |
+67902E57  |. FF15 58A59567       CALL DWORD PTR DS:[<&mfc100.#4283>]           ; \组合图片长度和00000020
+67902E5D  |. 83C4 10             ADD ESP,10
+67902E60  |. 8D45 F0             LEA EAX,DWORD PTR SS:[EBP-10]
+67902E63  |. 50                  PUSH EAX                                      ; /图片数据
+67902E64  |. 8BCE                MOV ECX,ESI                                   ; |组合图片长度+00000020的地址
+67902E66 >|. FF15 3CA49567       CALL DWORD PTR DS:[<&mfc100.#1479>]           ; \两者数据组合
+67902E6C  |. 8D4D EC             LEA ECX,DWORD PTR SS:[EBP-14]
+67902E6F  |. 51                  PUSH ECX                                      ; /32位验证码地址
+67902E70  |. 8BCE                MOV ECX,ESI                                   ; |上面组合的字符数据的地址
+67902E72  |. FF15 3CA49567       CALL DWORD PTR DS:[<&mfc100.#1479>]           ; \两字符串在相加，返回给eax指针
+67902E78  |. 8BCF                MOV ECX,EDI
+67902E7A  |. FF15 48A49567       CALL DWORD PTR DS:[<&mfc100.#901>]            ;  无用
+67902E80  |. 8D4D EC             LEA ECX,DWORD PTR SS:[EBP-14]
+67902E83  |. FF15 48A49567       CALL DWORD PTR DS:[<&mfc100.#901>]            ;  无用
+67902E89  |. 8D4D F0             LEA ECX,DWORD PTR SS:[EBP-10]
+67902E8C  |. FF15 48A49567       CALL DWORD PTR DS:[<&mfc100.#901>]            ;  无用
+67902E92  |. 8BC6                MOV EAX,ESI
+67902E94  |. 8B4D F4             MOV ECX,DWORD PTR SS:[EBP-C]
+67902E97  |. 64:890D 00000000    MOV DWORD PTR FS:[0],ECX
+67902E9E  |. 59                  POP ECX
+67902E9F  |. 5F                  POP EDI
+67902EA0  |. 5E                  POP ESI
+67902EA1  |. 8BE5                MOV ESP,EBP
+67902EA3  |. 5D                  POP EBP
+67902EA4  \. C2 0400             RETN 4
+67902EA7     CC                  INT3
+67902EA8     CC                  INT3
+67902EA9     CC                  INT3
+67902EAA     CC                  INT3
+67902EAB     CC                  INT3
+67902EAC     CC                  INT3
+67902EAD     CC                  INT3
+67902EAE     CC                  INT3
+67902EAF     CC                  INT3
+67902EB0  /. 55                  PUSH EBP                                      ;  SetRandomText,生成加密数据
+67902EB1  |. 8BEC                MOV EBP,ESP
+67902EB3  |. 83E4 F8             AND ESP,FFFFFFF8
+67902EB6  |. 6A FF               PUSH -1
+67902EB8  |. 68 E4939567         PUSH ycamera.679593E4
+67902EBD  |. 64:A1 00000000      MOV EAX,DWORD PTR FS:[0]
+67902EC3  |. 50                  PUSH EAX
+67902EC4  |. 83EC 1C             SUB ESP,1C
+67902EC7  |. 56                  PUSH ESI
+67902EC8  |. 57                  PUSH EDI
+67902EC9  |. A1 90979867         MOV EAX,DWORD PTR DS:[67989790]
+67902ECE  |. 33C4                XOR EAX,ESP
+67902ED0  |. 50                  PUSH EAX
+67902ED1  |. 8D4424 28           LEA EAX,DWORD PTR SS:[ESP+28]
+67902ED5  |. 64:A3 00000000      MOV DWORD PTR FS:[0],EAX
+67902EDB  |. 8BF1                MOV ESI,ECX
+67902EDD  |. E8 4F4C0500         CALL ycamera.67957B31                         ;  没有用
+67902EE2  |. 50                  PUSH EAX                                      ; /Arg1
+67902EE3  |. 8D4C24 18           LEA ECX,DWORD PTR SS:[ESP+18]                 ; |
+67902EE7  |. FF15 84A59567       CALL DWORD PTR DS:[<&mfc100.#322>]            ; \无用
+67902EED  |. 8D4C24 0C           LEA ECX,DWORD PTR SS:[ESP+C]
+67902EF1  |. C74424 30 00000000  MOV DWORD PTR SS:[ESP+30],0
+67902EF9  |. FF15 58A49567       CALL DWORD PTR DS:[<&mfc100.#316>]            ;  mfc100.66247561
+67902EFF  |. 8B45 08             MOV EAX,DWORD PTR SS:[EBP+8]
+67902F02  |. 51                  PUSH ECX
+67902F03  |. C64424 34 01        MOV BYTE PTR SS:[ESP+34],1
+67902F08  |. 8BCC                MOV ECX,ESP
+67902F0A  |. 896424 14           MOV DWORD PTR SS:[ESP+14],ESP
+67902F0E  |. 50                  PUSH EAX
+67902F0F  |. FF15 50A49567       CALL DWORD PTR DS:[<&mfc100.#310>]            ;  不是
+67902F15  |. 8D4C24 14           LEA ECX,DWORD PTR SS:[ESP+14]                 ; |
+67902F19  |. 51                  PUSH ECX                                      ; |Arg1
+67902F1A  |. E8 31FDFFFF         CALL ycamera.67902C50                         ; \一个重要因子的生成函数:598367,,,,
+67902F1F  |. 50                  PUSH EAX                                      ; /Arg1
+67902F20  |. 8D8E 14020000       LEA ECX,DWORD PTR DS:[ESI+214]                ; |
+67902F26  |. C64424 34 02        MOV BYTE PTR SS:[ESP+34],2                    ; |
+67902F2B  |. FF15 44A49567       CALL DWORD PTR DS:[<&mfc100.#1313>]           ; \不是
+67902F31  |. 8D4C24 10           LEA ECX,DWORD PTR SS:[ESP+10]
+67902F35  |. C64424 30 01        MOV BYTE PTR SS:[ESP+30],1
+67902F3A  |. FF15 48A49567       CALL DWORD PTR DS:[<&mfc100.#901>]            ;  不是
+67902F40  |. 8BBE 14020000       MOV EDI,DWORD PTR DS:[ESI+214]
+67902F46  |. 57                  PUSH EDI                                      ; /598367,,,,,,
+67902F47  |. FF15 B8A09567       CALL DWORD PTR DS:[<&MSVCR100.atoi>]          ; \atoi 函数将字符串转成了整数型
+67902F4D  |. 83C4 04             ADD ESP,4
+67902F50  |. 8D5424 10           LEA EDX,DWORD PTR SS:[ESP+10]
+67902F54  |. 52                  PUSH EDX                                      ; /这里是加密数据的关键call
+67902F55  |. 8BCE                MOV ECX,ESI                                   ; |
+67902F57  |. 8986 F8010000       MOV DWORD PTR DS:[ESI+1F8],EAX                ; |
+67902F5D  |. E8 1EFEFFFF         CALL ycamera.67902D80                         ; \加密数据生成call，是这个函数，返回给eax
+67902F62  |. 50                  PUSH EAX                                      ; /Arg1 = 0012EFE4
+67902F63  |. 8D4C24 10           LEA ECX,DWORD PTR SS:[ESP+10]                 ; |
+67902F67  |. C64424 34 03        MOV BYTE PTR SS:[ESP+34],3                    ; |
+67902F6C  |. FF15 44A49567       CALL DWORD PTR DS:[<&mfc100.#1313>]           ; \mfc100.661F3ED5
+67902F72  |. 8D4C24 10           LEA ECX,DWORD PTR SS:[ESP+10]
+67902F76  |. C64424 30 01        MOV BYTE PTR SS:[ESP+30],1
+67902F7B  |. FF15 48A49567       CALL DWORD PTR DS:[<&mfc100.#901>]            ;  mfc100.661F82BE
+67902F81  |. 8D4C24 0C           LEA ECX,DWORD PTR SS:[ESP+C]
+67902F85  |. FF15 34A49567       CALL DWORD PTR DS:[<&mfc100.#2119>]           ;  mfc100.661FB61E
+67902F8B  |. 8D4C24 0C           LEA ECX,DWORD PTR SS:[ESP+C]
+67902F8F  |. 8BF0                MOV ESI,EAX
+67902F91  |. FF15 48A49567       CALL DWORD PTR DS:[<&mfc100.#901>]            ;  mfc100.661F82BE
+67902F97  |. 8D4C24 14           LEA ECX,DWORD PTR SS:[ESP+14]
+67902F9B  |. C74424 30 FFFFFFFF  MOV DWORD PTR SS:[ESP+30],-1
+67902FA3  |. FF15 88A59567       CALL DWORD PTR DS:[<&mfc100.#13518>]          ;  mfc100.662D5283
+67902FA9  |. 8BC6                MOV EAX,ESI
+67902FAB  |. 8B4C24 28           MOV ECX,DWORD PTR SS:[ESP+28]
+67902FAF  |. 64:890D 00000000    MOV DWORD PTR FS:[0],ECX
+67902FB6  |. 59                  POP ECX
+67902FB7  |. 5F                  POP EDI
+67902FB8  |. 5E                  POP ESI
+67902FB9  |. 8BE5                MOV ESP,EBP
+67902FBB  |. 5D                  POP EBP
+67902FBC  \. C2 0400             RETN 4
+
+ 
