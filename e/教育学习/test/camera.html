@@ -1,0 +1,126 @@
+<html>
+<head>
+<title>photoshop</title>
+<script type="text/javascript" src="jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="/jquery.bootstrap.min.js"></script>
+<script type="text/javascript" src="/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="/modernizr-latest.js"></script>
+<script type="text/javascript" src="/pptBox.js"></script>
+<script type="text/javascript" src="/swfobject.js"></script>
+<script type="text/javascript" src="/respond.min.js"></script>
+<script type="text/javascript" src="/scriptcam.js"></script>
+<script type="text/javascript">
+function caption123(){
+	var src = yourFace.ImageCaption(1);
+	$('#imageBase64').val(src);
+	src = yourFace.ImageCaption(32);
+	$('#imageBase2').val(src);
+	src = yourFace.ImageCaption(3);
+	$('#imageBase3').val(src);
+	src = yourFace.ImageCaption(64);
+	$('#imageBase4').val(src);
+	var sr = "NMMqXVUJnDmOX1fpiSJ7ko4w4qdhURBJ749VMeYagXAzTAZNTOzm4VZZyhIgnbmkcEoBDzM1yGVgI5+WBxI9WbkYHwG63HS8KcuC7SuBOsDUjwZ4D9RMHlJJXb6adeZ0LMhPrZPEl64q2QHYIYWk7Lk+od1NbcpQiUHfqgIla/A=";
+	//sr = "a";
+	src = yourFace.SetRandomText(sr);
+	$('#facefield').val(src);
+}
+function setText(sr) {
+	// 设置加密随机数
+	sr = "NMMqXVUJnDmOX1fpiSJ7ko4w4qdhURBJ749VMeYagXAzTAZNTOzm4VZZyhIgnbmkcEoBDzM1yGVgI5+WBxI9WbkYHwG63HS8KcuC7SuBOsDUjwZ4D9RMHlJJXb6adeZ0LMhPrZPEl64q2QHYIYWk7Lk+od1NbcpQiUHfqgIla/A=";
+	//111111111111
+	var str = yourFace.SetRandomText(sr);
+	$('#facefield').val(str);
+	//222222222222
+	//NMMqXVUJnDmOX1fpiSJ7ko4w4qdhURBJ749VMeYagXAzTAZNTOzm4VZZyhIgnbmkcEoBDzM1yGVgI5+WBxI9WbkYHwG63HS8KcuC7SuBOsDUjwZ4D9RMHlJJXb6adeZ0LMhPrZPEl64q2QHYIYWk7Lk+od1NbcpQiUHfqgIla/A=
+	//sr = "Woc//cG7eA3LG2JRcOt/2LRUrtulBGKZxCNmjWG0eg4oKlG9ZRBLXd0fxmYZKfOCzwWKgy7McZ638e5/UkESOKLrqN8dA9KOo8Lk+ta7+cL8nJGxAmLeIRmI+R/o4WuQXFNKgpR4DnlG2EBeiT7s7L1Xx/mcv12zM6apOVIHrp8=";
+	str = yourFace.SetRandomText(sr);
+	$('#imageBase64').val(str);
+	//333333333333
+	str = yourFace.SetRandomText("1");
+	$('#imageBase2').val(str);
+	//444444444444
+	str = yourFace.SetRandomText("2");
+	$('#imageBase3').val(str);
+	//555555555555
+	str = yourFace.SetRandomText("3");
+	$('#imageBase4').val(str);
+	
+	return str;
+}
+//bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+//Woc//cG7eA3LG2JRcOt/2LRUrtulBGKZxCNmjWG0eg4oKlG9ZRBLXd0fxmYZKfOCzwWKgy7McZ638e5/UkESOKLrqN8dA9KOo8Lk+ta7+cL8nJGxAmLeIRmI+R/o4WuQXFNKgpR4DnlG2EBeiT7s7L1Xx/mcv12zM6apOVIHrp8=
+function stop(){
+	yourFace.stopVMR();
+}
+function start(){
+	yourFace.start();
+}
+function photo(){
+	//beginGetPhoto();
+	$('#image').attr("src", "data:image/png;base64," + $.scriptcam.getFrameAsBase64());
+	//alert(2+2);
+	//var faceField = $.scriptcam.getFrameAsBase64();
+	//$('#facefield').val(faceField); 
+}
+
+// 拍照
+function beginGetPhoto() {
+	$("#webcam").scriptcam( {
+		path : '/',
+		showMicrophoneErrors : false,
+		onError : onError,
+		cornerRadius : 20,
+		cornerColor : 'e3e5e2',
+		onWebcamReady : onWebcamReady,
+		onPictureAsBase64 : base64_tofield_and_image
+	});
+}
+
+function base64_tofield() {
+	$('#formfield').val($.scriptcam.getFrameAsBase64());
+};
+
+function base64_tofield_and_image(b64) {
+	$('#facefield').val(b64);
+	$('#image').attr("src", "data:image/png;base64," + b64);
+};
+function changeCamera() {
+	$.scriptcam.changeCamera($('#cameraNames').val());
+}
+function onError(errorId, errorMsg) {
+	alert(errorMsg);
+}
+function onWebcamReady(cameraNames, camera, microphoneNames, microphone, volume) {
+	$.each(cameraNames, function(index, text) {
+		$('#cameraNames').append($('<option></option>').val(index).html(text))
+	});
+	$('#cameraNames').val(camera);
+}
+function about(){
+	yourFace.AboutBox();
+}
+</script>
+<body>
+<object id="yourFace" width=320 height=240 
+classid="CLSID:6C94E32C-B15B-4A66-9FA8-6C1D013D0D19" 
+codebase="http://www/upload/camera.CAB"></object> 
+<img id="image" src="" width="320px" height="240px"/>
+<div id="webcam"></div>
+<br>
+<button onclick="caption123()">caption</button>
+<button onclick="setText('')">data</button>
+<button onclick="start()">start</button>
+<button onclick="stop()">stop</button>
+<button onclick="photo()">photo</button>
+<button onclick="about()">about</button>
+<br>
+
+<br>
+<textarea rows="20" id="facefield"></textarea>
+<textarea rows="20" id="imageBase64"></textarea>
+<textarea rows="20" id="imageBase2"></textarea>
+<textarea rows="20" id="imageBase3"></textarea>
+<textarea rows="20" id="imageBase4"></textarea>
+</body>
+</head>
+</html>
