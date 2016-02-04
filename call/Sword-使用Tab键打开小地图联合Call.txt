@@ -1,0 +1,8 @@
+mov ecx,00456C88	
+call 00403910
+mov ecx,004D9E88
+call 0041A1F0
+mov ecx,00456C88
+call 00403B40
+mov ecx,004D9E88
+call 0041A670

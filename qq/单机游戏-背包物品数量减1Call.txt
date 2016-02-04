@@ -8,10 +8,36 @@ CALL 00418E20
 --------------------------------------
 背包数量:66*3=198=0xC6
 每个格空间跨度:0x188+4=0x18C
-第一格起始地址:55D2F8-55D480	[55D2F8+18C=55D484]
-第二格地址空间:55D484-55D60C	[55D484+18C=55D610]
-第三格地址空间:55D610-55D798	[55D610+18C=55D79C]
+第一格起始地址: 55D2F8-55D480	[55D2F8+18C=55D484]
+第二格地址空间: 55D484-55D60C	[55D484+18C=55D610]
+第三格地址空间: 55D610-55D798	[55D610+18C=55D79C]
 后面依次类推...
+----------
+人物装备物品:
+内存空间跨度:0x318=792
+手拿起止地址: 570E88 - 5711A0
+验证下一个起止地址: 5711A0 - 5714B8
+验证上一个起止地址: 570B70 - 570E88
+第一个地址空间:		570858 - 570B70 -
+					570878 物品名称
+					5708D8 物品描述
+					570958 物品属性描述
+					570998 Head - 头戴   -标志
+					5709A8 物品类型
+					5709AC 物品价格
+					5709B0 物品数量
+					5709B4 物品ID
+					5709BC 恢复生命值
+					5709C0 恢复体力值
+					5709C4 恢复气血值
+					5709C8 增加生命上限
+					5709CC 增加体力上限
+					5709D0 增加气血上限
+					5709D4 攻击
+					5709D8 防御
+					5709DC 敏捷
+					5709E0 2体解毒,3气解毒
+============================================
 --------------------------------------
 ----找使用物品call方法----------------
 1.启动CE,从物品数量下手找使用物品call
@@ -169,6 +195,10 @@ CALL 00425BE0
 7.我们在测试S键，发现还是这个call,没有任何的区分，可能说明找的还不是对。
 8.继续向下找0041DA70，不行
 	00422440 00418280 0041B070
+9.继续分析,这个call找的是对的,可以调用成功,但是这个call并不完善;
+	区分不出是按了a键还是s键的技能call;同时还可以看出按A键:清心咒技能,
+	并不需要什么参数,直接作用自己;但是按S键,还必须有个人物方向参数,才能有目标的释放技能.
+	这个游戏,人物走动共有8个方向.
 ---------------------------------------
 --捡物品call--分析
 0012FDB0   7782286F  USER32.GetMessageA
@@ -266,6 +296,276 @@ CALL 00425BE0
 0012FEFC   00000000
 0012FF00   0042A513  返回到 Sworda.<模块入口点>+0CE 来自 Sworda.004085B0
 0012FF04   00400000  Sworda.00400000
+
+------------------------------------
+找Tab键呼出小地图Call
+对地图名称下断[dd 45781C],然后切换地图后,按Tab键断下,复制堆栈窗口数据如下：
+----------------------------
+0012FCF0   F579AAD3
+0012FCF4   0012FD7F
+0012FCF8   004D9E88  Sworda.004D9E88
+0012FCFC   00456C88  Sworda.00456C88
+0012FD00   0012FD4C
+0012FD04   0045781C  Sworda.0045781C
+0012FD08   0012FCF0
+0012FD0C   00438290  ASCII "Init"
+0012FD10   0012FE24  指向下一个 SEH 记录的指针
+0012FD14   75B4D5F5  SE处理程序
+0012FD18   80DFDA2B
+0012FD1C   00000000
+0012FD20   10002C80  Sword.?g_SetFilePath@@YAXPAD@Z
+0012FD24   0040EC14  返回到 Sworda.0040EC14 来自 kernel32.lstrcpynA 	;跟踪这个看一下
+									;发现可以将地图上面的名称给隐藏掉
+0012FD28   0045781C  Sworda.0045781C
+0012FD2C   0012FD4C
+0012FD30   00000100
+0012FD34   004039F1  返回到 Sworda.004039F1 来自 Sworda.0040EC00	;再跟踪这个看一下
+									;没有任何的相应,仅仅是返回了地图的名称：0x45781C
+0012FD38   0012FD4C
+0012FD3C   004D9E88  Sworda.004D9E88
+0012FD40   004D9E88  Sworda.004D9E88
+0012FD44   75C8286F  USER32.GetMessageA
+0012FD48   75C82EB2  USER32.PeekMessageA
+0012FD4C   F7CAB0D2
+0012FD50   0000D6C1
+0012FD54   FFFFFFFF
+0012FD58   0000002E
+0012FD5C   0000027F
+0012FD60   0000020E
+0012FD64   00000000
+0012FD68   00000000
+0012FD6C   5F70616D
+0012FD70   5F383030
+0012FD74   F7CAB0D2
+0012FD78   6D00D6C1
+0012FD7C   00007061
+0012FD80   004102AE  返回到 Sworda.004102AE	;在跟踪者下面几个，都是无法正确下断！！
+0012FD84   0043CA90  Sworda.0043CA90
+0012FD88   0043CA90  Sworda.0043CA90
+0012FD8C   0043CEFC  Sworda.0043CEFC
+0012FD90   004102AE  返回到 Sworda.004102AE
+0012FD94   0043CA90  Sworda.0043CA90
+0012FD98   0043CA90  Sworda.0043CA90
+0012FD9C   0043C978  Sworda.0043C978
+0012FDA0   00410235  返回到 Sworda.00410235
+0012FDA4   0012FE60
+0012FDA8   0012FE60
+0012FDAC   0043C910  Sworda.0043C910
+0012FDB0   0041024F  返回到 Sworda.0041024F
+0012FDB4   0012FE60
+0012FDB8   0012FE60
+0012FDBC   0043C8A8  Sworda.0043C8A8
+0012FDC0   0041024F  返回到 Sworda.0041024F
+0012FDC4   0012FE60
+0012FDC8   0012FE60
+0012FDCC   00000000
+0012FDD0   00000000
+0012FDD4   00000000
+0012FDD8   00000000
+0012FDDC   00000000
+0012FDE0   00000000
+0012FDE4   05882DB1
+0012FDE8   00000765
+0012FDEC   05882648  ASCII "[Init]"
+0012FDF0   00000000
+0012FDF4   00000000
+0012FDF8   00000000
+0012FDFC   00000000
+0012FE00   00000000
+0012FE04   00000000
+0012FE08   00000000
+0012FE0C   00000000
+0012FE10   00000000
+0012FE14   00001313
+0012FE18   00010000
+0012FE1C   00000001
+0012FE20   00010000
+0012FE24   0012FF78  指向下一个 SEH 记录的指针
+0012FE28   00431199  SE处理程序
+0012FE2C   00000000
+0012FE30   0041A0FD  返回到 Sworda.0041A0FD 来自 Sworda.00403910	;好到了这里，正常下断点
+	;此处的代码格式如下：
+=============================
+。。。
+0041A0F3  |> \B9 886C4500     mov ecx,Sworda.00456C88	;  Case F of switch 0041A075
+0041A0F8  |.  E8 1398FEFF     call Sworda.00403910		;跟踪这个call，后发现返回eax=1，代码执行成功。
+														;但是，程序并没有打开tab小地图。
+0041A0FD  |.  85C0            test eax,eax				;这里需要向下分析代码，F8单步向下执行，
+0041A0FF  |.  74 18           je short Sworda.0041A119	;发现这里的下面的每一个call,都能执行到。
+														;这里便是一个联合执行call。
+0041A101  |.  8BCE            mov ecx,esi               ;  ecx=004D9E88
+0041A103  |.  E8 E8000000     call Sworda.0041A1F0
+0041A108  |.  B9 886C4500     mov ecx,Sworda.00456C88
+0041A10D  |.  E8 2E9AFEFF     call Sworda.00403B40
+0041A112  |.  8BCE            mov ecx,esi
+0041A114  |.  E8 57050000     call Sworda.0041A670     ;  ecx=004D9E88
+0041A119  |>  5E              pop esi                  ;  Default case of switch 0041A075
+--------------------------------------------------------
+代码测试工具这样写：
+mov ecx,00456C88	
+call 00403910		;	第一次执行成功返回eax=1
+mov ecx,004D9E88
+call 0041A1F0		;	第二次执行成功返回eax=0
+mov ecx,00456C88
+call 00403B40		;	第三次执行成功返回eax=1D8
+mov ecx,004D9E88
+call 0041A670		;	第四次执行成功返回eax=1
+分了四次连续调用，然后可以看到Tab小地图出来了。
+这就是我们要找的Tab键打开游戏小地图的call！！！
+-----------------------------------------------
+ok,下面再介绍法二：
+就是第一次找到的是一个联合call ，不太方便，不妨在这个子程序的首部下断，
+找找看是哪里调用了这里。
+程序在首部断下，此时堆栈中，内容如下：
+0012FE38   00419FA2  返回到 Sworda.00419FA2 来自 Sworda.0041A070
+0012FE3C   0000000F
+0012FE40   00419F87  返回到 Sworda.00419F87 来自 Sworda.00419F90
+选择第一条，然后在反汇编窗口中跟随这个地址：00419FA2，内容如下：
+00419F90  /$ 8B4424 04      MOV EAX,DWORD PTR SS:[ESP+4]
+00419F94  |. 8338 0C        CMP DWORD PTR DS:[EAX],0C
+00419F97  |. 75 09          JNZ SHORT Sworda.00419FA2
+00419F99  |. 8B40 04        MOV EAX,DWORD PTR DS:[EAX+4]
+00419F9C  |. 50             PUSH EAX				;	eax=F
+00419F9D  |. E8 CE000000    CALL Sworda.0041A070	;	Tab键呼出小地图Call
+00419FA2  \> C2 0400        RETN 4
+这是一段小代码，使用远程call测试工具，测试如下：
+push 0xF
+call 0041A070
+ok，完美呼出Tab键的小地图。
+现在在进入这个call中看看0041A070，发现全部是switch-case语句，可以判断出
+这个函数应该封装了一下快捷键的操作方法，其中就有Tab键的使用，需要传递参数0xF。
+下面贴出这个call的代码,并给出分析：
+--------------------------------------------------------------------------
+00419F90  /$ 8B4424 04      MOV EAX,DWORD PTR SS:[ESP+4]
+00419F94  |. 8338 0C        CMP DWORD PTR DS:[EAX],0C
+00419F97  |. 75 09          JNZ SHORT Sworda.00419FA2
+00419F99  |. 8B40 04        MOV EAX,DWORD PTR DS:[EAX+4]
+00419F9C  |. 50             PUSH EAX				;	eax=??参数
+00419F9D  |. E8 CE000000    CALL Sworda.0041A070	;	根据参数对应的操作
+00419FA2  \> C2 0400        RETN 4
+--------------------------快捷操作子程序-------------------------0041A070
+0041A070  /$ 8B4424 04      MOV EAX,DWORD PTR SS:[ESP+4]
+0041A074  |. 56             PUSH ESI
+0041A075  |. 48             DEC EAX            		;  Switch (cases 1..41)
+0041A076  |. 8BF1           MOV ESI,ECX
+0041A078  |. 83F8 40        CMP EAX,40
+0041A07B  |. 0F87 98000000  JA Sworda.0041A119
+0041A081  |. 33C9           XOR ECX,ECX
+0041A083  |. 8A88 48A14100  MOV CL,BYTE PTR DS:[EAX+41A148]
+0041A089  |. FF248D 20A1410>JMP DWORD PTR DS:[ECX*4+41A120]
+0041A090  |> 8BCE           MOV ECX,ESI             ;  Case 3B of switch 0041A075
+0041A092  |. E8 09030000    CALL Sworda.0041A3A0	;	打开状态菜单;再调用一次会关闭
+0041A097  |. 5E             POP ESI
+0041A098  |. C2 0400        RETN 4
+0041A09B  |> 8BCE           MOV ECX,ESI             ;  Case 3C of switch 0041A075
+0041A09D  |. E8 4E030000    CALL Sworda.0041A3F0	;	打开装备菜单;再调用一次会关闭
+0041A0A2  |. 5E             POP ESI
+0041A0A3  |. C2 0400        RETN 4
+0041A0A6  |> 8BCE           MOV ECX,ESI             ;  Case 3D of switch 0041A075
+0041A0A8  |. E8 A3030000    CALL Sworda.0041A450	;	打开修炼菜单;再调用一次会关闭
+0041A0AD  |. 5E             POP ESI
+0041A0AE  |. C2 0400        RETN 4
+0041A0B1  |> 8BCE           MOV ECX,ESI             ;  Case 3F of switch 0041A075
+0041A0B3  |. E8 E8030000    CALL Sworda.0041A4A0	;	打开物品背包;再调用一次会关闭
+0041A0B8  |. 5E             POP ESI
+0041A0B9  |. C2 0400        RETN 4
+0041A0BC  |> 8BCE           MOV ECX,ESI             ;  Case 40 of switch 0041A075
+0041A0BE  |. E8 3D040000    CALL Sworda.0041A500	;	打开武功列表菜单;再调用一次会关闭
+0041A0C3  |. 5E             POP ESI
+0041A0C4  |. C2 0400        RETN 4
+0041A0C7  |> 8BCE           MOV ECX,ESI             ;  Case 41 of switch 0041A075
+0041A0C9  |. E8 92040000    CALL Sworda.0041A560	;	打开消息/任务菜单;再调用一次会关闭
+0041A0CE  |. 5E             POP ESI
+0041A0CF  |. C2 0400        RETN 4
+0041A0D2  |> 8BCE           MOV ECX,ESI             ;  Case 39 of switch 0041A075
+0041A0D4  |. E8 17010000    CALL Sworda.0041A1F0	;	将打开的菜单关闭,对tab键打开小地图无效
+0041A0D9  |. 5E             POP ESI
+0041A0DA  |. C2 0400        RETN 4
+0041A0DD  |> 8BCE           MOV ECX,ESI             ;  Case 1 of switch 0041A075
+0041A0DF  |. E8 0C010000    CALL Sworda.0041A1F0	;	这里是调用打开设置菜单
+0041A0E4  |. 85C0           TEST EAX,EAX
+0041A0E6  |. 75 31          JNZ SHORT Sworda.0041A119
+0041A0E8  |. 8BCE           MOV ECX,ESI
+0041A0EA  |. E8 C1040000    CALL Sworda.0041A5B0
+0041A0EF  |. 5E             POP ESI
+0041A0F0  |. C2 0400        RETN 4
+0041A0F3  |> B9 886C4500    MOV ECX,Sworda.00456C88 ;  Case F of switch 0041A075
+0041A0F8  |. E8 1398FEFF    CALL Sworda.00403910	;	这里是联合call
+0041A0FD  |. 85C0           TEST EAX,EAX			;	1 Tab键打开小地图call
+0041A0FF  |. 74 18          JE SHORT Sworda.0041A119
+0041A101  |. 8BCE           MOV ECX,ESI				;	ecx=004D9E88
+0041A103  |. E8 E8000000    CALL Sworda.0041A1F0	;	2 Tab键打开小地图call
+0041A108  |. B9 886C4500    MOV ECX,Sworda.00456C88
+0041A10D  |. E8 2E9AFEFF    CALL Sworda.00403B40	;	3 Tab键打开小地图call
+0041A112  |. 8BCE           MOV ECX,ESI				;	ecx=004D9E88
+0041A114  |. E8 57050000    CALL Sworda.0041A670	;	4 Tab键打开小地图call
+0041A119  |> 5E             POP ESI                 ;  Default case of switch 0041A075
+0041A11A  \. C2 0400        RETN 4
+--------------------------
+================================================================================
+
+0012FE34   0012FE60
+0012FE38   00419FA2  返回到 Sworda.00419FA2 来自 Sworda.0041A070
+0012FE3C   0000000F
+0012FE40   00419F87  返回到 Sworda.00419F87 来自 Sworda.00419F90
+0012FE44   0012FE60
+0012FE48   1000F270  Sword.?Get@KMessage@@QAEHPAUTMessage@@@Z
+0012FE4C   004D9E30  Sworda.004D9E30
+0012FE50   00418309  返回到 Sworda.00418309 来自 Sworda.00419EA0
+0012FE54   0012FE60
+0012FE58   75C7D656  USER32.PostMessageA
+0012FE5C   004D9E30  Sworda.004D9E30
+0012FE60   0000000C
+0012FE64   0000000F
+0012FE68   00000000
+0012FE6C   00000000
+0012FE70   00418294  返回到 Sworda.00418294 来自 Sworda.004182D0
+0012FE74   0012FEB4  ASCII "p9C"
+0012FE78   0041B0BA  返回到 Sworda.0041B0BA 来自 Sworda.00418280
+0012FE7C   004088A5  返回到 Sworda.004088A5 来自 Sworda.0041B070
+0012FE80   1000E70A  返回到 Sword.1000E70A
+0012FE84   00000000
+0012FE88   00000000
+0012FE8C   0012FF88
+0012FE90   7FFDF000
+0012FE94   003409F6
+0012FE98   00000200
+0012FE9C   00000000
+0012FEA0   005E0214
+0012FEA4   018B1221  ASCII "<script src="errorPageStrings.js" language="javascript" type="text/javascript">
+        </script>
+        <script src="httpErrorPagesScripts.js" language="javascript" type="text/javascript">
+        </script>
+    </head>
+
+    <body"...
+0012FEA8   00000213
+0012FEAC   0000008C
+0012FEB0   004085E2  返回到 Sworda.004085E2 来自 Sword.?Run@KApplication@@UAEXXZ
+0012FEB4   00433970  Sworda.00433970
+0012FEB8   726F7753
+0012FEBC   6C432064
+0012FEC0   00737361
+0012FEC4   00000000
+0012FEC8   004380CC  Sworda.004380CC
+0012FECC   0012FF88
+0012FED0   7FFDF000
+0012FED4   00429616  返回到 Sworda.00429616 来自 Sworda.0042A584
+0012FED8   726F7753
+0012FEDC   69572064
+0012FEE0   776F646E  返回到 ole32.776F646E 来自 ole32.776F8597
+0012FEE4   00000000
+0012FEE8   7FFDF000
+0012FEEC   004290BA  返回到 Sworda.004290BA 来自 Sworda.00429649
+0012FEF0   00000001
+0012FEF4   00000065
+0012FEF8   00000001
+0012FEFC   00000000
+0012FF00   0042A513  返回到 Sworda.<模块入口点>+0CE 来自 Sworda.004085B0
+0012FF04   00400000  Sworda.00400000
+===================================================
+
+
 
 
 
