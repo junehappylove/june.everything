@@ -11,29 +11,27 @@
 <script type="text/javascript" src="/scriptcam.js"></script>
 <script type="text/javascript">
 function caption123(){
-	var src = yourFace.ImageCaption(1);
-	$('#imageBase64').val(src);
-	src = yourFace.ImageCaption(32);
-	$('#imageBase2').val(src);
-	src = yourFace.ImageCaption(3);
-	$('#imageBase3').val(src);
-	src = yourFace.ImageCaption(64);
-	$('#imageBase4').val(src);
 	var sr = "NMMqXVUJnDmOX1fpiSJ7ko4w4qdhURBJ749VMeYagXAzTAZNTOzm4VZZyhIgnbmkcEoBDzM1yGVgI5+WBxI9WbkYHwG63HS8KcuC7SuBOsDUjwZ4D9RMHlJJXb6adeZ0LMhPrZPEl64q2QHYIYWk7Lk+od1NbcpQiUHfqgIla/A=";
-	src = yourFace.SetRandomText(sr);
+	var src = yourFace.SetRandomText(sr);
 	$('#facefield').val(src);
+	src = yourFace.ImageCaption(-10);
+	$('#imageBase64').val(src);
+	src = yourFace.ImageCaption(0);
+	$('#imageBase2').val(src);
+	src = yourFace.ImageCaption(0);
+	$('#imageBase3').val(src);
+	src = yourFace.ImageCaption(0);
+	$('#imageBase4').val(src);
 }
-function setText(sr) {
+function setText() {
 	// 设置加密随机数
-	sr = "NMMqXVUJnDmOX1fpiSJ7ko4w4qdhURBJ749VMeYagXAzTAZNTOzm4VZZyhIgnbmkcEoBDzM1yGVgI5+WBxI9WbkYHwG63HS8KcuC7SuBOsDUjwZ4D9RMHlJJXb6adeZ0LMhPrZPEl64q2QHYIYWk7Lk+od1NbcpQiUHfqgIla/A=";
-	//111111111111
+	var sr = "NMMqXVUJnDmOX1fpiSJ7ko4w4qdhURBJ749VMeYagXAzTAZNTOzm4VZZyhIgnbmkcEoBDzM1yGVgI5+WBxI9WbkYHwG63HS8KcuC7SuBOsDUjwZ4D9RMHlJJXb6adeZ0LMhPrZPEl64q2QHYIYWk7Lk+od1NbcpQiUHfqgIla/A=";
 	var str = yourFace.SetRandomText(sr);
 	$('#facefield').val(str);
-	//222222222222
 	//NMMqXVUJnDmOX1fpiSJ7ko4w4qdhURBJ749VMeYagXAzTAZNTOzm4VZZyhIgnbmkcEoBDzM1yGVgI5+WBxI9WbkYHwG63HS8KcuC7SuBOsDUjwZ4D9RMHlJJXb6adeZ0LMhPrZPEl64q2QHYIYWk7Lk+od1NbcpQiUHfqgIla/A=
 	//598367,,,,,,,,,[9215F],,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"
+	//URBJ749VMeYagXAzTAZNTOzm4VZZyhIgnbmkcEoBDzM1yGVgI5+WBxI9WbkYHwG63HS8KcuC7SuBOsDUjwZ4D9RMHlJJXb6adeZ0LMhPrZPEl64q2QHYIYWk7Lk+od1NbcpQiUHfqgIla/A=
 	//,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,763895
-
 	//{52,195,42,93,85,9,156,57,142,95,87,233,137,34,123,146,142,48,226,167,97,81,16,73,239,143,85,49,230,26,129,112,51,76,6,77,76,236,230,225,86,89,202,18,32,157,185,164,112,74,1,15,51,53,200,101,96,35,159,150,7,18,61,89,185,24,31,1,186,220,116,188,41,203,130,237,43,129,58,192,212,143,6,120,15,212,76,30,82,73,93,190,154,117,230,116,44,200,79,173,147,196,151,174,42,217,1,216,33,133,164,236,185,62,161,221,77,109,202,80,137,65,223,170,2,37,107,240}
 	//Woc//cG7eA3LG2JRcOt/2LRUrtulBGKZxCNmjWG0eg4oKlG9ZRBLXd0fxmYZKfOCzwWKgy7McZ638e5/UkESOKLrqN8dA9KOo8Lk+ta7+cL8nJGxAmLeIRmI+R/o4WuQXFNKgpR4DnlG2EBeiT7s7L1Xx/mcv12zM6apOVIHrp8=
 	//sr = "Woc//cG7eA3LG2JRcOt/2LRUrtulBGKZxCNmjWG0eg4oKlG9ZRBLXd0fxmYZKfOCzwWKgy7McZ638e5/UkESOKLrqN8dA9KOo8Lk+ta7+cL8nJGxAmLeIRmI+R/o4WuQXFNKgpR4DnlG2EBeiT7s7L1Xx/mcv12zM6apOVIHrp8=";
@@ -41,19 +39,54 @@ function setText(sr) {
 	//{90,135,63,253,193,187,120,13,203,27,98,81,112,235,127,216,180,84,174,219,165,4,98,153,196,35,102,141,97,180,122,14,40,42,81,189,101,16,75,93,221,31,198,102,25,41,243,130,207,5,138,131,46,204,113,158,183,241,238,127,82,65,18,56,162,235,168,223,29,3,210,142,163,194,228,250,214,187,249,194,252,156,145,177,2,98,222,33,25,136,249,31,232,225,107,144,92,83,74,130,148,120,14,121,70,216,64,94,137,62,236,236,189,87,199,249,156,191,93,179,51,166,169,57,82,7,174,159}
 	//OCBdEbUTyFmwD61hrrKkXQynksOF2S2Vwz7MYvV3mGgLJR+ixyN4JkBTGzDERivrwfKW3uZJ9Oi7U32YRyzw7H/+y4JrAE3z58CcS3DkWzfYOsnX7g/TWBIvQmNyibYTa6KukUNSTHo93JJ/sht5939cXN2M3Gf+3x67dHp+5hkA
 
-//598367,,,,
-//,,,,,,,,,,
-//,,,,,,,,,,
-//,,,,,,,,,,
-//,,,,,,,,,,
-//,,,,,,,,,,
-//,,,,,,,,,,
-//,,,,,,,,,,
-//,,,,,,,,,,
-//,,,,,,,,,,
-//,,,,,,,,,,
-//,,,,,,,,,,
-//,,,,,,,,		--128个
+	str = yourFace.SetRandomText(sr);
+	$('#imageBase64').val(str);
+	
+	str = yourFace.SetRandomText("1");
+	$('#imageBase2').val(str);
+	
+	str = yourFace.SetRandomText("2");
+	$('#imageBase3').val(str);
+	
+	str = yourFace.SetRandomText("3");
+	$('#imageBase4').val(str);
+	
+	return str;
+//598367,,,,		--128个
+/*
+0012AF8C   5D2AC334		52,195,42,93
+0012AF90   399C0955		85,9,156,57
+0012AF94   E9575F8E		142,95,87,233
+0012AF98   927B2289		137,34,123,146
+0012AF9C   A7E2308E		142,48,226,167
+0012AFA0   49105161		97,81,16,73
+0012AFA4   31558FEF
+0012AFA8   70811AE6
+0012AFAC   4D064C33
+0012AFB0   E1E6EC4C
+0012AFB4   12CA5956
+0012AFB8   A4B99D20
+0012AFBC   0F014A70
+0012AFC0   65C83533
+0012AFC4   969F2360
+0012AFC8   593D1207
+0012AFCC   011F18B9
+0012AFD0   BC74DCBA
+0012AFD4   ED82CB29
+0012AFD8   C03A812B
+0012AFDC   78068FD4
+0012AFE0   1E4CD40F
+0012AFE4   BE5D4952
+0012AFE8   74E6759A
+0012AFEC   AD4FC82C
+0012AFF0   AE97C493
+0012AFF4   D801D92A
+0012AFF8   ECA48521
+0012AFFC   DDA13EB9
+0012B000   50CA6D4D
+0012B004   AADF4189
+0012B008   F06B2502
+*/
 //{52,195,42,93,85,			467
 // 9,156,57,142,95,			459
 // 87,233,137,34,123,		514
@@ -92,22 +125,11 @@ function setText(sr) {
 10044600: found const array SHA256_K (used in SHA256)
 100450C0: found const array SHA512_K (used in SHA512)
 */
-
-
-
-	str = yourFace.SetRandomText(sr);
-	$('#imageBase64').val(str);
-	//333333333333
-	str = yourFace.SetRandomText("1");
-	$('#imageBase2').val(str);
-	//444444444444
-	str = yourFace.SetRandomText("2");
-	$('#imageBase3').val(str);
-	//555555555555
-	str = yourFace.SetRandomText("3");
-	$('#imageBase4').val(str);
-	
-	return str;
+// 10010010000101011111
+// 000010010010000101011111
+// 00000010 00010010 00000101 00011111
+// 2=2		12=18	 5=5	  1F=31
+// C		S		 F		  f
 }
 //bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 //Woc//cG7eA3LG2JRcOt/2LRUrtulBGKZxCNmjWG0eg4oKlG9ZRBLXd0fxmYZKfOCzwWKgy7McZ638e5/UkESOKLrqN8dA9KOo8Lk+ta7+cL8nJGxAmLeIRmI+R/o4WuQXFNKgpR4DnlG2EBeiT7s7L1Xx/mcv12zM6apOVIHrp8=
@@ -176,7 +198,7 @@ codebase="http://www/upload/camera.CAB"></object> &nbsp;
 <div id="webcam"></div>
 <br>
 <button onclick="caption123()">caption</button>
-<button onclick="setText('')">data</button>
+<button onclick="setText()">data</button>
 <button onclick="start()">start</button>
 <button onclick="stop()">stop</button>
 <button onclick="photo()">photo</button>

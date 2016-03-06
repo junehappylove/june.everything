@@ -88,10 +88,21 @@ http://jxjy.dwjtaq.com/reInitPlay.xhtml?contentId=a64c9063bd3e1a2330dac854f0c3c8
 a64c9063bd3e1a2330dac854f0c3c8dc
 
 
-http://jxjy.dwjtaq.com/reInitPlay.xhtml?contentId=123456&url=/view/ContinuingEducationWeb/knowledge/continuingeducationflashs/huoyunFlash/1/1_1/1_1_1/&page=12
-
+http://jxjy.dwjtaq.com/reInitPlay.xhtml?contentId=123456&url=/view/ContinuingEducationWeb/knowledge/continuingeducationflashs/huoyunFlash/1/1_1/1_1_1/&page=1
+http://jxjy.dwjtaq.com/view/ContinuingEducationWeb/knowledge/continuingeducationflashs/huoyunFlash/1/1_1/1_1_1/&page=12
 
 {"success":"isFace","error":null,"msg":null,"obj":null}
+GET /eduMall.xml HTTP/1.1
+Accept: */*
+Accept-Language: zh-CN
+Referer: http://jxjy.dwjtaq.com/view/ContinuingEducationWeb/knowledge/continuingeducationflashs/jxjy_player_V3_03.swf
+x-flash-version: 20,0,0,228
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E)
+Host: jxjy.dwjtaq.com
+Connection: Keep-Alive
+Cookie: LiveWSDCT42375070=1454153305215352763060; NDCT42375070fistvisitetime=1454224858319; LiveWSDCT42375070sessionid=1457237047072380843908; NDCT42375070visitecounts=4; NDCT42375070lastvisitetime=1457238477156; NDCT42375070visitepages=8; NDCT42375070lastinvite=1457238477310; JSESSIONID=CC19F6419D228542D0ED37D350F8D06E; CNZZDATA1256882194=1957431420-1457110279-http%253A%252F%252Fjxjy.dwjtaq.com%252F%7C1457276783
+
 
 
 著作权归作者所有。

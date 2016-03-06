@@ -1,0 +1,292 @@
+-- 播放教育视频 分析 --
+1	判断用户是否登录了
+GET http://jxjy.dwjtaq.com/judgeUserLogin.xhtml?1457280058997&val=%2FshowPlay.xhtml HTTP/1.1
+x-requested-with: XMLHttpRequest
+Accept-Language: zh-cn
+Referer: http://jxjy.dwjtaq.com/showPlay.xhtml
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E)
+Host: jxjy.dwjtaq.com
+Connection: Keep-Alive
+Cookie: LiveWSDCT42375070=1454153305215352763060; NDCT42375070fistvisitetime=1454224858319; LiveWSDCT42375070sessionid=1457237047072380843908; NDCT42375070visitecounts=4; NDCT42375070lastvisitetime=1457238477156; NDCT42375070visitepages=8; NDCT42375070lastinvite=1457238477310; JSESSIONID=CC19F6419D228542D0ED37D350F8D06E; CNZZDATA1256882194=1957431420-1457110279-http%253A%252F%252Fjxjy.dwjtaq.com%252F%7C1457276783
+------------返回 success 成功消息
+2
+GET http://jxjy.dwjtaq.com/showPlay.xhtml HTTP/1.1	展示教育播放页面，包括教育学习数列表，以及播放的视频页面
+Accept: image/jpeg, application/x-ms-application, image/gif, application/xaml+xml, image/pjpeg, application/x-ms-xbap, */*
+Accept-Language: zh-CN
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E)
+Accept-Encoding: gzip, deflate
+Host: jxjy.dwjtaq.com
+Connection: Keep-Alive
+Cookie: LiveWSDCT42375070=1454153305215352763060; NDCT42375070fistvisitetime=1454224858319; LiveWSDCT42375070sessionid=1457237047072380843908; NDCT42375070visitecounts=4; NDCT42375070lastvisitetime=1457238477156; NDCT42375070visitepages=8; NDCT42375070lastinvite=1457238477310; JSESSIONID=CC19F6419D228542D0ED37D350F8D06E; CNZZDATA1256882194=1957431420-1457110279-http%253A%252F%252Fjxjy.dwjtaq.com%252F%7C1457276783
+-----------返回 播放器
+
+3  请求教育内容页面
+GET http://jxjy.dwjtaq.com/view/ContinuingEducationWeb/content.jsp HTTP/1.1
+Accept: image/jpeg, application/x-ms-application, image/gif, application/xaml+xml, image/pjpeg, application/x-ms-xbap, */*
+Referer: http://jxjy.dwjtaq.com/showPlay.xhtml
+Accept-Language: zh-CN
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E)
+Accept-Encoding: gzip, deflate
+Host: jxjy.dwjtaq.com
+Connection: Keep-Alive
+Cookie: LiveWSDCT42375070=1454153305215352763060; NDCT42375070fistvisitetime=1454224858319; LiveWSDCT42375070sessionid=1457237047072380843908; NDCT42375070visitecounts=4; NDCT42375070lastvisitetime=1457238477156; NDCT42375070visitepages=8; NDCT42375070lastinvite=1457238477310; JSESSIONID=CC19F6419D228542D0ED37D350F8D06E; CNZZDATA1256882194=1957431420-1457110279-http%253A%252F%252Fjxjy.dwjtaq.com%252F%7C1457276783
+-----------返回 页面
+
+4
+GET http://jxjy.dwjtaq.com/index.php?c=code&id=10 HTTP/1.1	未知 404错误
+Accept: image/jpeg, application/x-ms-application, image/gif, application/xaml+xml, image/pjpeg, application/x-ms-xbap, */*
+Referer: http://jxjy.dwjtaq.com/showPlay.xhtml
+Accept-Language: zh-CN
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E)
+Accept-Encoding: gzip, deflate
+Host: i.tianqi.com
+Connection: Keep-Alive
+Cookie: cs_prov=01; cs_city=0101; ccity=101010100; ipPy=beijing; Hm_lvt_86f43783acc56b0c8abb5bb039edc763=1457279661,1457279747,1457279754,1457280022; Hm_lpvt_86f43783acc56b0c8abb5bb039edc763=1457280022
+
+未知
+5
+GET http://jxjy.dwjtaq.com/stat.htm?id=1256882194&r=&lg=zh-cn&ntime=1457276783&cnzz_eid=1957431420-1457110279-http%3A%2F%2Fjxjy.dwjtaq.com%2F&showp=1366x768&t=%E7%BB%A7%E7%BB%AD%E6%95%99%E8%82%B2%E6%92%AD%E6%94%BE%E9%A1%B5&h=1&rnd=225832226 HTTP/1.1
+Accept: */*
+Referer: http://jxjy.dwjtaq.com/showPlay.xhtml
+Accept-Language: zh-CN
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E;  QIHU 360EE)
+Accept-Encoding: gzip, deflate
+Host: z13.cnzz.com
+Connection: Keep-Alive
+Cookie: cna=wAUuD2jAdjYCAd6tSRPau+Ve
+
+未知 页面错误 404
+
+6 	返回数据是 ‘0’
+GET http://jxjy.dwjtaq.com/surplusHour.xhtml?1457280060687 HTTP/1.1
+x-requested-with: XMLHttpRequest
+Accept-Language: zh-cn
+Referer: http://jxjy.dwjtaq.com/showPlay.xhtml
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E)
+Host: jxjy.dwjtaq.com
+Connection: Keep-Alive
+Cookie: LiveWSDCT42375070=1454153305215352763060; NDCT42375070fistvisitetime=1454224858319; LiveWSDCT42375070sessionid=1457237047072380843908; NDCT42375070visitecounts=4; NDCT42375070lastvisitetime=1457238477156; NDCT42375070visitepages=8; NDCT42375070lastinvite=1457238477310; JSESSIONID=CC19F6419D228542D0ED37D350F8D06E; CNZZDATA1256882194=1957431420-1457110279-http%253A%252F%252Fjxjy.dwjtaq.com%252F%7C1457276783
+
+7	返回数据是“已完成学时”
+GET http://jxjy.dwjtaq.com/surplusTtme.xhtml?1457280060683 HTTP/1.1
+x-requested-with: XMLHttpRequest
+Accept-Language: zh-cn
+Referer: http://jxjy.dwjtaq.com/showPlay.xhtml
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E)
+Host: jxjy.dwjtaq.com
+Connection: Keep-Alive
+Cookie: LiveWSDCT42375070=1454153305215352763060; NDCT42375070fistvisitetime=1454224858319; LiveWSDCT42375070sessionid=1457237047072380843908; NDCT42375070visitecounts=4; NDCT42375070lastvisitetime=1457238477156; NDCT42375070visitepages=8; NDCT42375070lastinvite=1457238477310; JSESSIONID=CC19F6419D228542D0ED37D350F8D06E; CNZZDATA1256882194=1957431420-1457110279-http%253A%252F%252Fjxjy.dwjtaq.com%252F%7C1457276783
+
+8	返回数据是“12”	大概是总学时是12学时
+GET http://jxjy.dwjtaq.com/satisfyHour.xhtml?1457280060685 HTTP/1.1
+x-requested-with: XMLHttpRequest
+Accept-Language: zh-cn
+Referer: http://jxjy.dwjtaq.com/showPlay.xhtml
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E)
+Host: jxjy.dwjtaq.com
+Connection: Keep-Alive
+Cookie: LiveWSDCT42375070=1454153305215352763060; NDCT42375070fistvisitetime=1454224858319; LiveWSDCT42375070sessionid=1457237047072380843908; NDCT42375070visitecounts=4; NDCT42375070lastvisitetime=1457238477156; NDCT42375070visitepages=8; NDCT42375070lastinvite=1457238477310; JSESSIONID=CC19F6419D228542D0ED37D350F8D06E; CNZZDATA1256882194=1957431420-1457110279-http%253A%252F%252Fjxjy.dwjtaq.com%252F%7C1457276783
+
+9	返回数据是“您继续教育2015年度内累计达12学时(571分钟)”
+GET http://jxjy.dwjtaq.com/time.xhtml?1457280060682 HTTP/1.1
+x-requested-with: XMLHttpRequest
+Accept-Language: zh-cn
+Referer: http://jxjy.dwjtaq.com/showPlay.xhtml
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E)
+Host: jxjy.dwjtaq.com
+Connection: Keep-Alive
+Cookie: LiveWSDCT42375070=1454153305215352763060; NDCT42375070fistvisitetime=1454224858319; LiveWSDCT42375070sessionid=1457237047072380843908; NDCT42375070visitecounts=4; NDCT42375070lastvisitetime=1457238477156; NDCT42375070visitepages=8; NDCT42375070lastinvite=1457238477310; JSESSIONID=CC19F6419D228542D0ED37D350F8D06E; CNZZDATA1256882194=1957431420-1457110279-http%253A%252F%252Fjxjy.dwjtaq.com%252F%7C1457276783
+
+10	此处为一个下载文件调用，文件名为contentMenu.xhtml,文件内容时JSON数据，注意此处是POST调用
+POST http://jxjy.dwjtaq.com/contentMenu.xhtml HTTP/1.1
+x-requested-with: XMLHttpRequest
+Accept-Language: zh-cn
+Referer: http://jxjy.dwjtaq.com/showPlay.xhtml
+Accept: application/json, text/javascript, */*; q=0.01
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E)
+Host: jxjy.dwjtaq.com
+Content-Length: 0
+Connection: Keep-Alive
+Cache-Control: no-cache
+Cookie: LiveWSDCT42375070=1454153305215352763060; NDCT42375070fistvisitetime=1454224858319; LiveWSDCT42375070sessionid=1457237047072380843908; NDCT42375070visitecounts=4; NDCT42375070lastvisitetime=1457238477156; NDCT42375070visitepages=8; NDCT42375070lastinvite=1457238477310; JSESSIONID=CC19F6419D228542D0ED37D350F8D06E; CNZZDATA1256882194=1957431420-1457110279-http%253A%252F%252Fjxjy.dwjtaq.com%252F%7C1457276783
+
+调用两次
+生成文件数学习列表
+
+11
+GET http://jxjy.dwjtaq.com/eduMall.xml HTTP/1.1 	---- 未知页面404
+Accept: */*
+Accept-Language: zh-CN
+Referer: http://jxjy.dwjtaq.com/view/ContinuingEducationWeb/knowledge/continuingeducationflashs/jxjy_player_V3_03.swf
+x-flash-version: 20,0,0,228
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E)
+Host: jxjy.dwjtaq.com
+Connection: Keep-Alive
+Cookie: LiveWSDCT42375070=1454153305215352763060; NDCT42375070fistvisitetime=1454224858319; LiveWSDCT42375070sessionid=1457237047072380843908; NDCT42375070visitecounts=4; NDCT42375070lastvisitetime=1457238477156; NDCT42375070visitepages=8; NDCT42375070lastinvite=1457238477310; JSESSIONID=CC19F6419D228542D0ED37D350F8D06E; CNZZDATA1256882194=1957431420-1457110279-http%253A%252F%252Fjxjy.dwjtaq.com%252F%7C1457276783
+
+12 点击学习项目后的
+GET /reInitPlay.xhtml?contentId=248b2c27bb7f9f3d600741153b5204e4&url=/view/ContinuingEducationWeb/knowledge/continuingeducationflashs/huoyunFlash/1/1_1/1_1_2/&page=1 HTTP/1.1
+Accept: image/jpeg, application/x-ms-application, image/gif, application/xaml+xml, image/pjpeg, application/x-ms-xbap, */*
+Referer: http://jxjy.dwjtaq.com/showPlay.xhtml
+Accept-Language: zh-CN
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E)
+Accept-Encoding: gzip, deflate
+Host: jxjy.dwjtaq.com
+Connection: Keep-Alive
+Cookie: LiveWSDCT42375070=1454153305215352763060; NDCT42375070fistvisitetime=1454224858319; NDCT42375070visitecounts=4; NDCT42375070lastvisitetime=1457238477156; NDCT42375070visitepages=8; JSESSIONID=CC19F6419D228542D0ED37D350F8D06E; CNZZDATA1256882194=1957431420-1457110279-http%253A%252F%252Fjxjy.dwjtaq.com%252F%7C1457282665
+
+13 点击下一页后事件，用于提交时间  注意是post提交
+POST http://jxjy.dwjtaq.com/saveEduTime.xhtml?1457282898469 HTTP/1.1
+x-requested-with: XMLHttpRequest
+Accept-Language: zh-cn
+Referer: http://jxjy.dwjtaq.com/reInitPlay.xhtml?contentId=248b2c27bb7f9f3d600741153b5204e4&url=/view/ContinuingEducationWeb/knowledge/continuingeducationflashs/huoyunFlash/1/1_1/1_1_2/&page=1
+Accept: */*
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E)
+Host: jxjy.dwjtaq.com
+Content-Length: 78
+Connection: Keep-Alive
+Cache-Control: no-cache
+Cookie: LiveWSDCT42375070=1454153305215352763060; NDCT42375070fistvisitetime=1454224858319; NDCT42375070visitecounts=4; NDCT42375070lastvisitetime=1457238477156; NDCT42375070visitepages=8; JSESSIONID=CC19F6419D228542D0ED37D350F8D06E; CNZZDATA1256882194=1957431420-1457110279-http%253A%252F%252Fjxjy.dwjtaq.com%252F%7C1457282665
+----- 这里有post数据   ctinfo=05X216151X3179&pos=010102000&starttime=z0m5VMQ2vNNvowmdUHzJUVQXW06fhCH3
+----- 注意单独提交POST http://jxjy.dwjtaq.com/saveEduTime.xhtml?1457282898469会返回405错误
+
+14	注意同12 比较
+GET /view/ContinuingEducationWeb/knowledge/continuingeducationflashs/huoyunFlash/1/1_1/1_1_2/&page=1 HTTP/1.1
+GET /view/ContinuingEducationWeb/knowledge/continuingeducationflashs/huoyunFlash/1/1_1/1_1_2/1_1_2_2.swf HTTP/1.1
+Accept: */*
+Accept-Language: zh-CN
+Referer: http://jxjy.dwjtaq.com/view/ContinuingEducationWeb/knowledge/continuingeducationflashs/jxjy_player_V3_03.swf
+x-flash-version: 20,0,0,228
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E)
+Host: jxjy.dwjtaq.com
+Connection: Keep-Alive
+Cookie: LiveWSDCT42375070=1454153305215352763060; NDCT42375070fistvisitetime=1454224858319; NDCT42375070visitecounts=4; NDCT42375070lastvisitetime=1457238477156; NDCT42375070visitepages=8; JSESSIONID=CC19F6419D228542D0ED37D350F8D06E; CNZZDATA1256882194=1957431420-1457110279-http%253A%252F%252Fjxjy.dwjtaq.com%252F%7C1457282665
+
+15 	再点击下一页
+GET /view/ContinuingEducationWeb/knowledge/continuingeducationflashs/huoyunFlash/1/1_1/1_1_2/1_1_2_3.swf HTTP/1.1
+Accept: */*
+Accept-Language: zh-CN
+Referer: http://jxjy.dwjtaq.com/view/ContinuingEducationWeb/knowledge/continuingeducationflashs/jxjy_player_V3_03.swf
+x-flash-version: 20,0,0,228
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E)
+Host: jxjy.dwjtaq.com
+Connection: Keep-Alive
+Cookie: LiveWSDCT42375070=1454153305215352763060; NDCT42375070fistvisitetime=1454224858319; NDCT42375070visitecounts=4; NDCT42375070lastvisitetime=1457238477156; NDCT42375070visitepages=8; JSESSIONID=CC19F6419D228542D0ED37D350F8D06E; CNZZDATA1256882194=1957431420-1457110279-http%253A%252F%252Fjxjy.dwjtaq.com%252F%7C1457282665
+
+16	重复动作，上传学时；post提交，
+提交数据是：ctinfo=06X412448X11137&pos=010102002&starttime=z0m5VMQ2vNNvowmdUHzJUVQXW06fhCH3
+同13的比较：ctinfo=05X216151X3179&pos=010102000&starttime=z0m5VMQ2vNNvowmdUHzJUVQXW06fhCH3
+（z0m5VMQ2vNNvowmdUHzJUVQXW06fhCH3 是加密数据，需要分析web程序，查看如何生成的）
+POST /saveEduTime.xhtml?1457283501334 HTTP/1.1
+x-requested-with: XMLHttpRequest
+Accept-Language: zh-cn
+Referer: http://jxjy.dwjtaq.com/reInitPlay.xhtml?contentId=248b2c27bb7f9f3d600741153b5204e4&url=/view/ContinuingEducationWeb/knowledge/continuingeducationflashs/huoyunFlash/1/1_1/1_1_2/&page=1
+Accept: */*
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E)
+Host: jxjy.dwjtaq.com
+Content-Length: 79
+Connection: Keep-Alive
+Cache-Control: no-cache
+Cookie: LiveWSDCT42375070=1454153305215352763060; NDCT42375070fistvisitetime=1454224858319; NDCT42375070visitecounts=4; NDCT42375070lastvisitetime=1457238477156; NDCT42375070visitepages=8; JSESSIONID=CC19F6419D228542D0ED37D350F8D06E; CNZZDATA1256882194=1957431420-1457110279-http%253A%252F%252Fjxjy.dwjtaq.com%252F%7C1457282665
+
+17	重复动作，再上一步上传学时完成后，继续加载下一页数据
+GET /view/ContinuingEducationWeb/knowledge/continuingeducationflashs/huoyunFlash/1/1_1/1_1_2/1_1_2_4.swf HTTP/1.1
+Accept: */*
+Accept-Language: zh-CN
+Referer: http://jxjy.dwjtaq.com/view/ContinuingEducationWeb/knowledge/continuingeducationflashs/jxjy_player_V3_03.swf
+x-flash-version: 20,0,0,228
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E)
+Host: jxjy.dwjtaq.com
+Connection: Keep-Alive
+Cookie: LiveWSDCT42375070=1454153305215352763060; NDCT42375070fistvisitetime=1454224858319; NDCT42375070visitecounts=4; NDCT42375070lastvisitetime=1457238477156; NDCT42375070visitepages=8; JSESSIONID=CC19F6419D228542D0ED37D350F8D06E; CNZZDATA1256882194=1957431420-1457110279-http%253A%252F%252Fjxjy.dwjtaq.com%252F%7C1457282665
+
+
+18 切换节点后动作
+GET http://jxjy.dwjtaq.com/reInitPlay.xhtml?contentId=5f48bd885a7b83467bb368a3e336ecee&url=/view/ContinuingEducationWeb/knowledge/continuingeducationflashs/huoyunFlash/1/1_2/1_2_1/&page=1 HTTP/1.1
+Accept: image/jpeg, application/x-ms-application, image/gif, application/xaml+xml, image/pjpeg, application/x-ms-xbap, */*
+Referer: http://jxjy.dwjtaq.com/showPlay.xhtml
+Accept-Language: zh-CN
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E)
+Accept-Encoding: gzip, deflate
+Host: jxjy.dwjtaq.com
+Connection: Keep-Alive
+Cookie: LiveWSDCT42375070=1454153305215352763060; NDCT42375070fistvisitetime=1454224858319; NDCT42375070visitecounts=4; NDCT42375070lastvisitetime=1457238477156; NDCT42375070visitepages=8; JSESSIONID=CC19F6419D228542D0ED37D350F8D06E; CNZZDATA1256882194=1957431420-1457110279-http%253A%252F%252Fjxjy.dwjtaq.com%252F%7C1457282665
+
+19	这个是个webservice接口调用
+GET http://jxjy.dwjtaq.com/view/ContinuingEducationWeb/knowledge/continuingeducationflashs/huoyunFlash/1/1_2/1_2_1/eduMall.xml HTTP/1.1
+Accept: */*
+Accept-Language: zh-CN
+Referer: http://jxjy.dwjtaq.com/view/ContinuingEducationWeb/knowledge/continuingeducationflashs/jxjy_player_V3_03.swf
+x-flash-version: 20,0,0,228
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E)
+Host: jxjy.dwjtaq.com
+Connection: Keep-Alive
+Cookie: LiveWSDCT42375070=1454153305215352763060; NDCT42375070fistvisitetime=1454224858319; NDCT42375070visitecounts=4; NDCT42375070lastvisitetime=1457238477156; NDCT42375070visitepages=8; JSESSIONID=CC19F6419D228542D0ED37D350F8D06E; CNZZDATA1256882194=1957431420-1457110279-http%253A%252F%252Fjxjy.dwjtaq.com%252F%7C1457282665
+
+调用后返回数据是xml数据：【这个非常重要，直接表明此节点下有多少页数据】
+	  <?xml version="1.0" encoding="utf-8" ?> 
+	- <eduMall xmlns="http://sys.dwjtaq.com/eduMallv3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://sys.dwjtaq.com/eduMallv3 http://sys.dwjtaq.com/eduMallv3.xsd">
+	- <config>
+	  <maxTime value="60" /> 
+	  <maxTimeMultiple value="10" /> 
+	  <rightMenuName value="关于枫升科技" /> 
+	  <rightMenuUrl value="http://www.dwjtaq.com" /> 
+	  </config>
+	- <c1 c1id="1" title="">
+		- <c2 c2id="1_2" title="">
+			  <f file="1_2_1_1.swf" FPS="12" /> 
+			  <f file="1_2_1_2.swf" FPS="12" /> 
+			  <f file="1_2_1_3.swf" FPS="12" /> 
+			  <f file="1_2_1_4.swf" FPS="12" /> 
+			  <f file="1_2_1_5.swf" FPS="12" /> 
+			  <f file="1_2_1_6.swf" FPS="12" /> 
+			  <f file="1_2_1_7.swf" FPS="12" /> 
+			  <f file="1_2_1_8.swf" FPS="12" /> 
+			  <f file="1_2_1_9.swf" FPS="12" /> 
+			  <f file="1_2_1_10.swf" FPS="12" /> 
+			  <f file="1_2_1_11.swf" FPS="12" /> 
+			  <f file="1_2_1_12.swf" FPS="12" /> 
+			  <f file="1_2_1_13.swf" FPS="12" /> 
+			  <f file="1_2_1_14.swf" FPS="12" /> 
+			  <f file="1_2_1_15.swf" FPS="12" /> 
+			  <f file="end.swf" FPS="12" /> 
+		  </c2>
+	  </c1>
+	  </eduMall>
+	  
+	  
+20 观看此节下的第一页数据
+GET http://jxjy.dwjtaq.com/view/ContinuingEducationWeb/knowledge/continuingeducationflashs/huoyunFlash/1/1_2/1_2_1/1_2_1_1.swf HTTP/1.1
+Accept: */*
+Accept-Language: zh-CN
+Referer: http://jxjy.dwjtaq.com/view/ContinuingEducationWeb/knowledge/continuingeducationflashs/jxjy_player_V3_03.swf
+x-flash-version: 20,0,0,228
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E)
+Host: jxjy.dwjtaq.com
+Connection: Keep-Alive
+Cookie: LiveWSDCT42375070=1454153305215352763060; NDCT42375070fistvisitetime=1454224858319; NDCT42375070visitecounts=4; NDCT42375070lastvisitetime=1457238477156; NDCT42375070visitepages=8; JSESSIONID=CC19F6419D228542D0ED37D350F8D06E; CNZZDATA1256882194=1957431420-1457110279-http%253A%252F%252Fjxjy.dwjtaq.com%252F%7C1457282665
+
+
+。。。。。
+后面的都是再重复动作
