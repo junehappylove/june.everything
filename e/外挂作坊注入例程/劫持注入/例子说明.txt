@@ -1,0 +1,34 @@
+劫持注入是利用 EXE程序 加载某 DLL文件 时用 冒牌DLL 替换掉.达到注入目的.
+
+冒牌DLL 要与被 劫持DLL 公开同样的API函数名称.但不需要参数和返回值及代码
+
+
+编译本例的 劫持测试.e 和 MyDll.e 两个文件出来 劫持测试.exe 和 MyDll.dll
+
+运行EXE,点 信息框1 按钮和 信息框2 按钮都能成功调用 MyDll.dll 里的功能.
+
+
+
+现在把 MyDll.dll 改名为 OriMyDll.dll 然后编译 MyDllHook.e 出来 MyDll.dll
+
+运行EXE,点 信息框1 或 信息框2 按钮会出来 MyDll劫持 提示.按 HOME 键可呼出
+
+EXE和DLL同目录用改名劫持.不影响原EXE对原DLL的正常调用,我们的DLL也完美注入.
+
+
+
+
+
+初始化EXE要装载好多系统DLL,这些DLL不与EXE同目录的把 冒牌DLL 放进EXE目录即可
+
+用黑月编译 lpkHook.e 出来 lpk.dll 放在EXE同目录里,运行EXE,按 F12键 弹出提示
+
+删除lpk.dll后用黑月编译 usp10Hook.e 出来 usp10.dll 放EXE目录里运行EXE,按 F12键 弹出提示
+
+
+
+注意:劫持lpk.dll和usp10.dll都行黑月处理.Win7对这些系统DLL有保护暂不支持劫持
+
+提示:有些DLL不需要黑月处理也能劫持生效,遇到这样的DLL当然得优先对待滴!看代码
+
+若存在冒牌lpk.dll会导致usp10.dll劫持无效.所以测试usp10.dll时要先删掉lpk.dll
