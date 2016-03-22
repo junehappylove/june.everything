@@ -1,0 +1,120 @@
+自助学习系统启动时间：2016年3月22日1时1分2秒
+JSESSIONID=CE7AA36F5B6223FB8A006C93B9A8D840;
+被选择的登陆图片名：45.jpg
+登录参数：PAPERSCODE=211121197405031470&USERNAME=&yhdl=sfz&CERTTYPE=010600&PASSWORD=123123&rand=9781
+第一步 isFaceLogin:{"success":"isFace","error":null,"msg":null,"obj":null}
+第二步 InitialFaceCamera:{"success":"成功","error":null,"msg":"q4eOUmxUTS3QoaJ/YyR/9R4LpIbcp17rYV2AbRGBNyZtvNs0wMUU9j1qC9TukBEAckrQy9SjqV90Txhc92FoG070uJVg/HVlpyTWKMds0h95TAUMwXjRINywVZM=","obj":null}
+秘串：q4eOUmxUTS3QoaJ/YyR/9R4LpIbcp17rYV2Abb5ull3fnXWL45t4MsDYnnILLdkJyGylq/ARtka4JOCXkrf5PRGBNyZtvNs0wMUU9j1qC9TukBEAckrQy9SjqV90Txhc92FoG070uJVg/HVlpyTWKMds0h95TAUMwXjRINywVZM=
+原始照片数据：0000699800000020/9j/4AAQSkZJRgABAQEBLAEsAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRTSxP3qN24IFLCcHBqumpm1cscZzW3o1zviaFuGXp7isVRxVizk+z3KyA47H3FOlNXIqL8696f0ad02b80c0131baf47e7ae72734
+照片MD5值：8696f0ad02b80c0131baf47e7ae72734
+照片数据：/9j/4AAQSkZJRgABAQEBLAEsAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxOZsiiw7WJA2akDDFVUbJxUwNJoNdQdsKTSxP3qN24IFLCcHBqumpm1cscZzW3o1zviaFuGXp7isVRxVizk+z3KyA47H3FOlNXIqL
+加密文件头：0000607800000020
+照片重组后数据：0000607800000020/9j/4AAQSkZJRgABAQEBLAEsAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UTSxP3qN24IFLCcHBqumpm1cscZzW3o1zviaFuGXp7isVRxVizk+z3KyA47H3FOlNXIqL8696f0ad02b80c0131baf47e7ae72734
+验证参数：PAPERSCODE=211121197405031470&USERNAME=&yhdl=sfz&CERTTYPE=010600&PASSWORD=123123&rand=97811%4C%38%36%39%36%66%30%61%64%30%32%62%38%30%63%30%31%33%31%62%61%66%34%37%65%37%61%65%37%32%37%33%34
+第三步 UserTakeLogin:{"success":"0.85426205","error":"yearBefore","msg":"您现在的教育年度为2015年度?年度）不符，将不记录学时，如需学习2016年度需首先点击【确定】按钮进行续费后重新登录学习","obj":null}
+登录成功success
+登录成功
+开始下载学习数据...
+登录成功success
+用户已经登录成功
+已经访问showPlay页面
+学习数据下载完成。
+学习有效数据：[{"id":"58","text":"道路运输相关法规、政策","url":null,"children":[{"id":"125","text":_6_3/","children":[],"state":null,"time":0}],"state":"closed","time":0}],"state":"closed","time":0}]
+开始整理学习数据...
+整理学习数据完成
+节点切换访问地址：http://jxjy.dwjtaq.com/reInitPlay.xhtml?contentId=83d1632cdd7c2a9517c8029ebdbec217rl=/view/ContinuingEducationWeb/knowledge/continuingeducationflashs/huoyunFlash/1/1_1/1_1_1/
+&page=1
+节点切换存放目录：\1\1_1\1_1_1\1_1_1_1.swf
+开始下载文件，请稍后...
+创建目录：\1\1_1\1_1_1\1_1_1_1.swf 失败！
+下载文件：1_1_1_1 失败！
+XML数据请求地址：/view/ContinuingEducationWeb/knowledge/continuingeducationflashs/huoyunFlash/1/1_1/1_1_1/
+
+翻页XML数据：?<?xml version="1.0" encoding="utf-8"?>
+<eduMall xmlns="http://sys.dwjtaq.com/eduMallvfile="1_1_1_56.swf" FPS="12"/>
+      <f file="end.swf" FPS="12"/>
+    </c2>
+  </c1>
+</eduMall>
+
+XML数据到页完成
+当前页数据：
+当前页时间数据：
+获取当前节点开始时间：
+网络地址：http://jxjy.dwjtaq.com/view/ContinuingEducationWeb/knowledge/continuingeducationflashs/huoyunFlash/1/1_1/1_1_1/
+1_1_1_1.swf
+本地地址：F:\Workspaces\git\GitHub\e\教育学习\study\player\temp\1\1_1\1_1_1\1_1_1_1.swf
+文件名：1_1_1_1
+开始下载文件，请稍后...
+登录成功success
+文件[1_1_1_1]已经存在，不必下载
+1_1_1_1 获取成功！
+获取当前视频信息：010101001
+获取[1_1_1_1]的时长为：-1
+未能成功获取时长，学时计时失败...
+网络地址：http://jxjy.dwjtaq.com/view/ContinuingEducationWeb/knowledge/continuingeducationflashs/huoyunFlash/1/1_1/1_1_1/
+1_1_1_2.swf
+本地地址：F:\Workspaces\git\GitHub\e\教育学习\study\player\temp\1\1_1\1_1_1\1_1_1_2.swf
+文件名：1_1_1_2
+开始下载文件，请稍后...
+登录成功success
+文件[1_1_1_2]已经存在，不必下载
+1_1_1_2 获取成功！
+获取当前视频信息：010101002
+获取[1_1_1_2]的时长为：-1
+未能成功获取时长，学时计时失败...
+获取学习配置数据成功
+网络地址：http://jxjy.dwjtaq.com/view/ContinuingEducationWeb/knowledge/continuingeducationflashs/huoyunFlash/1/1_1/1_1_1/
+1_1_1_1.swf
+本地地址：F:\Workspaces\git\GitHub\e\教育学习\study\player\temp\1\1_1\1_1_1\1_1_1_1.swf
+文件名：1_1_1_1
+开始下载文件，请稍后...
+登录成功success
+文件[1_1_1_1]已经存在，不必下载
+1_1_1_1 获取成功！
+获取当前视频信息：010101001
+获取[1_1_1_1]的时长为：49
+开始计时...
+开始上传时长...
+时长上传参数：ctinfo=&pos=010101001&starttime=
+开始上传时长...经过
+节点切换访问地址：http://jxjy.dwjtaq.com/reInitPlay.xhtml?contentId=83d1632cdd7c2a9517c8029ebdbec217rl=/view/ContinuingEducationWeb/knowledge/continuingeducationflashs/huoyunFlash/1/1_1/1_1_1/
+&page=1
+节点切换存放目录：\1\1_1\1_1_1\1_1_1_1.swf
+开始下载文件，请稍后...
+创建目录：\1\1_1\1_1_1\1_1_1_1.swf 失败！
+下载文件：1_1_1_1 失败！
+XML数据请求地址：/view/ContinuingEducationWeb/knowledge/continuingeducationflashs/huoyunFlash/1/1_1/1_1_1/
+
+翻页XML数据：?<?xml version="1.0" encoding="utf-8"?>
+<eduMall xmlns="http://sys.dwjtaq.com/eduMallvfile="1_1_1_56.swf" FPS="12"/>
+      <f file="end.swf" FPS="12"/>
+    </c2>
+  </c1>
+</eduMall>
+
+XML数据到页完成
+当前页数据：
+当前页时间数据：
+获取当前节点开始时间：
+节点切换访问地址：http://jxjy.dwjtaq.com/reInitPlay.xhtml?contentId=63928ef961d808dfd1aa40f5a25aae84rl=/view/ContinuingEducationWeb/knowledge/continuingeducationflashs/huoyunFlash/1/1_1/1_1_2/
+&page=1
+节点切换存放目录：\1\1_1\1_1_2\1_1_2_1.swf
+开始下载文件，请稍后...
+创建目录：\1\1_1\1_1_2\1_1_2_1.swf 失败！
+下载文件：1_1_2_1 失败！
+XML数据请求地址：/view/ContinuingEducationWeb/knowledge/continuingeducationflashs/huoyunFlash/1/1_1/1_1_2/
+
+翻页XML数据：?<?xml version="1.0" encoding="utf-8"?>
+<eduMall xmlns="http://sys.dwjtaq.com/eduMallvfile="1_1_2_77.swf" FPS="12"/>
+      <f file="end.swf" FPS="12"/>
+    </c2>
+  </c1>
+</eduMall>
+
+XML数据到页完成
+当前页数据：
+当前页时间数据：
+获取当前节点开始时间：
+自助学习系统退出时间：2016年3月22日1时20分15秒
+日志保存时间：2016年3月22日1时20分15秒

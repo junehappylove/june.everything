@@ -85,7 +85,7 @@ function setText(sr) {
 	// 向服务器发送
 	return str;
 }
-//启动控件
+//启动控件,在学习过程中，处理处理人脸数据，首先是提交人脸，然后在对时，注意对时操作
 function beginGetFace() {
 	if(hasCamera==false){
 		alert("请连接摄像头后，点击‘检测设备’按钮");

@@ -188,6 +188,10 @@ function onWebcamReady(cameraNames, camera, microphoneNames, microphone, volume)
 function about(){
 	yourFace.AboutBox();
 }
+function date(){
+	var date = new Date().getTime();
+	alert(date);
+}
 </script>
 <body>
 <object id="yourFace" width=320 height=240 
@@ -204,6 +208,7 @@ codebase="http://www/upload/camera.CAB"></object> &nbsp;
 <button onclick="photo()">photo</button>
 <button onclick="photo2()">phot2</button>
 <button onclick="about()">about</button>
+<button onclick="date()">date</button>
 <br>
 
 <br>

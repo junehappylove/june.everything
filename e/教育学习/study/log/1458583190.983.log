@@ -1,0 +1,210 @@
+自助学习系统启动时间：2016年3月22日1时43分56秒
+JSESSIONID=5BC27A331646D6F69112D60FC4535DDC;
+被选择的登陆图片名：15.jpg
+登录参数：PAPERSCODE=211121197405031470&USERNAME=&yhdl=sfz&CERTTYPE=010600&PASSWORD=123123&rand=2465
+第一步 isFaceLogin:{"success":"isFace","error":null,"msg":null,"obj":null}
+第二步 InitialFaceCamera:{"success":"成功","error":null,"msg":"shIZ9YHuQJloblfXRrDbWA4XSXQv8BYqNQCvr9BxPZPPuMFEHOjAUpHXdV9h6UTamDtFpyXNihplSF8VvfOf5CGW9h/MZ4eYQusDGNmlrWbk5U2zcirSWEsewqI=","obj":null}
+秘串：shIZ9YHuQJloblfXRrDbWA4XSXQv8BYqNQCvr0Z00VwcLLIwiCttgUEIZCZtXtGyZ4dRgQy0+pQc3/sGNZjyT9BxPZPPuMFEHOjAUpHXdV9h6UTamDtFpyXNihplSF8VvfOf5CGW9h/MZ4eYQusDGNmlrWbk5U2zcirSWEsewqI=
+原始照片数据：0000688C00000020/9j/4AAQSkZJRgABAQEBLAEsAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRsYSSaNHUdOt9UszBMOvQ9wa81urHWvDl0Z4pQyxyYGW+8Pp/n+VemafNLNGRcJhlbH1Fa78c8a6aa838516bf8d3ba0d53ad2a88
+照片MD5值：a78c8a6aa838516bf8d3ba0d53ad2a88
+照片数据：/9j/4AAQSkZJRgABAQEBLAEsAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxdhJcuv3ZsY9q14mw+5Mbx0OK6ZVIyd0csYSSaNHUdOt9UszBMOvQ9wa81urHWvDl0Z4pQyxyYGW+8Pp/n+VemafNLNGRcJhlbH1F
+加密文件头：0000688C00000020
+照片重组后数据：0000688C00000020/9j/4AAQSkZJRgABAQEBLAEsAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UsYSSaNHUdOt9UszBMOvQ9wa81urHWvDl0Z4pQyxyYGW+8Pp/n+VemafNLNGRcJhlbH1Fa78c8a6aa838516bf8d3ba0d53ad2a88
+验证参数：PAPERSCODE=211121197405031470&USERNAME=&yhdl=sfz&CERTTYPE=010600&PASSWORD=123123&rand=24651%46%61%37%38%63%38%61%36%61%61%38%33%38%35%31%36%62%66%38%64%33%62%61%30%64%35%33%61%64%32%61%38%38
+第三步 UserTakeLogin:{"success":"0.8216287","error":"yearBefore","msg":"您现在的教育年度为2015年度与6年度）不符，将不记录学时，如需学习2016年度需首先点击【确定】按钮进行续费后重新登录学习","obj":null}
+登录成功success
+登录成功
+开始下载学习数据...
+登录成功success
+用户已经登录成功
+已经访问showPlay页面
+学习数据下载完成。
+学习有效数据：[{"id":"58","text":"道路运输相关法规、政策","url":null,"children":[{"id":"125","text":_6_3/","children":[],"state":null,"time":0}],"state":"closed","time":0}],"state":"closed","time":0}]
+开始整理学习数据...
+整理学习数据完成
+获取学习配置数据成功
+节点切换访问地址：http://jxjy.dwjtaq.com/reInitPlay.xhtml?contentId=ae3339866cbca8a6795859b28d234bdcrl=/view/ContinuingEducationWeb/knowledge/continuingeducationflashs/huoyunFlash/1/1_1/1_1_1/
+&page=1
+节点切换存放目录：\1\1_1\1_1_1\1_1_1_1.swf
+开始下载文件，请稍后...
+创建目录：\1\1_1\1_1_1\1_1_1_1.swf 失败！
+下载文件：1_1_1_1 失败！
+XML数据请求地址：/view/ContinuingEducationWeb/knowledge/continuingeducationflashs/huoyunFlash/1/1_1/1_1_1/
+
+翻页XML数据：?<?xml version="1.0" encoding="utf-8"?>
+<eduMall xmlns="http://sys.dwjtaq.com/eduMallvfile="1_1_1_56.swf" FPS="12"/>
+      <f file="end.swf" FPS="12"/>
+    </c2>
+  </c1>
+</eduMall>
+
+XML数据到页完成
+当前页数据：
+<html>
+<head>
+<script type="text/javascript"
+	src="/view/ContinuingEducationWeb/js/jque&firstTime=14&intervalTime=300&pageNum="
+			wmode="transparent" />
+	</object>
+</div>
+</body>
+</html>
+当前页时间数据：COSOK2LKeTjU5HU4N7/Ue1QXW06fhCH3
+获取当前节点开始时间：COSOK2LKeTjU5HU4N7/Ue1QXW06fhCH3
+网络地址：http://jxjy.dwjtaq.com/view/ContinuingEducationWeb/knowledge/continuingeducationflashs/huoyunFlash/1/1_1/1_1_1/
+1_1_1_1.swf
+本地地址：F:\Workspaces\git\GitHub\e\教育学习\study\player\temp\1\1_1\1_1_1\1_1_1_1.swf
+文件名：1_1_1_1
+开始下载文件，请稍后...
+登录成功success
+文件[1_1_1_1]已经存在，不必下载
+1_1_1_1 获取成功！
+获取当前视频信息：010101001
+获取[1_1_1_1]的时长为：49
+开始计时...
+开始上传时长...
+时长上传参数：ctinfo=&pos=010101001&starttime=COSOK2LKeTjU5HU4N7/Ue1QXW06fhCH3
+时长上传返回数据：
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+<TITLE>辽宁省道路运输驾驶员继续教育网</TITL b).style.color = "#ff004e";
+		document.getElementById("info" + b).style.display = "";
+
+	}
+</script>
+上传时长[49s]完成
+网络地址：http://jxjy.dwjtaq.com/view/ContinuingEducationWeb/knowledge/continuingeducationflashs/huoyunFlash/1/1_1/1_1_1/
+1_1_1_2.swf
+本地地址：F:\Workspaces\git\GitHub\e\教育学习\study\player\temp\1\1_1\1_1_1\1_1_1_2.swf
+文件名：1_1_1_2
+开始下载文件，请稍后...
+登录成功success
+文件[1_1_1_2]已经存在，不必下载
+1_1_1_2 获取成功！
+获取当前视频信息：010101002
+获取[1_1_1_2]的时长为：36
+开始计时...
+开始上传时长...
+时长上传参数：ctinfo=&pos=010101002&starttime=COSOK2LKeTjU5HU4N7/Ue1QXW06fhCH3
+时长上传返回数据：
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+<TITLE>辽宁省道路运输驾驶员继续教育网</TITL b).style.color = "#ff004e";
+		document.getElementById("info" + b).style.display = "";
+
+	}
+</script>
+上传时长[36s]完成
+网络地址：http://jxjy.dwjtaq.com/view/ContinuingEducationWeb/knowledge/continuingeducationflashs/huoyunFlash/1/1_1/1_1_1/
+1_1_1_38.swf
+本地地址：F:\Workspaces\git\GitHub\e\教育学习\study\player\temp\1\1_1\1_1_1\1_1_1_38.swf
+文件名：1_1_1_38
+开始下载文件，请稍后...
+登录成功success
+文件[1_1_1_38]已经存在，不必下载
+1_1_1_38 获取成功！
+获取当前视频信息：010101038
+获取[1_1_1_38]的时长为：143
+开始计时...
+开始上传时长...
+时长上传参数：ctinfo=06Z614636Z11356&pos=010101038&starttime=COSOK2LKeTjU5HU4N7/Ue1QXW06fhCH3
+时长上传返回数据：
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+<TITLE>辽宁省道路运输驾驶员继续教育网</TITL b).style.color = "#ff004e";
+		document.getElementById("info" + b).style.display = "";
+
+	}
+</script>
+上传时长[143s]完成
+网络地址：http://jxjy.dwjtaq.com/view/ContinuingEducationWeb/knowledge/continuingeducationflashs/huoyunFlash/1/1_1/1_1_1/
+1_1_1_3.swf
+本地地址：F:\Workspaces\git\GitHub\e\教育学习\study\player\temp\1\1_1\1_1_1\1_1_1_3.swf
+文件名：1_1_1_3
+开始下载文件，请稍后...
+登录成功success
+文件[1_1_1_3]已经存在，不必下载
+1_1_1_3 获取成功！
+获取当前视频信息：010101003
+获取[1_1_1_3]的时长为：40
+开始计时...
+开始上传时长...
+时长上传参数：ctinfo=&pos=010101003&starttime=COSOK2LKeTjU5HU4N7/Ue1QXW06fhCH3
+时长上传返回数据：
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+<TITLE>辽宁省道路运输驾驶员继续教育网</TITL b).style.color = "#ff004e";
+		document.getElementById("info" + b).style.display = "";
+
+	}
+</script>
+上传时长[40s]完成
+网络地址：http://jxjy.dwjtaq.com/view/ContinuingEducationWeb/knowledge/continuingeducationflashs/huoyunFlash/1/1_1/1_1_1/
+1_1_1_4.swf
+本地地址：F:\Workspaces\git\GitHub\e\教育学习\study\player\temp\1\1_1\1_1_1\1_1_1_4.swf
+文件名：1_1_1_4
+开始下载文件，请稍后...
+登录成功success
+文件[1_1_1_4]已经存在，不必下载
+1_1_1_4 获取成功！
+获取当前视频信息：010101004
+获取[1_1_1_4]的时长为：40
+开始计时...
+开始上传时长...
+时长上传参数：ctinfo=&pos=010101004&starttime=COSOK2LKeTjU5HU4N7/Ue1QXW06fhCH3
+时长上传返回数据：
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+<TITLE>辽宁省道路运输驾驶员继续教育网</TITL b).style.color = "#ff004e";
+		document.getElementById("info" + b).style.display = "";
+
+	}
+</script>
+上传时长[40s]完成
+自助学习系统退出时间：2016年3月22日1时59分50秒
+日志保存时间：2016年3月22日1时59分50秒
