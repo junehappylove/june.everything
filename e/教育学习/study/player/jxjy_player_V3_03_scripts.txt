@@ -126,7 +126,8 @@ package jxjy_AS3_V01_01_fla
                 case STATUS_PLAYDONE:	// 播放完成后触发的事件
                     _local_2 = studyTime;//将学习时间给变量2
                     if (_arg_1 == SAVE_BUTTON)
-                    {// 如果用户点击的是保存按钮的话
+                    {
+					// 如果用户点击的是保存按钮的话
 					// 则学时就是当前学时加上页面时间，但这里似乎用不到的
                         _local_2 = (_local_2 + pageTime);	
                     };

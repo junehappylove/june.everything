@@ -248,6 +248,8 @@ Cookie: LiveWSDCT42375070=1454153305215352763060; NDCT42375070fistvisitetime=145
 16	重复动作，上传学时；post提交，
 提交数据是：ctinfo=06X412448X11137&pos=010102002&starttime=z0m5VMQ2vNNvowmdUHzJUVQXW06fhCH3
 同13的比较：ctinfo=05X216151X3179&pos=010102000&starttime=z0m5VMQ2vNNvowmdUHzJUVQXW06fhCH3
+// ArsNDdeBChqOPSTtuvQREF67GH01KfgLIJwxyzM8iVWmXYjklnopUZc234ab59/=@]]]]
+// m 0
 （z0m5VMQ2vNNvowmdUHzJUVQXW06fhCH3 是加密数据，需要分析web程序，查看如何生成的）
 POST http://jxjy.dwjtaq.com/saveEduTime.xhtml?1457283501334 HTTP/1.1
 x-requested-with: XMLHttpRequest
