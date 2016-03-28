@@ -1,0 +1,216 @@
+CPU Disasm
+地址        十六进制数据                   指令                                                  注释                                                                 标签
+01331ED9      8B45 D4              mov     eax, dword ptr ss:[ebp-2C]
+01331EDC      BE 08000000          mov     esi, 8
+01331EE1      3975 E8              cmp     dword ptr ss:[ebp-18], esi
+01331EE4      73 03                jae     short PropagandaCallDemo.01331EE9
+01331EE6      8D45 D4              lea     eax, [ebp-2C]
+01331EE9      8B8D 5CFFFFFF        mov     ecx, dword ptr ss:[ebp-0A4]
+01331EEF      8B91 DC000000        mov     edx, dword ptr ds:[ecx+0DC]
+01331EF5      50                   push    eax                                          Text
+01331EF6      6A 00                push    0                                            CanUndo = FALSE
+01331EF8      68 C2000000          push    0C2                                          Msg = EM_REPLACESEL
+01331EFD      52                   push    edx                                          hWnd
+01331EFE      FF15 28784501        call    dword ptr ds:[<&USER32.SendMessageW>]        USER32.SendMessageW, 可能的发送call
+--
+call :
+mov eax,0035F1D0	;喊话地址
+mov edx,8ABC11B0	;RichEdit20W 句柄
+push eax,
+push 0
+push 0c2
+push edx
+call 75749679
+--
+二进制：
+8D 45 D4 8B 8D 5C FF FF FF 8B 91 DC 00 00 00 50
+6A 00 68 C2 00 00 00 52
+=====================================================
+QQ大厅喊话CALL
+----------
+CPU Disasm
+地址        十六进制转储            命令                                                   注释
+0901E6B9  |.  50            PUSH EAX                                             ; /Arg1 = UNICODE "aaaa", 0018F364
+0901E6BA  |.  8BCE          MOV ECX,ESI                                          ; |ecx=103F2FB8
+0901E6BC  |.  E8 22F4FFFF   CALL 0901DAE3                                        ; \MGRoom.0901DAE3
+--call：
+push 0CDE0000		;喊话内容指针
+mov ecx,103F2FB8	;
+CALL 0901DAE3 
+特征码:
+8B F1 8B BE 1C 04 00 00 33 DB 3B FB				在模块MGRoom中
+
+CPU Disasm
+地址        十六进制转储              命令                                                   注释
+0901E5EA  /$  55              PUSH EBP
+0901E5EB  |.  81EC 74070000   SUB ESP,774
+0901E5F1  |.  8D6C24 FC       LEA EBP,[LOCAL.478]
+0901E5F5  |.  A1 A85A1C09     MOV EAX,DWORD PTR DS:[91C5AA8]
+0901E5FA  |.  33C5            XOR EAX,EBP
+0901E5FC  |.  8985 74070000   MOV DWORD PTR SS:[LOCAL.1],EAX
+0901E602  |.  6A 14           PUSH 14
+0901E604  |.  B8 9B7A0B09     MOV EAX,090B7A9B                                     ; 入口点
+0901E609  |.  E8 73920800     CALL 090A7881
+
+0901E60E  |.  8BF1            MOV ESI,ECX										; 特征码位置
+0901E610  |.  8BBE 1C040000   MOV EDI,DWORD PTR DS:[ESI+41C]
+0901E616  |.  33DB            XOR EBX,EBX
+0901E618  |.  3BFB            CMP EDI,EBX
+
+0901E61A  |.  0F84 D3010000   JE 0901E7F3
+0901E620  |.  33C0            XOR EAX,EAX
+0901E622  |.  68 E8030000     PUSH 3E8                                             ; /Arg3 = 3E8
+0901E627  |.  66:8985 8802000 MOV WORD PTR SS:[LOCAL.316],AX                       ; |
+0901E62E  |.  8D85 8A020000   LEA EAX,[LOCAL.316+2]                                ; |
+0901E634  |.  53              PUSH EBX                                             ; |Arg2 => 0
+0901E635  |.  50              PUSH EAX                                             ; |Arg1
+0901E636  |.  E8 51930800     CALL <JMP.&MSVCR90.memset>                           ; \MSVCR90.memset
+0901E63B  |.  8B07            MOV EAX,DWORD PTR DS:[EDI]
+0901E63D  |.  83C4 0C         ADD ESP,0C
+0901E640  |.  68 F4010000     PUSH 1F4
+0901E645  |.  8D8D 88020000   LEA ECX,[LOCAL.316]
+0901E64B  |.  51              PUSH ECX
+0901E64C  |.  8BCF            MOV ECX,EDI
+0901E64E  |.  FF50 38         CALL DWORD PTR DS:[EAX+38]
+0901E651  |.  8D45 F0         LEA EAX,[LOCAL.482]
+0901E654  |.  50              PUSH EAX                                             ; /Arg1 => OFFSET LOCAL.482
+0901E655  |.  8BCE            MOV ECX,ESI                                          ; |
+0901E657  |.  895D F0         MOV DWORD PTR SS:[LOCAL.482],EBX                     ; |
+0901E65A  |.  E8 459F0000     CALL 090285A4                                        ; \MGRoom.090285A4
+0901E65F  |.  85C0            TEST EAX,EAX
+0901E661  |.  74 3E           JZ SHORT 0901E6A1
+0901E663  |.  8B7D F0         MOV EDI,DWORD PTR SS:[LOCAL.482]
+0901E666  |.  8B07            MOV EAX,DWORD PTR DS:[EDI]
+0901E668  |.  8BCF            MOV ECX,EDI
+0901E66A  |.  FF50 70         CALL DWORD PTR DS:[EAX+70]
+0901E66D  |.  85C0            TEST EAX,EAX
+0901E66F  |.  75 0B           JNZ SHORT 0901E67C
+0901E671  |.  8B07            MOV EAX,DWORD PTR DS:[EDI]
+0901E673  |.  8BCF            MOV ECX,EDI
+0901E675  |.  FF50 74         CALL DWORD PTR DS:[EAX+74]
+0901E678  |.  85C0            TEST EAX,EAX
+0901E67A  |.  74 25           JZ SHORT 0901E6A1
+0901E67C  |>  8B8E 1C040000   MOV ECX,DWORD PTR DS:[ESI+41C]
+0901E682  |.  8B01            MOV EAX,DWORD PTR DS:[ECX]
+0901E684  |.  FF50 14         CALL DWORD PTR DS:[EAX+14]
+0901E687  |.  50              PUSH EAX                                             ; /Arg1
+0901E688  |.  8BCE            MOV ECX,ESI                                          ; |
+0901E68A  |.  E8 F9FCFFFF     CALL 0901E388                                        ; \MGRoom.0901E388
+0901E68F  |.  8B8E 1C040000   MOV ECX,DWORD PTR DS:[ESI+41C]
+0901E695  |.  8B01            MOV EAX,DWORD PTR DS:[ECX]
+0901E697  |.  6A FF           PUSH -1
+0901E699  |.  FF50 2C         CALL DWORD PTR DS:[EAX+2C]
+0901E69C  |.  E9 52010000     JMP 0901E7F3
+0901E6A1  |>  8D85 88020000   LEA EAX,[LOCAL.316]
+0901E6A7  |.  50              PUSH EAX                                             ; /Arg1 => OFFSET LOCAL.316
+0901E6A8  |.  8BCE            MOV ECX,ESI                                          ; |
+0901E6AA  |.  E8 9BEDFFFF     CALL 0901D44A                                        ; \MGRoom.0901D44A
+0901E6AF  |.  85C0            TEST EAX,EAX
+0901E6B1  |.  75 23           JNZ SHORT 0901E6D6
+0901E6B3  |.  8D85 88020000   LEA EAX,[LOCAL.316]
+
+0901E6B9  |.  50              PUSH EAX                                             ; /Arg1 => OFFSET LOCAL.316, 0018F364
+0901E6BA  |.  8BCE            MOV ECX,ESI                                          ; |ecx=103F2FB8
+0901E6BC  |.  E8 22F4FFFF     CALL 0901DAE3                                        ; \MGRoom.0901DAE3, QQ大厅喊话call
+
+0901E6C1  |.  8B8E 1C040000   MOV ECX,DWORD PTR DS:[ESI+41C]
+0901E6C7  |.  8B01            MOV EAX,DWORD PTR DS:[ECX]
+0901E6C9  |.  68 E0451109     PUSH OFFSET 091145E0
+0901E6CE  |.  FF50 1C         CALL DWORD PTR DS:[EAX+1C]
+0901E6D1  |.  E9 1D010000     JMP 0901E7F3
+0901E6D6  |>  8B8E 1C040000   MOV ECX,DWORD PTR DS:[ESI+41C]
+0901E6DC  |.  8B01            MOV EAX,DWORD PTR DS:[ECX]
+0901E6DE  |.  FF50 14         CALL DWORD PTR DS:[EAX+14]
+0901E6E1  |.  8BF8            MOV EDI,EAX
+0901E6E3  |.  3BFB            CMP EDI,EBX
+0901E6E5  |.  0F84 08010000   JE 0901E7F3
+0901E6EB  |.  399E 98040000   CMP DWORD PTR DS:[ESI+498],EBX
+0901E6F1  |.  0F84 FC000000   JE 0901E7F3
+0901E6F7  |.  33C0            XOR EAX,EAX
+0901E6F9  |.  68 FE000000     PUSH 0FE                                             ; /Arg3 = 0FE
+0901E6FE  |.  66:8985 7406000 MOV WORD PTR SS:[LOCAL.65],AX                        ; |
+0901E705  |.  8D85 76060000   LEA EAX,[LOCAL.65+2]                                 ; |
+0901E70B  |.  53              PUSH EBX                                             ; |Arg2
+0901E70C  |.  50              PUSH EAX                                             ; |Arg1
+0901E70D  |.  E8 7A920800     CALL <JMP.&MSVCR90.memset>                           ; \MSVCR90.memset
+0901E712  |.  83C4 0C         ADD ESP,0C
+0901E715  |.  68 80000000     PUSH 80                                              ; /Arg3 = 80
+0901E71A  |.  68 B6900000     PUSH 90B6                                            ; |Arg2 = 90B6
+0901E71F  |.  8D85 74060000   LEA EAX,[LOCAL.65]                                   ; |
+0901E725  |.  50              PUSH EAX                                             ; |Arg1 => OFFSET LOCAL.65
+0901E726  |.  8BCE            MOV ECX,ESI                                          ; |
+0901E728  |.  E8 F5EB0100     CALL 0903D322                                        ; \MGRoom.0903D322
+0901E72D  |.  8D4D 00         LEA ECX,[LOCAL.478]
+0901E730  |.  E8 A37BFDFF     CALL 08FF62D8                                        ; [MGRoom.08FF62D8
+0901E735  |.  8B8E 98040000   MOV ECX,DWORD PTR DS:[ESI+498]
+0901E73B  |.  8B01            MOV EAX,DWORD PTR DS:[ECX]
+0901E73D  |.  8D55 00         LEA EDX,[LOCAL.478]
+0901E740  |.  52              PUSH EDX
+0901E741  |.  895D FC         MOV DWORD PTR SS:[LOCAL.479],EBX
+0901E744  |.  FF10            CALL DWORD PTR DS:[EAX]
+0901E746  |.  68 FF000000     PUSH 0FF                                             ; /Arg3 = 0FF
+0901E74B  |.  8D85 74060000   LEA EAX,[LOCAL.65]                                   ; |
+0901E751  |.  50              PUSH EAX                                             ; |Arg2 => OFFSET LOCAL.65
+0901E752  |.  8D45 24         LEA EAX,[LOCAL.469]                                  ; |
+0901E755  |.  50              PUSH EAX                                             ; |Arg1 => OFFSET LOCAL.469
+0901E756  |.  FF15 A8450C09   CALL DWORD PTR DS:[<&MSVCR90.wcsncpy>]               ; \MSVCR90.wcsncpy
+0901E75C  |.  8B07            MOV EAX,DWORD PTR DS:[EDI]
+0901E75E  |.  83C4 0C         ADD ESP,0C
+0901E761  |.  8D4D E0         LEA ECX,[LOCAL.486]
+0901E764  |.  51              PUSH ECX
+0901E765  |.  8BCF            MOV ECX,EDI
+0901E767  |.  C745 00 0400000 MOV DWORD PTR SS:[LOCAL.478],4
+0901E76E  |.  C785 2C020000 B MOV DWORD PTR SS:[LOCAL.339],0BB8
+0901E778  |.  899D 44020000   MOV DWORD PTR SS:[LOCAL.333],EBX
+0901E77E  |.  FF50 3C         CALL DWORD PTR DS:[EAX+3C]
+0901E781  |.  8B08            MOV ECX,DWORD PTR DS:[EAX]
+0901E783  |.  894D 04         MOV DWORD PTR SS:[LOCAL.477],ECX
+0901E786  |.  8B50 04         MOV EDX,DWORD PTR DS:[EAX+4]
+0901E789  |.  8955 08         MOV DWORD PTR SS:[LOCAL.476],EDX
+0901E78C  |.  8B78 08         MOV EDI,DWORD PTR DS:[EAX+8]
+0901E78F  |.  897D 0C         MOV DWORD PTR SS:[LOCAL.475],EDI
+0901E792  |.  8B40 0C         MOV EAX,DWORD PTR DS:[EAX+0C]
+0901E795  |.  83C1 0F         ADD ECX,0F
+0901E798  |.  8945 10         MOV DWORD PTR SS:[LOCAL.474],EAX
+0901E79B  |.  8B86 94040000   MOV EAX,DWORD PTR DS:[ESI+494]
+0901E7A1  |.  83C2 0A         ADD EDX,0A
+0901E7A4  |.  898D 4C020000   MOV DWORD PTR SS:[LOCAL.331],ECX
+0901E7AA  |.  8B8E 98040000   MOV ECX,DWORD PTR DS:[ESI+498]
+0901E7B0  |.  8995 50020000   MOV DWORD PTR SS:[LOCAL.330],EDX
+0901E7B6  |.  83F8 FF         CMP EAX,-1
+0901E7B9  |.  75 11           JNE SHORT 0901E7CC
+0901E7BB  |.  8B01            MOV EAX,DWORD PTR DS:[ECX]
+0901E7BD  |.  8D55 00         LEA EDX,[LOCAL.478]
+0901E7C0  |.  52              PUSH EDX
+0901E7C1  |.  FF50 58         CALL DWORD PTR DS:[EAX+58]
+0901E7C4  |.  8986 94040000   MOV DWORD PTR DS:[ESI+494],EAX
+0901E7CA  |.  EB 0A           JMP SHORT 0901E7D6
+0901E7CC  |>  8B11            MOV EDX,DWORD PTR DS:[ECX]
+0901E7CE  |.  8D7D 00         LEA EDI,[LOCAL.478]
+0901E7D1  |.  57              PUSH EDI
+0901E7D2  |.  50              PUSH EAX
+0901E7D3  |.  FF52 34         CALL DWORD PTR DS:[EDX+34]
+0901E7D6  |>  8B8E 98040000   MOV ECX,DWORD PTR DS:[ESI+498]
+0901E7DC  |.  FFB6 94040000   PUSH DWORD PTR DS:[ESI+494]
+0901E7E2  |.  8B01            MOV EAX,DWORD PTR DS:[ECX]
+0901E7E4  |.  FF50 40         CALL DWORD PTR DS:[EAX+40]
+0901E7E7  |.  834D FC FF      OR DWORD PTR SS:[LOCAL.479],FFFFFFFF
+0901E7EB  |.  8D4D 00         LEA ECX,[LOCAL.478]
+0901E7EE  |.  E8 517DFDFF     CALL 08FF6544                                        ; [MGRoom.08FF6544
+0901E7F3  |>  8B4D F4         MOV ECX,DWORD PTR SS:[LOCAL.481]
+0901E7F6  |.  64:890D 0000000 MOV DWORD PTR FS:[0],ECX
+0901E7FD  |.  59              POP ECX
+0901E7FE  |.  5F              POP EDI
+0901E7FF  |.  5E              POP ESI
+0901E800  |.  5B              POP EBX
+0901E801  |.  8B8D 74070000   MOV ECX,DWORD PTR SS:[LOCAL.1]
+0901E807  |.  33CD            XOR ECX,EBP
+0901E809  |.  E8 64900800     CALL 090A7872
+0901E80E  |.  81C5 78070000   ADD EBP,778
+0901E814  |.  C9              LEAVE
+0901E815  \.  C3              RETN
+
+
+
+mov ecx,[ebp-10]	;	ebp= 0018F8C4
+add ecx,-18c
