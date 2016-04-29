@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>控件测试页面</title>
+		<script type="text/javascript">
+
+			function startCam(){
+				var capActivexObject=document.getElementById('cap1');
+
+				//启动摄像头
+				capActivexObject.start();
+			}
+
+			function capAndUpload(){
+				document.getElementById('cap1').cap();
+				document.getElementById('cap1').drawTextInfo(100,100,12,255,0,0,'今天日期');
+				document.getElementById('picData1').value=document.getElementById('cap1').jpegBase64Data;
+				document.getElementById('picExt1').value='.jpg';
+				
+				//需要上传的话通过ajax技术上传jpgbase64data变量里面的值或者picData1里面的数据内容
+				
+				alert('当前帧数据已经采集,数据内容大小:'+document.getElementById('picData1').value.length);
+				
+			}
+
+		</script>
+	</head>
+	<body>
+		<form  method="post" >
+			<input type="hidden" id="picData1" name="picData1"/>
+			<input type="hidden" id="picExt1"  name="picExt1"/>
+			<p>
+				<input type="button" value="拍照并上传" onclick="javascript:capAndUpload();"  />
+				<input type="button" value="停止摄像头" onclick="javascript:document.getElementById('cap1').stop();"  />
+			</p>
+			<object classid="clsid:34681DB3-58E6-4512-86F2-9477F1A9F3D8" id="cap1" width="640" height="480" codebase="../cabs/ImageCapOnWeb.cab#version=2,0,0,0">
+				<param name="Visible" value="0">
+				<param name="AutoScroll" value="0">
+				<param name="AutoSize" value="0">
+				<param name="AxBorderStyle" value="1">
+				<param name="Caption" value="scaner">
+				<param name="Color" value="4278190095">
+				<param name="Font" value="宋体">
+				<param name="KeyPreview" value="0">
+				<param name="PixelsPerInch" value="96">
+				<param name="PrintScale" value="1">
+				<param name="Scaled" value="-1">
+				<param name="DropTarget" value="0">
+				<param name="HelpFile" value>
+				<param name="PopupMode" value="0">
+				<param name="ScreenSnap" value="0">
+				<param name="SnapBuffer" value="10">
+				<param name="DockSite" value="0">
+				<param name="DoubleBuffered" value="0">
+				<param name="ParentDoubleBuffered" value="0">
+				<param name="UseDockManager" value="0">
+				<param name="Enabled" value="-1">
+				<param name="AlignWithMargins" value="0">
+				<param name="ParentCustomHint" value="-1">
+				<param name="licenseMode" value="2">
+				<param name="key1" value="">
+				<param name="key2" value="">
+			</object>
+		</form>
+		<script type="text/javascript">
+			document.all.cap1.SwitchWatchOnly();  //切换到只显示摄像头画面形式，隐藏编辑按钮等图标.
+			startCam();
+		</script>
+	</body>
+</html>

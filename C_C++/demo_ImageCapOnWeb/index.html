@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>控件示例</title>
+		<style type="text/css">
+		<!--
+			html{
+				margin:0;
+				padding: 0;
+			}
+			body  {
+				font: 100% 宋体, 新宋体;
+				font-size:0.75em;
+				background: #666666;
+				margin: 0; /* 最好将 body 元素的边距和填充设置为 0 以覆盖不同的浏览器默认值 */
+				padding: 0;
+				text-align: center; /* 在 IE 5* 浏览器中，这会将容器居中。文本随后将在 #container 选择器中设置为默认左对齐 */
+				color: #000000;
+			}
+
+			.twoColElsLt #container {
+					width: 86em;  /* 当文本保持浏览器的默认字体大小时，此宽度将创建一个适合 800px 浏览器窗口的容器 */
+					background: #FFFFFF;
+					margin: 0 auto; /* 自动边距（与宽度一起）会将页面居中 */
+					border: 1px solid #000000;
+					text-align: left; /* 这将覆盖 body 元素上的“text-align: center”。 */
+			}
+
+			.twoColElsLt #sidebar1 {
+						float: left;
+						width: 12em; /* 由于此元素是浮动的，因此必须指定宽度 */
+						background: #EBEBEB; /* 将显示背景色，其宽度等于栏中内容的长度，*/
+						padding: 15px 0; /* 顶部和底部的填充将在该 div 中产生视觉空间 */
+			}
+			.twoColElsLt #sidebar1 h3, .twoColElsLt #sidebar1 p {
+						margin-left: 10px; /* 对于将要放在侧栏中的每个元素，都应当设置左边距和右边距 */
+						margin-right: 10px;
+			}
+
+						/* mainContent 提示：
+						1. 如果为 #mainContent div 和 #sidebar1 div 指定不同的字体大小，则 #mainContent div 的边距和 #sidebar1 div 的宽度将取决于各自 div 的字体大小。您最好调整这些 div 的值。
+						2. mainContent 和 sidebar1 之间的空白是由 mainContent div 的左边距创建的。无论 sidebar1 div 中包含多少内容，都将保留栏空白。如果您希望在 #sidebar1 中的内容结束时，用 #mainContent div 的文本填充 #sidebar1 空白，则可以删除此左边距。
+						3. 为避免出现“浮动下降”，可能需要进行测试，以确定近似的最大图像/元素大小，这是由于此布局基于用户的字体大小以及您所设置的值。但是，如果用户将浏览器的字体大小设置为低于正常值，那么，在 #mainContent div 中看到的空白将少于在测试时看到的空白。
+						4. 在下面的 Internet Explorer 条件注释中，zoom 属性用来赋予 mainContent“hasLayout”。这会避免几个可能出现的特定于 IE 的错误。
+						*/
+			.twoColElsLt #mainContent {
+							margin: 0 1.5em 0 13em; /* 右边距可以用全方 (em) 或像素来指定，它会在页面的右下方产生空白。 */
+			}
+
+							/* 要重用的各种类 */
+			.fltrt { /* 此类可用来使页面中的元素向右浮动。浮动元素必须位于页面上要与之相邻的元素之前。 */
+				float: right;
+				margin-left: 8px;
+			}
+			.fltlft { /* 此类可用来使页面上的元素向左浮动 */
+							float: left;
+							margin-right: 8px;
+			}
+			.clearfloat { /* 此类应当放在 div 或 break 元素上，而且该元素应当是完全包含浮动的容器关闭之前的最后一个元素 */
+							clear:both;
+							height:0;
+							font-size: 1px;
+							line-height: 0px;
+			}
+							-->
+</style>
+<!--[if IE]>
+			<style type="text/css">
+				/* 请将所有版本的 IE 的 css 修复放在这个条件注释中 */
+				.twoColElsLt #sidebar1 { padding-top: 30px; }
+				.twoColElsLt #mainContent { zoom: 1; padding-top: 15px; }
+				/* 上面的专用 zoom 属性为 IE 提供避免错误所需的 hasLayout */
+			</style>
+<![endif]-->
+</head>
+
+<body class="twoColElsLt">
+	<div id="container">
+			<div id="sidebar1">
+				<h3>导航链接</h3>
+				<p><a href="pages/demo1.html" target="_blank">演示控件加载页面</a></p>
+				<p><a href="pages/demo2.html" target="_blank">演示通过js编程控制扫描页面</a></p>
+				<p><a href="pages/demo3.html" target="_blank">演示客户端本地保存页面</a></p>
+				<p><a href="pages/ajax.html" target="_blank">演示通过ajax技术提交页面</a></p>
+				<p><a href="pages/submit.html" target="_blank">演示通过提交表单方式提交页面</a></p>
+				<p><a href="pages/demo4.html" target="_blank">典型集成应用模式示例</a></p>
+				<p><a href="pages/demo6.html" target="_blank">证件照集成示例</a></p>
+				<p><a href="pages/demo5.html" target="_blank">多画面示例</a></p>
+				<p>作者联系方式：20155031@qq.com</p>
+				<p>&nbsp;</p>
+				<p>&nbsp;</p>
+				<!-- end #sidebar1 -->
+			</div>
+			<div id="mainContent">
+				<h1> ImageCapOnWeb摄像头控件 </h1>
+				<p>ImageCapOnWeb控件用于嵌入在浏览器中读取摄像头图像，支持客户端本地保存、打印等功能，控件内含强大的图像编辑处理功能，支持对视频采集结果进行编辑处理。</p>
+				<p>控件支持通过编程方式控制摄像头启动、拍照等操作，本地文件保存时有多种文件格式选择，支持jpeg\bmp\pcx\photoshop psd\gif\png等众多图像文件格式。</p>
+				<p>当您在项目中使用本控件时，请仔细阅读控件使用说明文档以加快您的开发进度。</p>
+				<p><a href="images/demo.jpg" target="_blank"><img src="images/demo.jpg" width="510" height="425" /></a></p>
+				<h1>使用注意事项</h1>
+				<p>此控件基于ActiveX技术，目前只能工作在支持ActiveX技术的浏览器中，使用前请调整浏览器设定，将测试站点或您的应用程序加入可信站点，然后调整可信站点的安全级别为启动未签名ActiveX控件下载及运行。</p>
+				<p>另外因图像编辑处理时需要占用一定的屏幕区域，尽量将包含控件的页面单独放在一个页面中，不建议嵌套使用，否则有可能造成扫件中的编辑按钮显示不全的情况。</p>
+	 		</div>
+		</div>
+	</body>
+</html>

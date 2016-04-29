@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>控件测试页面</title>
+        <script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
+		<script type="text/javascript">
+
+			function startCam(){
+				var capActivexObject=document.getElementById('cap1');
+				//切换到只显示摄像头画面形式，隐藏编辑按钮等图标
+				capActivexObject.SwitchWatchOnly();  
+				//启动摄像头
+				capActivexObject.start();
+			}
+
+			function ajax_post() { //ajax上传
+				var base64_data = document.getElementById('cap1').getCurrentFrame(); //取当前帧图像数据
+				$.ajax({
+					url : 'http://localhost:8080/phpsite/pages/revData.php',
+					type : 'POST',
+					dataType : 'jason',
+					data : {
+						picData : "'" + base64_data + "'",
+						picExt:".jpg",
+						phoneCode:$('#phoneCode').val()
+					},
+					timeout : 1000,
+					success : callbackfunction
+				});
+			}
+			
+
+			function callbackfunction(data) {
+				var obj = eval('(' + data + ')');
+
+				if ('ok' == obj.savestatus) {
+					alert('上传成功!请继续采集!');
+					$('#phoneCode').val('');
+					$('#phoneCode').focus();
+				}
+
+			}			
+
+$(document).ready(function(){
+   $('#phoneCode').keypress(function (e) {
+		var keyCode = e.keyCode ? e.keyCode : e.which ? e.which : e.charCode;
+		if (keyCode == 13){
+			e.keyCode=0;
+			if ($('#phoneCode').val().length==0){
+			   alert('请输入手机号码!');
+			   $('#phoneCode').focus();
+			   return false;
+		   }else{
+			   ajax_post();
+			   return false;
+		   }
+		   return false;
+		}
+	}); 
+	startCam();
+});
+		</script>
+	</head>
+	<body>
+		<form  method="post" action="">
+			<input type="hidden" id="picData1" name="picData1"/>
+			<input type="hidden" id="picExt1"  name="picExt1"/>
+			<p>
+	            <input type="text" id="phoneCode" name="phoneCode"/>
+				<input type="button" value="自动上传" onclick="javascript:ajax_post();"  />
+			</p>
+			<object classid="clsid:34681DB3-58E6-4512-86F2-9477F1A9F3D8" id="cap1" width="640" height="480" codebase="../cabs/ImageCapOnWeb.cab#version=2,0,0,0">
+				<param name="Visible" value="0">
+				<param name="AutoScroll" value="0">
+				<param name="AutoSize" value="0">
+				<param name="AxBorderStyle" value="1">
+				<param name="Caption" value="scaner">
+				<param name="Color" value="4278190095">
+				<param name="Font" value="宋体">
+				<param name="KeyPreview" value="0">
+				<param name="PixelsPerInch" value="96">
+				<param name="PrintScale" value="1">
+				<param name="Scaled" value="-1">
+				<param name="DropTarget" value="0">
+				<param name="HelpFile" value>
+				<param name="PopupMode" value="0">
+				<param name="ScreenSnap" value="0">
+				<param name="SnapBuffer" value="10">
+				<param name="DockSite" value="0">
+				<param name="DoubleBuffered" value="0">
+				<param name="ParentDoubleBuffered" value="0">
+				<param name="UseDockManager" value="0">
+				<param name="Enabled" value="-1">
+				<param name="AlignWithMargins" value="0">
+				<param name="ParentCustomHint" value="-1">
+				<param name="licenseMode" value="2">
+				<param name="key1" value="">
+				<param name="key2" value="">
+			</object>
+		</form>
+	</body>
+</html>

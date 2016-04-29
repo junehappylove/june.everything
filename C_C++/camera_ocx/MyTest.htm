@@ -1,0 +1,60 @@
+<HTML>
+
+<HEAD>
+	<TITLE>LX_CameraPhoto.ocx ≤‚ ‘</TITLE>
+	
+	<SCRIPT LANGUAGE="JavaScript">
+		function SetID()
+		{
+			MyPhoto.SetID("wangjun");
+		}
+
+		function ReSet()
+		{
+			MyPhoto.ReSet();
+		}
+
+		function GetVersion()
+		{
+			alert(MyPhoto.GetVersion());
+		}
+
+		function GetBase64ZP()
+		{
+			var myZP = MyPhoto.GetPhoto();
+			alert(myZP.substring(1,1000));
+		}
+
+
+	</SCRIPT>
+</HEAD>
+
+<BODY>
+
+<center>
+…„œÒÕ∑’’œ‡»Ìº˛≤‚ ‘
+</center>
+
+<hr>
+
+<OBJECT ID="MyPhoto" WIDTH=800 HEIGHT=400
+ 	CLASSID="CLSID:22FBAE15-359B-45B1-81A1-76ECA1969A71" 
+	codebase="CameraPhoto.ocx">
+</OBJECT>
+
+<hr>
+
+<INPUT TYPE="button" id="SetID" NAME="SetID" VALUE="SetID" ONCLICK=SetID()>
+&nbsp&nbsp
+<INPUT TYPE="button" id="ReSet" NAME="ReSet" VALUE="ReSet" ONCLICK=ReSet()>
+&nbsp&nbsp
+<INPUT TYPE="button" id="ReSet" NAME="GetVersion" VALUE="GetVersion" ONCLICK=GetVersion()>
+&nbsp&nbsp
+<INPUT TYPE="button" id="GetBase64ZP" NAME="GetBase64ZP" VALUE="GetBase64ZP" ONCLICK=GetBase64ZP()>
+
+<br>
+<hr>
+
+</BODY>
+
+</HTML>

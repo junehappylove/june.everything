@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>控件测试页面</title>
+<script language="javascript" type="text/javascript" src="../js/jquery-1.4.2.min.js" ></script>
+<script type="text/javascript">
+$(function() {
+			$('#btnUpload1').click(function() {
+				submit_1();
+
+			})
+});
+
+function auto_select_server_action(){
+	var server_action_url;
+    if ($('#asp').attr("checked")==true) {
+	  server_action_url="./submit.asp";
+	}else if ($('#jsp').attr("checked")==true) {
+	  server_action_url="http://localhost:8080/pages/submit.jsp";
+    }else if ($('#php').attr("checked")==true) {
+ 	  server_action_url="./submit.php";
+    }else if ($('#aspnet').attr("checked")==true) {
+	  server_action_url="./submit.aspx";
+    } else{
+      alert('请选择服务器端技术类型!');
+	  return ;
+    }
+   document.forms[0].action=server_action_url;
+}
+
+function submit_1(){
+  auto_select_server_action();
+  var base64_data = document.getElementById('cap1').jpegBase64Data;  
+  document.getElementById('picData').value=base64_data;
+  document.getElementById('picExt').value='.jpg'; 
+  document.forms[0].submit();
+}
+</script>
+</head>
+<body>
+<form action="" name="form1" id="form1" method="post" target="_blank">
+  <input type="hidden" id="picData" name="picData"/>
+  <input type="hidden" id="picExt"  name="picExt"/>
+  <p>请选择服务器端技术:
+    <label>
+      <input name="radio" type="radio" id="asp" value="asp" checked="checked" />
+      asp</label>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <label>
+      <input type="radio" name="radio" id="jsp" value="jsp" />
+      jsp</label>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <label>
+      <input type="radio" name="radio" id="aspnet" value="asp.net" />
+      asp.net</label>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <label>
+      <input type="radio" name="radio" id="php" value="php" />
+      php</label>
+  </p>
+  <p>
+  <input type="button" value="启动摄像头" onclick="javascript:document.getElementById('cap1').start();"  /> 
+  <input type="button" value="拍照" onclick="javascript:document.getElementById('cap1').cap();"  /> 
+    <input type="button" value="上传"  id="btnUpload1"/>
+  </p>
+  <object classid="clsid:34681DB3-58E6-4512-86F2-9477F1A9F3D8" id="cap1" width="100%" height="600" codebase="../cabs/ImageCapOnWeb.cab#version=2,0,0,0">
+    <param name="Visible" value="0">
+    <param name="AutoScroll" value="0">
+    <param name="AutoSize" value="0">
+    <param name="AxBorderStyle" value="1">
+    <param name="Caption" value="scaner">
+    <param name="Color" value="4278190095">
+    <param name="Font" value="宋体">
+    <param name="KeyPreview" value="0">
+    <param name="PixelsPerInch" value="96">
+    <param name="PrintScale" value="1">
+    <param name="Scaled" value="-1">
+    <param name="DropTarget" value="0">
+    <param name="HelpFile" value>
+    <param name="PopupMode" value="0">
+    <param name="ScreenSnap" value="0">
+    <param name="SnapBuffer" value="10">
+    <param name="DockSite" value="0">
+    <param name="DoubleBuffered" value="0">
+    <param name="ParentDoubleBuffered" value="0">
+    <param name="UseDockManager" value="0">
+    <param name="Enabled" value="-1">
+    <param name="AlignWithMargins" value="0">
+    <param name="ParentCustomHint" value="-1">
+    <param name="key1" value="">
+    <param name="key2" value="">
+  </object>
+</form>
+</body>
+</html>

@@ -1,0 +1,43 @@
+// FileTool.odl : type library source for FileTool.dll
+
+// This file will be processed by the Make Type Library (mktyplib) tool to
+// produce the type library (FileTool.tlb).
+
+[	uuid(33A4EAC6-A4DA-11D2-91A2-00A0C9D136D1), version(1.0),
+	helpstring ("FILETOOL Developer Studio Add-in") ]
+library FileTool
+{
+	importlib("stdole32.tlb");
+	
+
+	//  Dual interface for CCommands
+	//
+	//  All commands that your add-in adds to DevStudio
+	//   must appear in this interface.  You may use the
+	//   ClassView to add methods to this interface, which
+	//   will cause stub implementations of those methods to
+	//   appear in your CCommands class.
+	
+	[	uuid(33A4EAC2-A4DA-11D2-91A2-00A0C9D136D1),
+		oleautomation,
+		dual
+	]
+
+	interface ICommands : IDispatch
+	{
+		// methods
+		[id(1), helpstring("method AddFileToProject")] HRESULT AddFileToProject();
+		[id(2), helpstring("method OpenFile")] HRESULT OpenFile();
+	};
+
+	//  Class information for CCommands
+
+	[ uuid(33A4EAC3-A4DA-11D2-91A2-00A0C9D136D1) ]
+	coclass Commands
+	{
+		[default] interface ICommands;
+	};
+
+	//{{AFX_APPEND_ODL}}
+	//}}AFX_APPEND_ODL}}
+};

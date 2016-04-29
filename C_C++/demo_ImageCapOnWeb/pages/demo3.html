@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>控件测试页面</title>
+<script type="text/javascript">
+   function saveToFile(){
+	   document.getElementById('cap1').saveToFile('c://test.jpg'); //可以尝试修改文件扩展名试试,如改成test.bmp
+	   alert('请打开c:\\test.jpg查看扫描结果');
+   }
+</script>
+</head>
+
+<body>
+<form action="demo3.html">
+<p>控件支持客户端本地保存结果，几乎支持目前已知的所有图像格式，保存时根据传入的文件扩展名自动按相应格式存储图像文件。</p>
+<p>
+  <input type="button" value="启动摄像头" onclick="javascript:document.getElementById('cap1').start();"  /> 
+  <input type="button" value="拍照" onclick="javascript:document.getElementById('cap1').cap();"  /> 
+  <input type="button" value="以jpg格式保存当前结果" onclick="javascript:saveToFile();"  /> 
+</p>
+  <object classid="clsid:34681DB3-58E6-4512-86F2-9477F1A9F3D8" id="cap1" width="100%" height="600" codebase="../cabs/ImageCapOnWeb.cab#version=2,0,0,0">
+    <param name="Visible" value="0">
+    <param name="AutoScroll" value="0">
+    <param name="AutoSize" value="0">
+    <param name="AxBorderStyle" value="1">
+    <param name="Caption" value="scaner">
+    <param name="Color" value="4278190095">
+    <param name="Font" value="宋体">
+    <param name="KeyPreview" value="0">
+    <param name="PixelsPerInch" value="96">
+    <param name="PrintScale" value="1">
+    <param name="Scaled" value="-1">
+    <param name="DropTarget" value="0">
+    <param name="HelpFile" value>
+    <param name="PopupMode" value="0">
+    <param name="ScreenSnap" value="0">
+    <param name="SnapBuffer" value="10">
+    <param name="DockSite" value="0">
+    <param name="DoubleBuffered" value="0">
+    <param name="ParentDoubleBuffered" value="0">
+    <param name="UseDockManager" value="0">
+    <param name="Enabled" value="-1">
+    <param name="AlignWithMargins" value="0">
+    <param name="ParentCustomHint" value="-1">
+    <param name="key1" value="">
+    <param name="key2" value="">   
+  </object>
+</form>
+</body>
+</html>
