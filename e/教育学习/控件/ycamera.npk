@@ -14,14 +14,45 @@
 
 @@ Lang = 1
 
-@@ OCX = {6C94E32C-B15B-4A66-9FA8-6C1D013D0D19},AnjieCaptionXLib
+@@ OCX = {6C94E32C-B15B-4A66-9FA8-6C1D013D0D19},大连枫升拍照支持库
+服务支持：大连枫升科技有限公司
+http://www.f-s-safe.com/
 
+##1 AnjieCaptionX = 拍照OCX组件
+拍照OCX组件
+
+##1 AnjieCaptionX.AboutBox = 关于
+关于对话框
+
+##1 AnjieCaptionX.Start = 开启
+打开摄像头
+
+##1 AnjieCaptionX.ImageCaption = 拍照
+拍照，并且返回拍照后的文本数据(以Base64编码)
+
+##1 AnjieCaptionX.ImageCaption.CapType = 照片类型
+整数型，0表示jpg格式图片
 
 ##1 AnjieCaptionX.SetRandomText = 设置加密
-
+拍照并返回加密后的照片数据
 
 ##1 AnjieCaptionX.SetRandomText.strEncryptedRandomText = 加密字符串
+文本型，有服务器生成的172码数据（此数据经过Base64编码运算）
 
+##0 AnjieCaptionX.HidenFunction004 = 
+
+
+##0 AnjieCaptionX.HidenFunction005 = 
+
+
+##0 AnjieCaptionX.HidenFunction006 = 
+
+
+##0 AnjieCaptionX.HidenFunction007 = 
+
+
+##1 AnjieCaptionX.StopVMR = 关闭
+关闭摄像头
 
 @@ Interface =
 1, {6C94E32C-B15B-4A66-9FA8-6C1D013D0D19}, AnjieCaptionX, { -552, 1, 2, 3, 4, 5, 6, 7, 8,  }, {  }, {  }

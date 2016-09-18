@@ -1,0 +1,26 @@
+-------关于时长检测问题 ------------
+
+首先是每隔15min检测一次，有个问题是
+一定会在期前一分钟去主动检测，比如首次检查实在14min种时候
+第二次在29min时候，第三次实在44分时候，第四次实在59分时候
+----
+https://www.tenpay.com/v2/account/pay/index.shtml?
+accept_uin=980154978&
+fee=2.00&
+pay_memo=asdf&
+anonymous=&
+md5=93e635f311f2069526a79a69eba8952f
+
+------------------------------------------
+https://www.tenpay.com/v2/account/pay/index.shtml?accept_uin=980154978&fee=1.00&pay_memo=111111&accept_name=%E7%8E%8B%E4%BF%8A%E4%BC%9F&anonymous=0&sms_flag=&sms_mobile=&md5=8a3a06e6978bd5d8d75c29905ffa291a&ADTAG=TENPAY_V2.PAY.CONFIRM.LINK_BACK_MODIFY
+https://www.tenpay.com/v2/account/pay/index.shtml?accept_uin=980154978&fee=10.00&pay_memo=%E8%BD%AF%E4%BB%B6%E4%B8%8D%E9%94%99%EF%BC%8C%E6%89%93%E8%B5%8F%E4%BD%A0%E4%B8%80%E4%B8%8B&accept_name=%E7%8E%8B%E4%BF%8A%E4%BC%9F&anonymous=1&sms_flag=&sms_mobile=&md5=bd6a0de2e48699646b6d8e9969d9cf1a&ADTAG=TENPAY_V2.PAY.CONFIRM.LINK_BACK_MODIFY
+
+
+
+
+
+
+
+
+
+

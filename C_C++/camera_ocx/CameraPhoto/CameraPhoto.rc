@@ -1,0 +1,258 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "1 TYPELIB ""CameraPhoto.tlb""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,1,0,1
+ PRODUCTVERSION 1,1,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a8"
+        BEGIN
+            VALUE "CompanyName", "TODO: <公司名>"
+            VALUE "FileDescription", "TODO: <文件说明>"
+            VALUE "FileVersion", "1.1.0.1"
+            VALUE "InternalName", "CameraPhoto.ocx"
+            VALUE "LegalCopyright", "TODO: (C) <公司名>。保留所有权利。"
+            VALUE "OriginalFilename", "CameraPhoto.ocx"
+            VALUE "ProductName", "TODO: <产品名>"
+            VALUE "ProductVersion", "1.1.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ABOUTDLL            ICON                    "CameraPhoto.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_CAMERAPHOTO         BITMAP                  "CameraPhotoCtrl.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX_CAMERAPHOTO DIALOGEX 0, 0, 170, 62
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 CameraPhoto Control"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDI_ABOUTDLL,IDC_STATIC,14,14,21,20
+    LTEXT           "CameraPhoto Control 1.0 版",IDC_STATIC,42,14,114,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2011, ",IDC_STATIC,42,26,114,8
+    DEFPUSHBUTTON   "确定",IDOK,113,41,50,14,WS_GROUP
+END
+
+IDD_PROPPAGE_CAMERAPHOTO DIALOG  0, 0, 250, 62
+STYLE DS_SETFONT | WS_CHILD
+FONT 9, "MS Shell Dlg"
+BEGIN
+    LTEXT           "TODO: 将用于操作 CameraPhoto Control 的属性的控件放置在此对话框上。",IDC_STATIC,7,25,229,16
+END
+
+IDD_LX_CPMAINDLG_DIALOG DIALOGEX 0, 0, 446, 218
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_VISIBLE
+EXSTYLE WS_EX_STATICEDGE
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_VEDIO,"Static",SS_BLACKFRAME,15,13,140,96
+    CONTROL         "",IDC_IMAGE,"Static",SS_BLACKFRAME | WS_BORDER,168,6,271,205,WS_EX_DLGMODALFRAME | WS_EX_STATICEDGE
+    PUSHBUTTON      "拍照",IDC_BUTTON1,7,196,48,14
+    CONTROL         "",IDC_PHOTO,"Static",SS_BLACKFRAME,14,124,66,66,WS_EX_STATICEDGE
+    PUSHBUTTON      " 文件...",IDC_BUTTON2,62,196,47,14
+    GROUPBOX        "摄像头",IDC_STATICGP1,7,3,155,110
+    GROUPBOX        "生成照片",IDC_STATIC,7,114,155,80
+    LTEXT           "ID",IDC_STATIC,85,131,15,8
+    EDITTEXT        IDC_ID,102,130,54,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "宽",IDC_STATIC,86,152,8,8
+    LTEXT           "高",IDC_STATIC,86,169,8,8
+    EDITTEXT        IDC_EDIT_WIDTH,102,150,40,14,ES_CENTER | ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER
+    EDITTEXT        IDC_EDIT_HEIGHT,102,168,40,14,ES_CENTER | ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER
+    LTEXT           "像素",IDC_STATIC,144,154,15,8
+    LTEXT           "像素",IDC_STATIC,145,170,15,8
+    PUSHBUTTON      "设置...",IDC_SET,116,196,47,14
+END
+
+IDD_DLG_SET DIALOGEX 0, 0, 316, 183
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "设置..."
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,205,162,50,14
+    PUSHBUTTON      "取消",IDCANCEL,259,162,50,14
+    LTEXT           "初始缩放比例：",IDC_STATIC,37,25,57,8
+    LTEXT           "图像宽：",IDC_STATIC,38,75,33,8
+    LTEXT           "图像高：",IDC_STATIC,181,75,33,8
+    EDITTEXT        IDC_WIDTH,72,73,40,14,ES_CENTER | ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_HEIGHT,216,72,40,14,ES_CENTER | ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_SCALE,95,22,58,14,ES_CENTER | ES_AUTOHSCROLL | ES_NUMBER
+    GROUPBOX        "原始截图：",IDC_STATIC,7,7,302,38
+    GROUPBOX        "生成图像：",IDC_STATIC,7,57,302,98
+    LTEXT           "像素",IDC_STATIC,121,75,17,8
+    LTEXT           "像素",IDC_STATIC,262,75,17,8
+    LTEXT           "%（百分比）",IDC_STATIC,158,25,48,8
+    CONTROL         "自定义图像存放属性",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,38,103,88,10
+    LTEXT           "图像存放目录：",IDC_STATIC,55,122,57,8
+    LTEXT           "图像命名方式：",IDC_STATIC,55,139,57,8
+    EDITTEXT        IDC_PATH,115,119,138,14,ES_AUTOHSCROLL | WS_DISABLED
+    CONTROL         "ID",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON | WS_DISABLED,115,138,23,10
+    CONTROL         "Name",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON | WS_DISABLED,160,138,34,10
+    CONTROL         "Default",IDC_RADIO4,"Button",BS_AUTORADIOBUTTON | WS_DISABLED,212,138,39,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX_CAMERAPHOTO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 163
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 55
+    END
+
+    IDD_PROPPAGE_CAMERAPHOTO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 243
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 55
+    END
+
+    IDD_LX_CPMAINDLG_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 439
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 211
+    END
+
+    IDD_DLG_SET, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 176
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_CAMERAPHOTO         "CameraPhoto Control"
+    IDS_CAMERAPHOTO_PPG     "CameraPhoto Property Page"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CAMERAPHOTO_PPG_CAPTION "常规"
+END
+
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+1 TYPELIB "CameraPhoto.tlb"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

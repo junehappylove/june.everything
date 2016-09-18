@@ -1,0 +1,56 @@
+// CameraPhoto.idl : ActiveX 控件项目的类型库源。
+
+// 此文件将由 MIDL 编译器工具处理以
+// 产生类型库(CameraPhoto.tlb)，该类型库将成为
+// CameraPhoto.ocx.
+
+#include <olectl.h>
+#include <idispids.h>
+
+[ uuid(54A399EC-2329-4EEC-86E3-730047119509), version(1.0),
+  helpfile("CameraPhoto.hlp"),
+  helpstring("CameraPhoto ActiveX 控件模块"),
+  control ]
+library CameraPhotoLib
+{
+	importlib(STDOLE_TLB);
+
+	//  CCameraPhotoCtrl 的主调度接口
+
+	[ uuid(4BF027D0-97A5-4A8B-979C-93594266C0FE),
+	  helpstring("CameraPhoto Control 的调度接口")]
+	dispinterface _DCameraPhoto
+	{
+		properties:
+		methods:
+
+			[id(DISPID_ABOUTBOX)] void AboutBox();
+			[id(1), helpstring("方法SetID")] void SetID(BSTR id);
+			[id(2), helpstring("方法Reset")] void Reset(void);
+			[id(3), helpstring("方法GetPhoto")] BSTR GetPhoto(void);
+			[id(4), helpstring("方法GetVersion")] BSTR GetVersion(void);
+	};
+
+	//  CCameraPhotoCtrl 的事件调度接口
+
+	[ uuid(96DD868A-6A81-4D73-900B-858E168213BC),
+	  helpstring("CameraPhoto Control 的事件接口") ]
+	dispinterface _DCameraPhotoEvents
+	{
+		properties:
+			//  事件接口没有任何属性
+
+		methods:
+	};
+
+	//  CCameraPhotoCtrl 的类信息
+
+	[ uuid(22FBAE15-359B-45B1-81A1-76ECA1969A71),
+	  helpstring("CameraPhoto Control"), control ]
+	coclass CameraPhoto
+	{
+		[default] dispinterface _DCameraPhoto;
+		[default, source] dispinterface _DCameraPhotoEvents;
+	};
+
+};

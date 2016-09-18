@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>控件测试页面</title>
+</head>
+
+<body>
+<form action="demo3.html">
+<p>可以调用start()方法开始读取摄像头画面数据 
+  <input type="button" value="启动摄像头" onclick="javascript:document.getElementById('cap1').start();"  /> <br/>
+  可以调用cap()方法进行抓拍
+  <input type="button" value="拍照" onclick="javascript:document.getElementById('cap1').cap();"  /> 
+  可以调用clear()方法清除拍照结果
+  <input type="button" value="清除结果" onclick="javascript:document.getElementById('cap1').clear();"  /> <br/>  
+  </p>
+  <object classid="clsid:34681DB3-58E6-4512-86F2-9477F1A9F3D8" id="cap1" width="100%" height="600" codebase="../cabs/ImageCapOnWeb.cab#version=2,0,0,0">
+    <param name="Visible" value="0">
+    <param name="AutoScroll" value="0">
+    <param name="AutoSize" value="0">
+    <param name="AxBorderStyle" value="1">
+    <param name="Caption" value="scaner">
+    <param name="Color" value="4278190095">
+    <param name="Font" value="宋体">
+    <param name="KeyPreview" value="0">
+    <param name="PixelsPerInch" value="96">
+    <param name="PrintScale" value="1">
+    <param name="Scaled" value="-1">
+    <param name="DropTarget" value="0">
+    <param name="HelpFile" value>
+    <param name="PopupMode" value="0">
+    <param name="ScreenSnap" value="0">
+    <param name="SnapBuffer" value="10">
+    <param name="DockSite" value="0">
+    <param name="DoubleBuffered" value="0">
+    <param name="ParentDoubleBuffered" value="0">
+    <param name="UseDockManager" value="0">
+    <param name="Enabled" value="-1">
+    <param name="AlignWithMargins" value="0">
+    <param name="ParentCustomHint" value="-1">
+    <param name="key1" value="">
+    <param name="key2" value="">   
+  </object>
+</form>
+<script type="text/javascript">
+  document.all.cap1.SwitchWatchOnly();  //切换到只显示摄像头画面形式，隐藏编辑按钮等图标.
+</script>
+</body>
+</html>
