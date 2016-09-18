@@ -1,3 +1,7 @@
+发包函数：
+bpx WSACleanup
+bp send
+bp WSASend
 拦截窗口：
 bp CreateWindow 创建窗口
 bp CreateWindowEx(A) 创建窗口
