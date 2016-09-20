@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="18">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>0</ID>
+      <Description>"人物当前血基址"</Description>
+      <LastState Value="1963" Activated="0" RealAddress="6DA75AA0"/>
+      <Color>80000008</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>00AD012C</Address>
+      <Offsets>
+        <Offset>2760</Offset>
+        <Offset>4</Offset>
+        <Offset>1EC</Offset>
+        <Offset>78</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>2</ID>
+      <Description>"人物当前气基址"</Description>
+      <LastState Value="1162" Activated="0" RealAddress="6DA75AA4"/>
+      <Color>80000008</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>00AD012C</Address>
+      <Offsets>
+        <Offset>2764</Offset>
+        <Offset>4</Offset>
+        <Offset>1EC</Offset>
+        <Offset>78</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>3</ID>
+      <Description>"人物拥有经验基址"</Description>
+      <LastState Value="1129" Activated="0" RealAddress="6DA75AA8"/>
+      <Color>80000008</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>00AD012C</Address>
+      <Offsets>
+        <Offset>2768</Offset>
+        <Offset>4</Offset>
+        <Offset>1EC</Offset>
+        <Offset>78</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>4</ID>
+      <Description>"人物当前活力基址"</Description>
+      <LastState Value="48" Activated="0" RealAddress="6DA75AB4"/>
+      <Color>80000008</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>00AD012C</Address>
+      <Offsets>
+        <Offset>2774</Offset>
+        <Offset>4</Offset>
+        <Offset>1EC</Offset>
+        <Offset>78</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>5</ID>
+      <Description>"人物最大活力基址"</Description>
+      <LastState Value="95" Activated="0" RealAddress="6DA75AB8"/>
+      <Color>80000008</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>00AD012C</Address>
+      <Offsets>
+        <Offset>2778</Offset>
+        <Offset>4</Offset>
+        <Offset>1EC</Offset>
+        <Offset>78</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>6</ID>
+      <Description>"人物当前精力基址"</Description>
+      <LastState Value="48" Activated="0" RealAddress="6DA75ABC"/>
+      <Color>80000008</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>00AD012C</Address>
+      <Offsets>
+        <Offset>277C</Offset>
+        <Offset>4</Offset>
+        <Offset>1EC</Offset>
+        <Offset>78</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>7</ID>
+      <Description>"人物最大精力基址"</Description>
+      <LastState Value="95" Activated="0" RealAddress="6DA75AC0"/>
+      <Color>80000008</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>00AD012C</Address>
+      <Offsets>
+        <Offset>2780</Offset>
+        <Offset>4</Offset>
+        <Offset>1EC</Offset>
+        <Offset>78</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>9</ID>
+      <Description>"人物体力加成基址"</Description>
+      <LastState Value="29" Activated="0" RealAddress="6DA75AF0"/>
+      <Color>80000008</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>00AD012C</Address>
+      <Offsets>
+        <Offset>27B0</Offset>
+        <Offset>4</Offset>
+        <Offset>1EC</Offset>
+        <Offset>78</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>8</ID>
+      <Description>"人物定力加成基址"</Description>
+      <LastState Value="18" Activated="0" RealAddress="6DA75AF4"/>
+      <Color>80000008</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>00AD012C</Address>
+      <Offsets>
+        <Offset>27B4</Offset>
+        <Offset>4</Offset>
+        <Offset>1EC</Offset>
+        <Offset>78</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>10</ID>
+      <Description>"人物身法加成基址"</Description>
+      <LastState Value="10" Activated="0" RealAddress="6DA75AF8"/>
+      <Color>80000008</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>00AD012C</Address>
+      <Offsets>
+        <Offset>27B8</Offset>
+        <Offset>4</Offset>
+        <Offset>1EC</Offset>
+        <Offset>78</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>11</ID>
+      <Description>"人物潜能基址"</Description>
+      <LastState Value="10" Activated="0" RealAddress="6DA75AFC"/>
+      <Color>80000008</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>00AD012C</Address>
+      <Offsets>
+        <Offset>27BC</Offset>
+        <Offset>4</Offset>
+        <Offset>1EC</Offset>
+        <Offset>78</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>12</ID>
+      <Description>"人物力量加成基址"</Description>
+      <LastState Value="222" Activated="0" RealAddress="6DA75B00"/>
+      <Color>80000008</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>00AD012C</Address>
+      <Offsets>
+        <Offset>27C0</Offset>
+        <Offset>4</Offset>
+        <Offset>1EC</Offset>
+        <Offset>78</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>13</ID>
+      <Description>"人物灵气加成基址"</Description>
+      <LastState Value="22" Activated="0" RealAddress="6DA75B04"/>
+      <Color>80000008</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>00AD012C</Address>
+      <Offsets>
+        <Offset>27C4</Offset>
+        <Offset>4</Offset>
+        <Offset>1EC</Offset>
+        <Offset>78</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>14</ID>
+      <Description>"人物外功攻击基址"</Description>
+      <LastState Value="656" Activated="0" RealAddress="6DA75B08"/>
+      <Color>80000008</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>00AD012C</Address>
+      <Offsets>
+        <Offset>27C8</Offset>
+        <Offset>4</Offset>
+        <Offset>1EC</Offset>
+        <Offset>78</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>15</ID>
+      <Description>"人物内功攻击基址"</Description>
+      <LastState Value="656" Activated="0" RealAddress="6DA75B0C"/>
+      <Color>80000008</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>00AD012C</Address>
+      <Offsets>
+        <Offset>27CC</Offset>
+        <Offset>4</Offset>
+        <Offset>1EC</Offset>
+        <Offset>78</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>16</ID>
+      <Description>"人物外功防御基址"</Description>
+      <LastState Value="402" Activated="0" RealAddress="6DA75B10"/>
+      <Color>80000008</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>00AD012C</Address>
+      <Offsets>
+        <Offset>27D0</Offset>
+        <Offset>4</Offset>
+        <Offset>1EC</Offset>
+        <Offset>78</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>17</ID>
+      <Description>"人物内功防御基址"</Description>
+      <LastState Value="356" Activated="0" RealAddress="6DA75B14"/>
+      <Color>80000008</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>00AD012C</Address>
+      <Offsets>
+        <Offset>27D4</Offset>
+        <Offset>4</Offset>
+        <Offset>1EC</Offset>
+        <Offset>78</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>18</ID>
+      <Description>"人物血址最大值基址"</Description>
+      <LastState Value="27322" Activated="0" RealAddress="6DA75B18"/>
+      <Color>80000008</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>00AD012C</Address>
+      <Offsets>
+        <Offset>27D8</Offset>
+        <Offset>4</Offset>
+        <Offset>1EC</Offset>
+        <Offset>78</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>19</ID>
+      <Description>"人物气值最大值基址"</Description>
+      <LastState Value="1162" Activated="0" RealAddress="6DA75B1C"/>
+      <Color>80000008</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>00AD012C</Address>
+      <Offsets>
+        <Offset>27DC</Offset>
+        <Offset>4</Offset>
+        <Offset>1EC</Offset>
+        <Offset>78</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>20</ID>
+      <Description>"人物命中基址"</Description>
+      <LastState Value="10" Activated="0" RealAddress="6DA75B28"/>
+      <Color>80000008</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>00AD012C</Address>
+      <Offsets>
+        <Offset>27E8</Offset>
+        <Offset>4</Offset>
+        <Offset>1EC</Offset>
+        <Offset>78</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>21</ID>
+      <Description>"人物闪避基址"</Description>
+      <LastState Value="128" Activated="0" RealAddress="6DA75B2C"/>
+      <Color>80000008</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>00AD012C</Address>
+      <Offsets>
+        <Offset>27EC</Offset>
+        <Offset>4</Offset>
+        <Offset>1EC</Offset>
+        <Offset>78</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>22</ID>
+      <Description>"人物会心攻击基址"</Description>
+      <LastState Value="2" Activated="0" RealAddress="6DA75B30"/>
+      <Color>80000008</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>00AD012C</Address>
+      <Offsets>
+        <Offset>27F0</Offset>
+        <Offset>4</Offset>
+        <Offset>1EC</Offset>
+        <Offset>78</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>23</ID>
+      <Description>"人物会心防御基址"</Description>
+      <LastState Value="2" Activated="0" RealAddress="6DA75B34"/>
+      <Color>80000008</Color>
+      <VariableType>4 Bytes</VariableType>
+      <Address>00AD012C</Address>
+      <Offsets>
+        <Offset>27F4</Offset>
+        <Offset>4</Offset>
+        <Offset>1EC</Offset>
+        <Offset>78</Offset>
+      </Offsets>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+</CheatTable>

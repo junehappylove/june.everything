@@ -1,0 +1,85 @@
+
+
+Probable base pointer =6D123340
+
+004CB57A - mov eax,[edx+00002760]
+
+============
+7B37CC70
+004DB59A - mov eax,[ebx+04]
+------
+
+Probable base pointer =6D3E4E40
+
+004A9DB3 - mov ecx,[eax+000001EC]
+
+==================
+
+Probable base pointer =7ED10160
+
+0040585D - call dword ptr [Game.exe+4EE38C]
+00405863 - mov ecx,[Game.exe+6D012C]
+00405869 - mov eax,[ecx+78]
+0040586C - mov eax,[eax+000001EC]
+00405872 - lea edx,[esp+58]
+
+================
+
+
+Probable base pointer =006D012C
+
+004110F3 - mov eax,[Game.exe+6D012C]
+004110F8 - mov eax,[eax+78]
+
+---------------------
+人物血基址：
+[[[[[00AD012C]+78]+000001EC]+04]+00002760]
+==============================================
+
+
+Probable base pointer =69492640
+
+054F14FA - mov esi,ecx
+054F14FC - mov ecx,[eax]
+054F14FE - mov [esi+5C],ecx
+054F1501 - mov edx,[eax+04]
+054F1504 - mov [esi+60],edx
+
+==
+
+
+Probable base pointer =6EFC9A60
+
+004220D0 - push esi
+004220D1 - mov esi,ecx
+004220D3 - mov eax,[esi+3C]
+004220D6 - test eax,eax
+004220D8 - je Game.exe+220E5
+---
+
+
+Probable base pointer =7EF40280
+
+00766F7A - push eax
+00766F7B - call Game.exe+56D80
+00766F80 - mov ecx,[esi+00000208]
+00766F86 - mov eax,[ecx]
+00766F88 - push edi
+----
+
+
+Probable base pointer =01042A58
+
+00431ED1 - mov ebp,esp
+00431ED3 - sub esp,08
+00431ED6 - mov eax,[Game.exe+1042A58]
+00431EDB - push esi
+00431EDC - mov esi,ecx
+----
+人物坐标基址：[01442A58]+00000208]+3C]+5C]
+====================================
+
+
+
+
+

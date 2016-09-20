@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="18">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>22</ID>
+      <Description>"地图地址X坐标基址"</Description>
+      <LastState Value="192.9505463" Activated="0" RealAddress="71AB789C"/>
+      <Color>80000008</Color>
+      <VariableType>Float</VariableType>
+      <Address>01442A58</Address>
+      <Offsets>
+        <Offset>5C</Offset>
+        <Offset>3C</Offset>
+        <Offset>208</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>27</ID>
+      <Description>"地图地址Y坐标基址"</Description>
+      <LastState Value="62.79925919" Activated="0" RealAddress="71AB78A4"/>
+      <Color>80000008</Color>
+      <VariableType>Float</VariableType>
+      <Address>01442A58</Address>
+      <Offsets>
+        <Offset>64</Offset>
+        <Offset>3C</Offset>
+        <Offset>208</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>26</ID>
+      <Description>"地图地址X坐标基址"</Description>
+      <LastState Value="192.9505463" Activated="0" RealAddress="71AB789C"/>
+      <Color>80000008</Color>
+      <VariableType>Float</VariableType>
+      <Address>01442A5C</Address>
+      <Offsets>
+        <Offset>5C</Offset>
+        <Offset>3C</Offset>
+        <Offset>208</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>25</ID>
+      <Description>"地图地址Y坐标基址"</Description>
+      <LastState Value="62.79925919" Activated="0" RealAddress="71AB78A4"/>
+      <Color>80000008</Color>
+      <VariableType>Float</VariableType>
+      <Address>01442A5C</Address>
+      <Offsets>
+        <Offset>64</Offset>
+        <Offset>3C</Offset>
+        <Offset>208</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>24</ID>
+      <Description>"地图地址X坐标基址"</Description>
+      <LastState Value="192.9505463" Activated="0" RealAddress="71AB789C"/>
+      <Color>80000008</Color>
+      <VariableType>Float</VariableType>
+      <Address>01442A74</Address>
+      <Offsets>
+        <Offset>5C</Offset>
+        <Offset>3C</Offset>
+        <Offset>208</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>23</ID>
+      <Description>"地图地址Y坐标基址"</Description>
+      <LastState Value="62.79925919" Activated="0" RealAddress="71AB78A4"/>
+      <Color>80000008</Color>
+      <VariableType>Float</VariableType>
+      <Address>01442A74</Address>
+      <Offsets>
+        <Offset>64</Offset>
+        <Offset>3C</Offset>
+        <Offset>208</Offset>
+      </Offsets>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+</CheatTable>
