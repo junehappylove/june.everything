@@ -4,7 +4,7 @@
     <CheatEntry>
       <ID>6</ID>
       <Description>"背包物品数量"</Description>
-      <LastState Value="??" Activated="0" RealAddress="00000000"/>
+      <LastState Value="100" Activated="0" RealAddress="12072AB4"/>
       <Color>80000008</Color>
       <VariableType>4 Bytes</VariableType>
       <Address>00B5D424</Address>
@@ -18,7 +18,7 @@
     <CheatEntry>
       <ID>32</ID>
       <Description>"背包物品名称"</Description>
-      <LastState Activated="0" RealAddress="00000000"/>
+      <LastState Activated="0" RealAddress="12073150"/>
       <Color>80000008</Color>
       <VariableType>String</VariableType>
       <Length>10</Length>
@@ -35,7 +35,7 @@
     <CheatEntry>
       <ID>22</ID>
       <Description>"背包物品数量"</Description>
-      <LastState Value="??" Activated="0" RealAddress="00000000"/>
+      <LastState Value="0" Activated="0" RealAddress="1206F174"/>
       <Color>80000008</Color>
       <VariableType>4 Bytes</VariableType>
       <Address>00B5D424</Address>
@@ -49,7 +49,7 @@
     <CheatEntry>
       <ID>23</ID>
       <Description>"背包物品名称"</Description>
-      <LastState Activated="0" RealAddress="00000000"/>
+      <LastState Activated="0" RealAddress="1206F810"/>
       <Color>80000008</Color>
       <VariableType>String</VariableType>
       <Length>10</Length>
@@ -66,7 +66,7 @@
     <CheatEntry>
       <ID>15</ID>
       <Description>"背包物品数量"</Description>
-      <LastState Value="??" Activated="0" RealAddress="00000000"/>
+      <LastState Value="100" Activated="0" RealAddress="1204DFE4"/>
       <Color>80000008</Color>
       <VariableType>4 Bytes</VariableType>
       <Address>00B5D424</Address>
@@ -80,7 +80,7 @@
     <CheatEntry>
       <ID>31</ID>
       <Description>"背包物品名称"</Description>
-      <LastState Activated="0" RealAddress="00000000"/>
+      <LastState Activated="0" RealAddress="1204E680"/>
       <Color>80000008</Color>
       <VariableType>String</VariableType>
       <Length>10</Length>
@@ -97,7 +97,7 @@
     <CheatEntry>
       <ID>14</ID>
       <Description>"base site"</Description>
-      <LastState Value="??" Activated="0" RealAddress="011C77C0"/>
+      <LastState Value="121C0020" Activated="0" RealAddress="011C77C0"/>
       <ShowAsHex>1</ShowAsHex>
       <Color>80000008</Color>
       <VariableType>4 Bytes</VariableType>
@@ -106,7 +106,7 @@
     <CheatEntry>
       <ID>16</ID>
       <Description>"人物等级[01344218]"</Description>
-      <LastState Value="??" Activated="0" RealAddress="00000000"/>
+      <LastState Value="42" Activated="0" RealAddress="12D53064"/>
       <Color>80000008</Color>
       <VariableType>4 Bytes</VariableType>
       <Address>01344218</Address>
@@ -117,7 +117,7 @@
     <CheatEntry>
       <ID>17</ID>
       <Description>"护体真气"</Description>
-      <LastState Value="??" Activated="0" RealAddress="00000000"/>
+      <LastState Value="??" Activated="0" RealAddress="0000037C"/>
       <Color>80000008</Color>
       <VariableType>4 Bytes</VariableType>
       <Address>011C73D0</Address>
@@ -128,7 +128,7 @@
     <CheatEntry>
       <ID>18</ID>
       <Description>"内力"</Description>
-      <LastState Value="??" Activated="0" RealAddress="00000000"/>
+      <LastState Value="??" Activated="0" RealAddress="00000384"/>
       <Color>80000008</Color>
       <VariableType>4 Bytes</VariableType>
       <Address>011C73D0</Address>
@@ -146,7 +146,7 @@
     </CheatEntry>
     <CheatEntry>
       <ID>27</ID>
-      <Description>"No description"</Description>
+      <Description>"物品名称"</Description>
       <LastState Activated="0" RealAddress="0018D200"/>
       <Color>80000008</Color>
       <VariableType>String</VariableType>
@@ -156,20 +156,9 @@
       <Address>0018D200</Address>
     </CheatEntry>
     <CheatEntry>
-      <ID>29</ID>
-      <Description>"No description"</Description>
-      <LastState Activated="0" RealAddress="139BC72C"/>
-      <Color>80000008</Color>
-      <VariableType>String</VariableType>
-      <Length>12</Length>
-      <Unicode>0</Unicode>
-      <ZeroTerminate>1</ZeroTerminate>
-      <Address>139BC72C</Address>
-    </CheatEntry>
-    <CheatEntry>
       <ID>30</ID>
       <Description>"背包物品名称"</Description>
-      <LastState Activated="0" RealAddress="00000000"/>
+      <LastState Activated="0" RealAddress="139451D4"/>
       <Color>80000008</Color>
       <VariableType>String</VariableType>
       <Length>12</Length>
@@ -187,13 +176,30 @@
     <CheatEntry>
       <ID>33</ID>
       <Description>"背包物品类型"</Description>
-      <LastState Value="??" Activated="1" RealAddress="00000000"/>
+      <LastState Value="1" Activated="0" RealAddress="1204F414"/>
       <Color>80000008</Color>
       <VariableType>4 Bytes</VariableType>
       <Address>00B5D424</Address>
       <Offsets>
-        <Offset>10</Offset>
-        <Offset>20</Offset>
+        <Offset>610</Offset>
+        <Offset>C</Offset>
+        <Offset>0</Offset>
+        <Offset>264170</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>34</ID>
+      <Description>"背包物品名称20"</Description>
+      <LastState Activated="0" RealAddress="1204E680"/>
+      <Color>80000008</Color>
+      <VariableType>String</VariableType>
+      <Length>20</Length>
+      <Unicode>0</Unicode>
+      <ZeroTerminate>1</ZeroTerminate>
+      <Address>00B5D424</Address>
+      <Offsets>
+        <Offset>6CC</Offset>
+        <Offset>4</Offset>
         <Offset>0</Offset>
         <Offset>264170</Offset>
       </Offsets>

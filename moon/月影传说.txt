@@ -1,5 +1,0 @@
-mov [esi+254],ebx esi=132B1530
-mov eax,[00A11F32]
-----
-mov eax,[esi+37C] esi=F8FB1E0
-mov [895ea],edx
