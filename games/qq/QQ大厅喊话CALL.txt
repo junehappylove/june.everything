@@ -33,12 +33,12 @@ CPU Disasm
 0901E6B9  |.  50            PUSH EAX                                             ; /Arg1 = UNICODE "aaaa", 0018F364
 0901E6BA  |.  8BCE          MOV ECX,ESI                                          ; |ecx=103F2FB8
 0901E6BC  |.  E8 22F4FFFF   CALL 0901DAE3                                        ; \MGRoom.0901DAE3
---call：
-push 0CDE0000		;喊话内容指针
-mov ecx,103F2FB8	;
-CALL 0901DAE3 
+-- call：
+	push 0CDE0000		;喊话内容指针
+	mov ecx,103F2FB8	;
+	CALL 0901DAE3 
 特征码:
-8B F1 8B BE 1C 04 00 00 33 DB 3B FB				在模块MGRoom中
+	8B F1 8B BE 1C 04 00 00 33 DB 3B FB				在模块MGRoom中
 
 CPU Disasm
 地址        十六进制转储              命令                                                   注释
@@ -348,7 +348,7 @@ EIP 09E2862F CUQG_ocx.09E2862F
 =============
 CPU Disasm
 地址        十六进制转储            命令                                       注释
-0C6785A0  /$  81EC 10040000 SUB ESP,410                              ; CUQG_ocx.0C6785A0(guessed Format...)
+0C67 85A0  /$  81EC 10040000 SUB ESP,410                              ; CUQG_ocx.0C6785A0(guessed Format...)
 0C6785A6  |.  A1 BC2A690C   MOV EAX,DWORD PTR DS:[0C692ABC]          ; ASCII "jzhang(CUQG):"
 0C6785AB  |.  8B0D C02A690C MOV ECX,DWORD PTR DS:[0C692AC0]          ; ASCII "ng(CUQG):"
 0C6785B1  |.  894424 00     MOV DWORD PTR SS:[ESP],EAX
@@ -440,12 +440,11 @@ ESI 0C46AC74
 EDI 0C46ACCC
 EIP 0911352F CUQG.0911352F
 
----- 喊话的关键call 需要游戏过保护，否则调用不了，直接崩溃！
+---- 喊话的关键call 需要游戏过保护，否则调用不了，直接崩溃！------------------
 0BD03525  |. 8B4C24 10      MOV ECX,DWORD PTR SS:[ESP+10]
-0BD03529  |. 51             PUSH ECX		;喊话内容的偏移地址
-0BD0352A  |. 68 0815D40B    PUSH CUQG.0BD41508  ;  ASCII "CChatWnd::OnSend %s
-"
-0BD0352F  |. E8 6C500200    CALL CUQG.0BD285A0
+0BD03529  |. 51             PUSH ECX			; 喊话内容的偏移地址
+0BD0352A  |. 68 0815D40B    PUSH CUQG.0BD41508  ; ASCII "CChatWnd::OnSend %s"
+0BD0352F  |. E8 6C500200    CALL CUQG.0BD285A0	; CALL
 ----
 mov esp,00176448
 mov EAX,0738F440
@@ -469,8 +468,6 @@ Address   Message
           Debug string: jzhang(CUQG):CRichEditCtrlEx2::AppendEscapedText 1
           Debug string: jzhang(CUQG):CRichEditCtrlEx2::ShowMessage nUIN=1417192483 pMsg=1 cFlag=1 bForceShow=0 cFlagAdv=0
 
-
-
 091C8635  |. 83C4 20        ADD ESP,20
 091C8638  |. 8D4424 14      LEA EAX,DWORD PTR SS:[ESP+14]
 091C863C  |. 50             PUSH EAX                                 ; /String
@@ -482,24 +479,20 @@ call 7530B2B7
 
 bp SendMessageW
 
-
 =========================
 09103525  |. 8B4C24 10      MOV ECX,DWORD PTR SS:[ESP+10]            ;  怀疑这里就是喊话的call
 09103529  |. 51             PUSH ECX
-0910352A  |. 68 08151409    PUSH CUQG.09141508                       ;  ASCII "CChatWnd::OnSend %s
-"
+0910352A  |. 68 08151409    PUSH CUQG.09141508                       ;  ASCII "CChatWnd::OnSend %s"
 0910352F  |. E8 6C500200    CALL CUQG.091285A0                       ;  喊话关键call
 
 CPU Disasm
 地址        十六进制数据            指令                                       注释                                                             标签
 092C3529  |.  51            PUSH ECX                                 /<%s> = "111"
-092C352A  |.  68 08153009   PUSH OFFSET 09301508                     |Format = "CChatWnd::OnSend %s
-"
+092C352A  |.  68 08153009   PUSH OFFSET 09301508                     |Format = "CChatWnd::OnSend %s"
 092C352F  |.  E8 6C500200   CALL 092E85A0                            \CUQG_ocx.092E85A0
 
 
 CPU Disasm
 地址        十六进制数据            指令                                       注释                                                             标签
-092E863C  |.  50            PUSH EAX                                 /String = "jzhang(CUQG):CChatWnd::OnSend aaa
-"
+092E863C  |.  50            PUSH EAX                                 /String = "jzhang(CUQG):CChatWnd::OnSend aaa"
 092E863D  |.  FF15 20612F09 CALL NEAR DWORD PTR DS:[<&KERNEL32.Outpu \KERNEL32.OutputDebugStringA

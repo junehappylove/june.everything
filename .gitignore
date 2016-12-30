@@ -66,10 +66,8 @@ UpgradeLog*.XML
 Thumbs.db
 Desktop.ini
 *.py[co]
-# Packages
 *.egg
 *.egg-info
-# dist
 eggs
 parts
 #var
