@@ -5,4 +5,6 @@
 
 乱七八糟的都在这里了！
 
-项目整体迁移至：https://code.csdn.net/junehappylove/june-everything.git
+项目整体迁移至：https://code.csdn.net/junehappylove/june-everything
+
+因为github在国内访问相对比较慢...
